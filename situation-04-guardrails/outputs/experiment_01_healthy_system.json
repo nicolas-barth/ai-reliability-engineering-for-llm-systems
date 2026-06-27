@@ -1,0 +1,2767 @@
+{
+  "experiment_id": "experiment_01_healthy_system",
+  "experiment_name": "Healthy System Baseline",
+  "description": "Evaluates Situation 3 Level 3 production-grade classifications. No faults injected. Validates guardrails produce zero false positives.",
+  "expected_outcome": "No violations — all 25 classifications allowed through.",
+  "total_runs": 25,
+  "summary": {
+    "total_allowed": 25,
+    "total_blocked": 0,
+    "total_violations": 0,
+    "detection_rate_pct": 100.0,
+    "block_rate_pct": 0.0,
+    "guardrail_triggered": false
+  },
+  "runs": [
+    {
+      "run_id": "F802B459",
+      "input": "Fui cobrado errado e quero cancelar minha assinatura",
+      "predicted_intent": "billing_issue",
+      "confidence": 0.85,
+      "routing_flow": "Billing Support Flow",
+      "reliability_score": 89,
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "engine_decision": {
+        "allowed": true,
+        "blocked_by": [],
+        "warned_by": [],
+        "total_violations": 0,
+        "total_blocks": 0,
+        "total_warnings": 0,
+        "guardrail_results": [
+          {
+            "guardrail_name": "IntentValidationGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Intent 'billing_issue' validated (confidence=0.85).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ConfidenceThresholdGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "HIGH confidence band (0.85 >= 0.75). Direct routing authorized.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "AmbiguityDetectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "No significant ambiguity (secondary=0.10 < 0.3).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "RoutingProtectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Routing consistent: 'billing_issue' → 'Billing Support Flow'.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ReliabilityScoreGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Reliability score 89 meets production threshold (>= 70).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          }
+        ]
+      },
+      "policy_result": {
+        "final_action": "LOG",
+        "blocked": false,
+        "escalated": false,
+        "requires_review": false,
+        "triggered_policies": [],
+        "decisions": [
+          {
+            "policy_name": "LOW_CONFIDENCE_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'LOW_CONFIDENCE_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "MULTI_INTENT_ESCALATION",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'MULTI_INTENT_ESCALATION' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "ROUTING_MISMATCH_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'ROUTING_MISMATCH_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "RELIABILITY_THRESHOLD",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'RELIABILITY_THRESHOLD' — no matching violations.",
+            "metadata": {}
+          }
+        ]
+      },
+      "final_allowed": true
+    },
+    {
+      "run_id": "E8ECF1E6",
+      "input": "Fui cobrado errado e quero cancelar minha assinatura",
+      "predicted_intent": "billing_issue",
+      "confidence": 0.875,
+      "routing_flow": "Billing Support Flow",
+      "reliability_score": 90,
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "engine_decision": {
+        "allowed": true,
+        "blocked_by": [],
+        "warned_by": [],
+        "total_violations": 0,
+        "total_blocks": 0,
+        "total_warnings": 0,
+        "guardrail_results": [
+          {
+            "guardrail_name": "IntentValidationGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Intent 'billing_issue' validated (confidence=0.88).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ConfidenceThresholdGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "HIGH confidence band (0.88 >= 0.75). Direct routing authorized.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "AmbiguityDetectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "No significant ambiguity (secondary=0.07 < 0.3).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "RoutingProtectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Routing consistent: 'billing_issue' → 'Billing Support Flow'.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ReliabilityScoreGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Reliability score 90 meets production threshold (>= 70).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          }
+        ]
+      },
+      "policy_result": {
+        "final_action": "LOG",
+        "blocked": false,
+        "escalated": false,
+        "requires_review": false,
+        "triggered_policies": [],
+        "decisions": [
+          {
+            "policy_name": "LOW_CONFIDENCE_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'LOW_CONFIDENCE_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "MULTI_INTENT_ESCALATION",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'MULTI_INTENT_ESCALATION' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "ROUTING_MISMATCH_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'ROUTING_MISMATCH_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "RELIABILITY_THRESHOLD",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'RELIABILITY_THRESHOLD' — no matching violations.",
+            "metadata": {}
+          }
+        ]
+      },
+      "final_allowed": true
+    },
+    {
+      "run_id": "EE319526",
+      "input": "Fui cobrado errado e quero cancelar minha assinatura",
+      "predicted_intent": "billing_issue",
+      "confidence": 0.9,
+      "routing_flow": "Billing Support Flow",
+      "reliability_score": 91,
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "engine_decision": {
+        "allowed": true,
+        "blocked_by": [],
+        "warned_by": [],
+        "total_violations": 0,
+        "total_blocks": 0,
+        "total_warnings": 0,
+        "guardrail_results": [
+          {
+            "guardrail_name": "IntentValidationGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Intent 'billing_issue' validated (confidence=0.90).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ConfidenceThresholdGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "HIGH confidence band (0.90 >= 0.75). Direct routing authorized.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "AmbiguityDetectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "No significant ambiguity (secondary=0.05 < 0.3).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "RoutingProtectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Routing consistent: 'billing_issue' → 'Billing Support Flow'.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ReliabilityScoreGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Reliability score 91 meets production threshold (>= 70).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          }
+        ]
+      },
+      "policy_result": {
+        "final_action": "LOG",
+        "blocked": false,
+        "escalated": false,
+        "requires_review": false,
+        "triggered_policies": [],
+        "decisions": [
+          {
+            "policy_name": "LOW_CONFIDENCE_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'LOW_CONFIDENCE_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "MULTI_INTENT_ESCALATION",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'MULTI_INTENT_ESCALATION' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "ROUTING_MISMATCH_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'ROUTING_MISMATCH_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "RELIABILITY_THRESHOLD",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'RELIABILITY_THRESHOLD' — no matching violations.",
+            "metadata": {}
+          }
+        ]
+      },
+      "final_allowed": true
+    },
+    {
+      "run_id": "8C5A3AE1",
+      "input": "Fui cobrado errado e quero cancelar minha assinatura",
+      "predicted_intent": "billing_issue",
+      "confidence": 0.85,
+      "routing_flow": "Billing Support Flow",
+      "reliability_score": 89,
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "engine_decision": {
+        "allowed": true,
+        "blocked_by": [],
+        "warned_by": [],
+        "total_violations": 0,
+        "total_blocks": 0,
+        "total_warnings": 0,
+        "guardrail_results": [
+          {
+            "guardrail_name": "IntentValidationGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Intent 'billing_issue' validated (confidence=0.85).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ConfidenceThresholdGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "HIGH confidence band (0.85 >= 0.75). Direct routing authorized.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "AmbiguityDetectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "No significant ambiguity (secondary=0.10 < 0.3).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "RoutingProtectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Routing consistent: 'billing_issue' → 'Billing Support Flow'.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ReliabilityScoreGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Reliability score 89 meets production threshold (>= 70).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          }
+        ]
+      },
+      "policy_result": {
+        "final_action": "LOG",
+        "blocked": false,
+        "escalated": false,
+        "requires_review": false,
+        "triggered_policies": [],
+        "decisions": [
+          {
+            "policy_name": "LOW_CONFIDENCE_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'LOW_CONFIDENCE_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "MULTI_INTENT_ESCALATION",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'MULTI_INTENT_ESCALATION' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "ROUTING_MISMATCH_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'ROUTING_MISMATCH_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "RELIABILITY_THRESHOLD",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'RELIABILITY_THRESHOLD' — no matching violations.",
+            "metadata": {}
+          }
+        ]
+      },
+      "final_allowed": true
+    },
+    {
+      "run_id": "5F4CB311",
+      "input": "Fui cobrado errado e quero cancelar minha assinatura",
+      "predicted_intent": "billing_issue",
+      "confidence": 0.875,
+      "routing_flow": "Billing Support Flow",
+      "reliability_score": 90,
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "engine_decision": {
+        "allowed": true,
+        "blocked_by": [],
+        "warned_by": [],
+        "total_violations": 0,
+        "total_blocks": 0,
+        "total_warnings": 0,
+        "guardrail_results": [
+          {
+            "guardrail_name": "IntentValidationGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Intent 'billing_issue' validated (confidence=0.88).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ConfidenceThresholdGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "HIGH confidence band (0.88 >= 0.75). Direct routing authorized.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "AmbiguityDetectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "No significant ambiguity (secondary=0.07 < 0.3).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "RoutingProtectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Routing consistent: 'billing_issue' → 'Billing Support Flow'.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ReliabilityScoreGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Reliability score 90 meets production threshold (>= 70).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          }
+        ]
+      },
+      "policy_result": {
+        "final_action": "LOG",
+        "blocked": false,
+        "escalated": false,
+        "requires_review": false,
+        "triggered_policies": [],
+        "decisions": [
+          {
+            "policy_name": "LOW_CONFIDENCE_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'LOW_CONFIDENCE_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "MULTI_INTENT_ESCALATION",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'MULTI_INTENT_ESCALATION' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "ROUTING_MISMATCH_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'ROUTING_MISMATCH_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "RELIABILITY_THRESHOLD",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'RELIABILITY_THRESHOLD' — no matching violations.",
+            "metadata": {}
+          }
+        ]
+      },
+      "final_allowed": true
+    },
+    {
+      "run_id": "764ECDA6",
+      "input": "Fui cobrado errado e quero cancelar minha assinatura",
+      "predicted_intent": "billing_issue",
+      "confidence": 0.9,
+      "routing_flow": "Billing Support Flow",
+      "reliability_score": 91,
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "engine_decision": {
+        "allowed": true,
+        "blocked_by": [],
+        "warned_by": [],
+        "total_violations": 0,
+        "total_blocks": 0,
+        "total_warnings": 0,
+        "guardrail_results": [
+          {
+            "guardrail_name": "IntentValidationGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Intent 'billing_issue' validated (confidence=0.90).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ConfidenceThresholdGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "HIGH confidence band (0.90 >= 0.75). Direct routing authorized.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "AmbiguityDetectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "No significant ambiguity (secondary=0.05 < 0.3).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "RoutingProtectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Routing consistent: 'billing_issue' → 'Billing Support Flow'.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ReliabilityScoreGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Reliability score 91 meets production threshold (>= 70).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          }
+        ]
+      },
+      "policy_result": {
+        "final_action": "LOG",
+        "blocked": false,
+        "escalated": false,
+        "requires_review": false,
+        "triggered_policies": [],
+        "decisions": [
+          {
+            "policy_name": "LOW_CONFIDENCE_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'LOW_CONFIDENCE_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "MULTI_INTENT_ESCALATION",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'MULTI_INTENT_ESCALATION' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "ROUTING_MISMATCH_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'ROUTING_MISMATCH_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "RELIABILITY_THRESHOLD",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'RELIABILITY_THRESHOLD' — no matching violations.",
+            "metadata": {}
+          }
+        ]
+      },
+      "final_allowed": true
+    },
+    {
+      "run_id": "4BDF00B0",
+      "input": "Fui cobrado errado e quero cancelar minha assinatura",
+      "predicted_intent": "billing_issue",
+      "confidence": 0.85,
+      "routing_flow": "Billing Support Flow",
+      "reliability_score": 89,
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "engine_decision": {
+        "allowed": true,
+        "blocked_by": [],
+        "warned_by": [],
+        "total_violations": 0,
+        "total_blocks": 0,
+        "total_warnings": 0,
+        "guardrail_results": [
+          {
+            "guardrail_name": "IntentValidationGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Intent 'billing_issue' validated (confidence=0.85).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ConfidenceThresholdGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "HIGH confidence band (0.85 >= 0.75). Direct routing authorized.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "AmbiguityDetectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "No significant ambiguity (secondary=0.10 < 0.3).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "RoutingProtectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Routing consistent: 'billing_issue' → 'Billing Support Flow'.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ReliabilityScoreGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Reliability score 89 meets production threshold (>= 70).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          }
+        ]
+      },
+      "policy_result": {
+        "final_action": "LOG",
+        "blocked": false,
+        "escalated": false,
+        "requires_review": false,
+        "triggered_policies": [],
+        "decisions": [
+          {
+            "policy_name": "LOW_CONFIDENCE_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'LOW_CONFIDENCE_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "MULTI_INTENT_ESCALATION",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'MULTI_INTENT_ESCALATION' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "ROUTING_MISMATCH_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'ROUTING_MISMATCH_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "RELIABILITY_THRESHOLD",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'RELIABILITY_THRESHOLD' — no matching violations.",
+            "metadata": {}
+          }
+        ]
+      },
+      "final_allowed": true
+    },
+    {
+      "run_id": "9F8D3035",
+      "input": "Fui cobrado errado e quero cancelar minha assinatura",
+      "predicted_intent": "billing_issue",
+      "confidence": 0.875,
+      "routing_flow": "Billing Support Flow",
+      "reliability_score": 90,
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "engine_decision": {
+        "allowed": true,
+        "blocked_by": [],
+        "warned_by": [],
+        "total_violations": 0,
+        "total_blocks": 0,
+        "total_warnings": 0,
+        "guardrail_results": [
+          {
+            "guardrail_name": "IntentValidationGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Intent 'billing_issue' validated (confidence=0.88).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ConfidenceThresholdGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "HIGH confidence band (0.88 >= 0.75). Direct routing authorized.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "AmbiguityDetectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "No significant ambiguity (secondary=0.07 < 0.3).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "RoutingProtectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Routing consistent: 'billing_issue' → 'Billing Support Flow'.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ReliabilityScoreGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Reliability score 90 meets production threshold (>= 70).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          }
+        ]
+      },
+      "policy_result": {
+        "final_action": "LOG",
+        "blocked": false,
+        "escalated": false,
+        "requires_review": false,
+        "triggered_policies": [],
+        "decisions": [
+          {
+            "policy_name": "LOW_CONFIDENCE_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'LOW_CONFIDENCE_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "MULTI_INTENT_ESCALATION",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'MULTI_INTENT_ESCALATION' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "ROUTING_MISMATCH_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'ROUTING_MISMATCH_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "RELIABILITY_THRESHOLD",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'RELIABILITY_THRESHOLD' — no matching violations.",
+            "metadata": {}
+          }
+        ]
+      },
+      "final_allowed": true
+    },
+    {
+      "run_id": "486DA775",
+      "input": "Fui cobrado errado e quero cancelar minha assinatura",
+      "predicted_intent": "billing_issue",
+      "confidence": 0.9,
+      "routing_flow": "Billing Support Flow",
+      "reliability_score": 91,
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "engine_decision": {
+        "allowed": true,
+        "blocked_by": [],
+        "warned_by": [],
+        "total_violations": 0,
+        "total_blocks": 0,
+        "total_warnings": 0,
+        "guardrail_results": [
+          {
+            "guardrail_name": "IntentValidationGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Intent 'billing_issue' validated (confidence=0.90).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ConfidenceThresholdGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "HIGH confidence band (0.90 >= 0.75). Direct routing authorized.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "AmbiguityDetectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "No significant ambiguity (secondary=0.05 < 0.3).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "RoutingProtectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Routing consistent: 'billing_issue' → 'Billing Support Flow'.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ReliabilityScoreGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Reliability score 91 meets production threshold (>= 70).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          }
+        ]
+      },
+      "policy_result": {
+        "final_action": "LOG",
+        "blocked": false,
+        "escalated": false,
+        "requires_review": false,
+        "triggered_policies": [],
+        "decisions": [
+          {
+            "policy_name": "LOW_CONFIDENCE_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'LOW_CONFIDENCE_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "MULTI_INTENT_ESCALATION",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'MULTI_INTENT_ESCALATION' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "ROUTING_MISMATCH_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'ROUTING_MISMATCH_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "RELIABILITY_THRESHOLD",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'RELIABILITY_THRESHOLD' — no matching violations.",
+            "metadata": {}
+          }
+        ]
+      },
+      "final_allowed": true
+    },
+    {
+      "run_id": "CA58299D",
+      "input": "Fui cobrado errado e quero cancelar minha assinatura",
+      "predicted_intent": "billing_issue",
+      "confidence": 0.85,
+      "routing_flow": "Billing Support Flow",
+      "reliability_score": 89,
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "engine_decision": {
+        "allowed": true,
+        "blocked_by": [],
+        "warned_by": [],
+        "total_violations": 0,
+        "total_blocks": 0,
+        "total_warnings": 0,
+        "guardrail_results": [
+          {
+            "guardrail_name": "IntentValidationGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Intent 'billing_issue' validated (confidence=0.85).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ConfidenceThresholdGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "HIGH confidence band (0.85 >= 0.75). Direct routing authorized.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "AmbiguityDetectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "No significant ambiguity (secondary=0.10 < 0.3).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "RoutingProtectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Routing consistent: 'billing_issue' → 'Billing Support Flow'.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ReliabilityScoreGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Reliability score 89 meets production threshold (>= 70).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          }
+        ]
+      },
+      "policy_result": {
+        "final_action": "LOG",
+        "blocked": false,
+        "escalated": false,
+        "requires_review": false,
+        "triggered_policies": [],
+        "decisions": [
+          {
+            "policy_name": "LOW_CONFIDENCE_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'LOW_CONFIDENCE_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "MULTI_INTENT_ESCALATION",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'MULTI_INTENT_ESCALATION' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "ROUTING_MISMATCH_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'ROUTING_MISMATCH_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "RELIABILITY_THRESHOLD",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'RELIABILITY_THRESHOLD' — no matching violations.",
+            "metadata": {}
+          }
+        ]
+      },
+      "final_allowed": true
+    },
+    {
+      "run_id": "09494637",
+      "input": "Fui cobrado errado e quero cancelar minha assinatura",
+      "predicted_intent": "billing_issue",
+      "confidence": 0.875,
+      "routing_flow": "Billing Support Flow",
+      "reliability_score": 90,
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "engine_decision": {
+        "allowed": true,
+        "blocked_by": [],
+        "warned_by": [],
+        "total_violations": 0,
+        "total_blocks": 0,
+        "total_warnings": 0,
+        "guardrail_results": [
+          {
+            "guardrail_name": "IntentValidationGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Intent 'billing_issue' validated (confidence=0.88).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ConfidenceThresholdGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "HIGH confidence band (0.88 >= 0.75). Direct routing authorized.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "AmbiguityDetectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "No significant ambiguity (secondary=0.07 < 0.3).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "RoutingProtectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Routing consistent: 'billing_issue' → 'Billing Support Flow'.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ReliabilityScoreGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Reliability score 90 meets production threshold (>= 70).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          }
+        ]
+      },
+      "policy_result": {
+        "final_action": "LOG",
+        "blocked": false,
+        "escalated": false,
+        "requires_review": false,
+        "triggered_policies": [],
+        "decisions": [
+          {
+            "policy_name": "LOW_CONFIDENCE_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'LOW_CONFIDENCE_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "MULTI_INTENT_ESCALATION",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'MULTI_INTENT_ESCALATION' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "ROUTING_MISMATCH_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'ROUTING_MISMATCH_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "RELIABILITY_THRESHOLD",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'RELIABILITY_THRESHOLD' — no matching violations.",
+            "metadata": {}
+          }
+        ]
+      },
+      "final_allowed": true
+    },
+    {
+      "run_id": "43864B9E",
+      "input": "Fui cobrado errado e quero cancelar minha assinatura",
+      "predicted_intent": "billing_issue",
+      "confidence": 0.9,
+      "routing_flow": "Billing Support Flow",
+      "reliability_score": 91,
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "engine_decision": {
+        "allowed": true,
+        "blocked_by": [],
+        "warned_by": [],
+        "total_violations": 0,
+        "total_blocks": 0,
+        "total_warnings": 0,
+        "guardrail_results": [
+          {
+            "guardrail_name": "IntentValidationGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Intent 'billing_issue' validated (confidence=0.90).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ConfidenceThresholdGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "HIGH confidence band (0.90 >= 0.75). Direct routing authorized.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "AmbiguityDetectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "No significant ambiguity (secondary=0.05 < 0.3).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "RoutingProtectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Routing consistent: 'billing_issue' → 'Billing Support Flow'.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ReliabilityScoreGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Reliability score 91 meets production threshold (>= 70).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          }
+        ]
+      },
+      "policy_result": {
+        "final_action": "LOG",
+        "blocked": false,
+        "escalated": false,
+        "requires_review": false,
+        "triggered_policies": [],
+        "decisions": [
+          {
+            "policy_name": "LOW_CONFIDENCE_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'LOW_CONFIDENCE_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "MULTI_INTENT_ESCALATION",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'MULTI_INTENT_ESCALATION' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "ROUTING_MISMATCH_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'ROUTING_MISMATCH_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "RELIABILITY_THRESHOLD",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'RELIABILITY_THRESHOLD' — no matching violations.",
+            "metadata": {}
+          }
+        ]
+      },
+      "final_allowed": true
+    },
+    {
+      "run_id": "9F53CD74",
+      "input": "Fui cobrado errado e quero cancelar minha assinatura",
+      "predicted_intent": "billing_issue",
+      "confidence": 0.85,
+      "routing_flow": "Billing Support Flow",
+      "reliability_score": 89,
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "engine_decision": {
+        "allowed": true,
+        "blocked_by": [],
+        "warned_by": [],
+        "total_violations": 0,
+        "total_blocks": 0,
+        "total_warnings": 0,
+        "guardrail_results": [
+          {
+            "guardrail_name": "IntentValidationGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Intent 'billing_issue' validated (confidence=0.85).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ConfidenceThresholdGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "HIGH confidence band (0.85 >= 0.75). Direct routing authorized.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "AmbiguityDetectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "No significant ambiguity (secondary=0.10 < 0.3).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "RoutingProtectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Routing consistent: 'billing_issue' → 'Billing Support Flow'.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ReliabilityScoreGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Reliability score 89 meets production threshold (>= 70).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          }
+        ]
+      },
+      "policy_result": {
+        "final_action": "LOG",
+        "blocked": false,
+        "escalated": false,
+        "requires_review": false,
+        "triggered_policies": [],
+        "decisions": [
+          {
+            "policy_name": "LOW_CONFIDENCE_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'LOW_CONFIDENCE_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "MULTI_INTENT_ESCALATION",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'MULTI_INTENT_ESCALATION' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "ROUTING_MISMATCH_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'ROUTING_MISMATCH_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "RELIABILITY_THRESHOLD",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'RELIABILITY_THRESHOLD' — no matching violations.",
+            "metadata": {}
+          }
+        ]
+      },
+      "final_allowed": true
+    },
+    {
+      "run_id": "1D819289",
+      "input": "Fui cobrado errado e quero cancelar minha assinatura",
+      "predicted_intent": "billing_issue",
+      "confidence": 0.875,
+      "routing_flow": "Billing Support Flow",
+      "reliability_score": 90,
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "engine_decision": {
+        "allowed": true,
+        "blocked_by": [],
+        "warned_by": [],
+        "total_violations": 0,
+        "total_blocks": 0,
+        "total_warnings": 0,
+        "guardrail_results": [
+          {
+            "guardrail_name": "IntentValidationGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Intent 'billing_issue' validated (confidence=0.88).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ConfidenceThresholdGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "HIGH confidence band (0.88 >= 0.75). Direct routing authorized.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "AmbiguityDetectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "No significant ambiguity (secondary=0.07 < 0.3).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "RoutingProtectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Routing consistent: 'billing_issue' → 'Billing Support Flow'.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ReliabilityScoreGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Reliability score 90 meets production threshold (>= 70).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          }
+        ]
+      },
+      "policy_result": {
+        "final_action": "LOG",
+        "blocked": false,
+        "escalated": false,
+        "requires_review": false,
+        "triggered_policies": [],
+        "decisions": [
+          {
+            "policy_name": "LOW_CONFIDENCE_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'LOW_CONFIDENCE_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "MULTI_INTENT_ESCALATION",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'MULTI_INTENT_ESCALATION' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "ROUTING_MISMATCH_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'ROUTING_MISMATCH_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "RELIABILITY_THRESHOLD",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'RELIABILITY_THRESHOLD' — no matching violations.",
+            "metadata": {}
+          }
+        ]
+      },
+      "final_allowed": true
+    },
+    {
+      "run_id": "F0C38ACB",
+      "input": "Fui cobrado errado e quero cancelar minha assinatura",
+      "predicted_intent": "billing_issue",
+      "confidence": 0.9,
+      "routing_flow": "Billing Support Flow",
+      "reliability_score": 91,
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "engine_decision": {
+        "allowed": true,
+        "blocked_by": [],
+        "warned_by": [],
+        "total_violations": 0,
+        "total_blocks": 0,
+        "total_warnings": 0,
+        "guardrail_results": [
+          {
+            "guardrail_name": "IntentValidationGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Intent 'billing_issue' validated (confidence=0.90).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ConfidenceThresholdGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "HIGH confidence band (0.90 >= 0.75). Direct routing authorized.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "AmbiguityDetectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "No significant ambiguity (secondary=0.05 < 0.3).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "RoutingProtectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Routing consistent: 'billing_issue' → 'Billing Support Flow'.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ReliabilityScoreGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Reliability score 91 meets production threshold (>= 70).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          }
+        ]
+      },
+      "policy_result": {
+        "final_action": "LOG",
+        "blocked": false,
+        "escalated": false,
+        "requires_review": false,
+        "triggered_policies": [],
+        "decisions": [
+          {
+            "policy_name": "LOW_CONFIDENCE_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'LOW_CONFIDENCE_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "MULTI_INTENT_ESCALATION",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'MULTI_INTENT_ESCALATION' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "ROUTING_MISMATCH_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'ROUTING_MISMATCH_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "RELIABILITY_THRESHOLD",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'RELIABILITY_THRESHOLD' — no matching violations.",
+            "metadata": {}
+          }
+        ]
+      },
+      "final_allowed": true
+    },
+    {
+      "run_id": "28372A85",
+      "input": "Fui cobrado errado e quero cancelar minha assinatura",
+      "predicted_intent": "billing_issue",
+      "confidence": 0.85,
+      "routing_flow": "Billing Support Flow",
+      "reliability_score": 89,
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "engine_decision": {
+        "allowed": true,
+        "blocked_by": [],
+        "warned_by": [],
+        "total_violations": 0,
+        "total_blocks": 0,
+        "total_warnings": 0,
+        "guardrail_results": [
+          {
+            "guardrail_name": "IntentValidationGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Intent 'billing_issue' validated (confidence=0.85).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ConfidenceThresholdGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "HIGH confidence band (0.85 >= 0.75). Direct routing authorized.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "AmbiguityDetectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "No significant ambiguity (secondary=0.10 < 0.3).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "RoutingProtectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Routing consistent: 'billing_issue' → 'Billing Support Flow'.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ReliabilityScoreGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Reliability score 89 meets production threshold (>= 70).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          }
+        ]
+      },
+      "policy_result": {
+        "final_action": "LOG",
+        "blocked": false,
+        "escalated": false,
+        "requires_review": false,
+        "triggered_policies": [],
+        "decisions": [
+          {
+            "policy_name": "LOW_CONFIDENCE_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'LOW_CONFIDENCE_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "MULTI_INTENT_ESCALATION",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'MULTI_INTENT_ESCALATION' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "ROUTING_MISMATCH_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'ROUTING_MISMATCH_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "RELIABILITY_THRESHOLD",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'RELIABILITY_THRESHOLD' — no matching violations.",
+            "metadata": {}
+          }
+        ]
+      },
+      "final_allowed": true
+    },
+    {
+      "run_id": "B7891964",
+      "input": "Fui cobrado errado e quero cancelar minha assinatura",
+      "predicted_intent": "billing_issue",
+      "confidence": 0.875,
+      "routing_flow": "Billing Support Flow",
+      "reliability_score": 90,
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "engine_decision": {
+        "allowed": true,
+        "blocked_by": [],
+        "warned_by": [],
+        "total_violations": 0,
+        "total_blocks": 0,
+        "total_warnings": 0,
+        "guardrail_results": [
+          {
+            "guardrail_name": "IntentValidationGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Intent 'billing_issue' validated (confidence=0.88).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ConfidenceThresholdGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "HIGH confidence band (0.88 >= 0.75). Direct routing authorized.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "AmbiguityDetectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "No significant ambiguity (secondary=0.07 < 0.3).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "RoutingProtectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Routing consistent: 'billing_issue' → 'Billing Support Flow'.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ReliabilityScoreGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Reliability score 90 meets production threshold (>= 70).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          }
+        ]
+      },
+      "policy_result": {
+        "final_action": "LOG",
+        "blocked": false,
+        "escalated": false,
+        "requires_review": false,
+        "triggered_policies": [],
+        "decisions": [
+          {
+            "policy_name": "LOW_CONFIDENCE_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'LOW_CONFIDENCE_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "MULTI_INTENT_ESCALATION",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'MULTI_INTENT_ESCALATION' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "ROUTING_MISMATCH_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'ROUTING_MISMATCH_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "RELIABILITY_THRESHOLD",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'RELIABILITY_THRESHOLD' — no matching violations.",
+            "metadata": {}
+          }
+        ]
+      },
+      "final_allowed": true
+    },
+    {
+      "run_id": "1AEF8411",
+      "input": "Fui cobrado errado e quero cancelar minha assinatura",
+      "predicted_intent": "billing_issue",
+      "confidence": 0.9,
+      "routing_flow": "Billing Support Flow",
+      "reliability_score": 91,
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "engine_decision": {
+        "allowed": true,
+        "blocked_by": [],
+        "warned_by": [],
+        "total_violations": 0,
+        "total_blocks": 0,
+        "total_warnings": 0,
+        "guardrail_results": [
+          {
+            "guardrail_name": "IntentValidationGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Intent 'billing_issue' validated (confidence=0.90).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ConfidenceThresholdGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "HIGH confidence band (0.90 >= 0.75). Direct routing authorized.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "AmbiguityDetectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "No significant ambiguity (secondary=0.05 < 0.3).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "RoutingProtectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Routing consistent: 'billing_issue' → 'Billing Support Flow'.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ReliabilityScoreGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Reliability score 91 meets production threshold (>= 70).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          }
+        ]
+      },
+      "policy_result": {
+        "final_action": "LOG",
+        "blocked": false,
+        "escalated": false,
+        "requires_review": false,
+        "triggered_policies": [],
+        "decisions": [
+          {
+            "policy_name": "LOW_CONFIDENCE_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'LOW_CONFIDENCE_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "MULTI_INTENT_ESCALATION",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'MULTI_INTENT_ESCALATION' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "ROUTING_MISMATCH_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'ROUTING_MISMATCH_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "RELIABILITY_THRESHOLD",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'RELIABILITY_THRESHOLD' — no matching violations.",
+            "metadata": {}
+          }
+        ]
+      },
+      "final_allowed": true
+    },
+    {
+      "run_id": "E939EEE2",
+      "input": "Fui cobrado errado e quero cancelar minha assinatura",
+      "predicted_intent": "billing_issue",
+      "confidence": 0.85,
+      "routing_flow": "Billing Support Flow",
+      "reliability_score": 89,
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "engine_decision": {
+        "allowed": true,
+        "blocked_by": [],
+        "warned_by": [],
+        "total_violations": 0,
+        "total_blocks": 0,
+        "total_warnings": 0,
+        "guardrail_results": [
+          {
+            "guardrail_name": "IntentValidationGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Intent 'billing_issue' validated (confidence=0.85).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ConfidenceThresholdGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "HIGH confidence band (0.85 >= 0.75). Direct routing authorized.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "AmbiguityDetectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "No significant ambiguity (secondary=0.10 < 0.3).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "RoutingProtectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Routing consistent: 'billing_issue' → 'Billing Support Flow'.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ReliabilityScoreGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Reliability score 89 meets production threshold (>= 70).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          }
+        ]
+      },
+      "policy_result": {
+        "final_action": "LOG",
+        "blocked": false,
+        "escalated": false,
+        "requires_review": false,
+        "triggered_policies": [],
+        "decisions": [
+          {
+            "policy_name": "LOW_CONFIDENCE_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'LOW_CONFIDENCE_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "MULTI_INTENT_ESCALATION",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'MULTI_INTENT_ESCALATION' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "ROUTING_MISMATCH_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'ROUTING_MISMATCH_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "RELIABILITY_THRESHOLD",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'RELIABILITY_THRESHOLD' — no matching violations.",
+            "metadata": {}
+          }
+        ]
+      },
+      "final_allowed": true
+    },
+    {
+      "run_id": "22ECD267",
+      "input": "Fui cobrado errado e quero cancelar minha assinatura",
+      "predicted_intent": "billing_issue",
+      "confidence": 0.875,
+      "routing_flow": "Billing Support Flow",
+      "reliability_score": 90,
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "engine_decision": {
+        "allowed": true,
+        "blocked_by": [],
+        "warned_by": [],
+        "total_violations": 0,
+        "total_blocks": 0,
+        "total_warnings": 0,
+        "guardrail_results": [
+          {
+            "guardrail_name": "IntentValidationGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Intent 'billing_issue' validated (confidence=0.88).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ConfidenceThresholdGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "HIGH confidence band (0.88 >= 0.75). Direct routing authorized.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "AmbiguityDetectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "No significant ambiguity (secondary=0.07 < 0.3).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "RoutingProtectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Routing consistent: 'billing_issue' → 'Billing Support Flow'.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ReliabilityScoreGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Reliability score 90 meets production threshold (>= 70).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          }
+        ]
+      },
+      "policy_result": {
+        "final_action": "LOG",
+        "blocked": false,
+        "escalated": false,
+        "requires_review": false,
+        "triggered_policies": [],
+        "decisions": [
+          {
+            "policy_name": "LOW_CONFIDENCE_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'LOW_CONFIDENCE_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "MULTI_INTENT_ESCALATION",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'MULTI_INTENT_ESCALATION' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "ROUTING_MISMATCH_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'ROUTING_MISMATCH_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "RELIABILITY_THRESHOLD",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'RELIABILITY_THRESHOLD' — no matching violations.",
+            "metadata": {}
+          }
+        ]
+      },
+      "final_allowed": true
+    },
+    {
+      "run_id": "A1BDE706",
+      "input": "Fui cobrado errado e quero cancelar minha assinatura",
+      "predicted_intent": "billing_issue",
+      "confidence": 0.9,
+      "routing_flow": "Billing Support Flow",
+      "reliability_score": 91,
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "engine_decision": {
+        "allowed": true,
+        "blocked_by": [],
+        "warned_by": [],
+        "total_violations": 0,
+        "total_blocks": 0,
+        "total_warnings": 0,
+        "guardrail_results": [
+          {
+            "guardrail_name": "IntentValidationGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Intent 'billing_issue' validated (confidence=0.90).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ConfidenceThresholdGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "HIGH confidence band (0.90 >= 0.75). Direct routing authorized.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "AmbiguityDetectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "No significant ambiguity (secondary=0.05 < 0.3).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "RoutingProtectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Routing consistent: 'billing_issue' → 'Billing Support Flow'.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ReliabilityScoreGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Reliability score 91 meets production threshold (>= 70).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          }
+        ]
+      },
+      "policy_result": {
+        "final_action": "LOG",
+        "blocked": false,
+        "escalated": false,
+        "requires_review": false,
+        "triggered_policies": [],
+        "decisions": [
+          {
+            "policy_name": "LOW_CONFIDENCE_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'LOW_CONFIDENCE_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "MULTI_INTENT_ESCALATION",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'MULTI_INTENT_ESCALATION' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "ROUTING_MISMATCH_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'ROUTING_MISMATCH_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "RELIABILITY_THRESHOLD",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'RELIABILITY_THRESHOLD' — no matching violations.",
+            "metadata": {}
+          }
+        ]
+      },
+      "final_allowed": true
+    },
+    {
+      "run_id": "42B58705",
+      "input": "Fui cobrado errado e quero cancelar minha assinatura",
+      "predicted_intent": "billing_issue",
+      "confidence": 0.85,
+      "routing_flow": "Billing Support Flow",
+      "reliability_score": 89,
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "engine_decision": {
+        "allowed": true,
+        "blocked_by": [],
+        "warned_by": [],
+        "total_violations": 0,
+        "total_blocks": 0,
+        "total_warnings": 0,
+        "guardrail_results": [
+          {
+            "guardrail_name": "IntentValidationGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Intent 'billing_issue' validated (confidence=0.85).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ConfidenceThresholdGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "HIGH confidence band (0.85 >= 0.75). Direct routing authorized.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "AmbiguityDetectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "No significant ambiguity (secondary=0.10 < 0.3).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "RoutingProtectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Routing consistent: 'billing_issue' → 'Billing Support Flow'.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ReliabilityScoreGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Reliability score 89 meets production threshold (>= 70).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          }
+        ]
+      },
+      "policy_result": {
+        "final_action": "LOG",
+        "blocked": false,
+        "escalated": false,
+        "requires_review": false,
+        "triggered_policies": [],
+        "decisions": [
+          {
+            "policy_name": "LOW_CONFIDENCE_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'LOW_CONFIDENCE_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "MULTI_INTENT_ESCALATION",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'MULTI_INTENT_ESCALATION' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "ROUTING_MISMATCH_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'ROUTING_MISMATCH_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "RELIABILITY_THRESHOLD",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'RELIABILITY_THRESHOLD' — no matching violations.",
+            "metadata": {}
+          }
+        ]
+      },
+      "final_allowed": true
+    },
+    {
+      "run_id": "7236B628",
+      "input": "Fui cobrado errado e quero cancelar minha assinatura",
+      "predicted_intent": "billing_issue",
+      "confidence": 0.875,
+      "routing_flow": "Billing Support Flow",
+      "reliability_score": 90,
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "engine_decision": {
+        "allowed": true,
+        "blocked_by": [],
+        "warned_by": [],
+        "total_violations": 0,
+        "total_blocks": 0,
+        "total_warnings": 0,
+        "guardrail_results": [
+          {
+            "guardrail_name": "IntentValidationGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Intent 'billing_issue' validated (confidence=0.88).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ConfidenceThresholdGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "HIGH confidence band (0.88 >= 0.75). Direct routing authorized.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "AmbiguityDetectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "No significant ambiguity (secondary=0.07 < 0.3).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "RoutingProtectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Routing consistent: 'billing_issue' → 'Billing Support Flow'.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ReliabilityScoreGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Reliability score 90 meets production threshold (>= 70).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          }
+        ]
+      },
+      "policy_result": {
+        "final_action": "LOG",
+        "blocked": false,
+        "escalated": false,
+        "requires_review": false,
+        "triggered_policies": [],
+        "decisions": [
+          {
+            "policy_name": "LOW_CONFIDENCE_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'LOW_CONFIDENCE_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "MULTI_INTENT_ESCALATION",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'MULTI_INTENT_ESCALATION' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "ROUTING_MISMATCH_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'ROUTING_MISMATCH_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "RELIABILITY_THRESHOLD",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'RELIABILITY_THRESHOLD' — no matching violations.",
+            "metadata": {}
+          }
+        ]
+      },
+      "final_allowed": true
+    },
+    {
+      "run_id": "F63809AD",
+      "input": "Fui cobrado errado e quero cancelar minha assinatura",
+      "predicted_intent": "cancel_order",
+      "confidence": 0.9,
+      "routing_flow": "Order Cancellation Flow",
+      "reliability_score": 91,
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "engine_decision": {
+        "allowed": true,
+        "blocked_by": [],
+        "warned_by": [],
+        "total_violations": 0,
+        "total_blocks": 0,
+        "total_warnings": 0,
+        "guardrail_results": [
+          {
+            "guardrail_name": "IntentValidationGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Intent 'cancel_order' validated (confidence=0.90).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ConfidenceThresholdGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "HIGH confidence band (0.90 >= 0.75). Direct routing authorized.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "AmbiguityDetectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "No significant ambiguity (secondary=0.05 < 0.3).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "RoutingProtectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Routing consistent: 'cancel_order' → 'Order Cancellation Flow'.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ReliabilityScoreGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Reliability score 91 meets production threshold (>= 70).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          }
+        ]
+      },
+      "policy_result": {
+        "final_action": "LOG",
+        "blocked": false,
+        "escalated": false,
+        "requires_review": false,
+        "triggered_policies": [],
+        "decisions": [
+          {
+            "policy_name": "LOW_CONFIDENCE_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'LOW_CONFIDENCE_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "MULTI_INTENT_ESCALATION",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'MULTI_INTENT_ESCALATION' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "ROUTING_MISMATCH_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'ROUTING_MISMATCH_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "RELIABILITY_THRESHOLD",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'RELIABILITY_THRESHOLD' — no matching violations.",
+            "metadata": {}
+          }
+        ]
+      },
+      "final_allowed": true
+    },
+    {
+      "run_id": "90718644",
+      "input": "Fui cobrado errado e quero cancelar minha assinatura",
+      "predicted_intent": "cancel_order",
+      "confidence": 0.85,
+      "routing_flow": "Order Cancellation Flow",
+      "reliability_score": 89,
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "engine_decision": {
+        "allowed": true,
+        "blocked_by": [],
+        "warned_by": [],
+        "total_violations": 0,
+        "total_blocks": 0,
+        "total_warnings": 0,
+        "guardrail_results": [
+          {
+            "guardrail_name": "IntentValidationGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Intent 'cancel_order' validated (confidence=0.85).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ConfidenceThresholdGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "HIGH confidence band (0.85 >= 0.75). Direct routing authorized.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "AmbiguityDetectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "No significant ambiguity (secondary=0.10 < 0.3).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "RoutingProtectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Routing consistent: 'cancel_order' → 'Order Cancellation Flow'.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ReliabilityScoreGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Reliability score 89 meets production threshold (>= 70).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          }
+        ]
+      },
+      "policy_result": {
+        "final_action": "LOG",
+        "blocked": false,
+        "escalated": false,
+        "requires_review": false,
+        "triggered_policies": [],
+        "decisions": [
+          {
+            "policy_name": "LOW_CONFIDENCE_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'LOW_CONFIDENCE_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "MULTI_INTENT_ESCALATION",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'MULTI_INTENT_ESCALATION' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "ROUTING_MISMATCH_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'ROUTING_MISMATCH_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "RELIABILITY_THRESHOLD",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'RELIABILITY_THRESHOLD' — no matching violations.",
+            "metadata": {}
+          }
+        ]
+      },
+      "final_allowed": true
+    }
+  ]
+}

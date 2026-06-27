@@ -1,0 +1,340 @@
+{
+  "generated_at": "2026-06-27T16:45:14.648201+00:00",
+  "execution_mode": "full",
+  "data_source": "synthetic",
+  "runs_per_experiment": 50,
+  "comparison": {
+    "baseline_label": "Experiment 01 — Baseline",
+    "final_label": "Experiment 04 -- Full Reliability Engineering",
+    "improvements": {
+      "consistency_rate": {
+        "before": 34.0,
+        "after": 92.0,
+        "delta": 58.0,
+        "pct_improvement": 270.6,
+        "target_met": true
+      },
+      "entropy": {
+        "before": 0.8385,
+        "after": 0.2249,
+        "before_level": "HIGH",
+        "after_level": "LOW",
+        "delta": -0.6136,
+        "target_met": true
+      },
+      "routing_flows": {
+        "before": 4,
+        "after": 4,
+        "delta": 0,
+        "dominant_flow_pct_before": 34.0,
+        "dominant_flow_pct_after": 92.0,
+        "target_met": true
+      },
+      "reliability_score": {
+        "before": 24,
+        "after": 85,
+        "delta": 61,
+        "target_met": true
+      },
+      "readiness": {
+        "before": "CRITICAL",
+        "after": "READY",
+        "improved": true
+      },
+      "confidence_stability": {
+        "std_before": 0.306,
+        "std_after": 0.1,
+        "delta": -0.206,
+        "improvement_pct": 67.3
+      }
+    },
+    "progression": [
+      {
+        "label": "Experiment 01 — Baseline",
+        "strategies_active": "None (unstable system)",
+        "consistency_rate": 34.0,
+        "entropy": "HIGH",
+        "routing_flows": 4,
+        "reliability_score": 24,
+        "readiness": "CRITICAL"
+      },
+      {
+        "label": "Experiment 02 -- Structured Classification",
+        "strategies_active": "Structured Output + Low Temperature",
+        "consistency_rate": 64.0,
+        "entropy": "MEDIUM",
+        "routing_flows": 4,
+        "reliability_score": 56,
+        "readiness": "NOT READY"
+      },
+      {
+        "label": "Experiment 03 -- Disambiguation + Priority Engine",
+        "strategies_active": "Strategies 1-2-3: Disambiguation + Priority + Thresholds",
+        "consistency_rate": 88.0,
+        "entropy": "LOW",
+        "routing_flows": 3,
+        "reliability_score": 81,
+        "readiness": "READY"
+      },
+      {
+        "label": "Experiment 04 -- Full Reliability Engineering",
+        "strategies_active": "All 6 Strategies: Complete Reliability Pipeline",
+        "consistency_rate": 92.0,
+        "entropy": "LOW",
+        "routing_flows": 4,
+        "reliability_score": 85,
+        "readiness": "READY"
+      }
+    ],
+    "verdict": {
+      "all_targets_met": true,
+      "targets_met_count": 4,
+      "targets_total": 4,
+      "final_readiness": "READY",
+      "final_score": 85,
+      "summary": "The reliability engineering interventions successfully resolved all target metrics. Consistency increased from 34% to 92%, routing variance was effectively eliminated: dominant-flow concentration improved from 34% to 92%, and production readiness improved from CRITICAL to READY. The system now demonstrates predictable, repeatable behaviour under identical inputs."
+    },
+    "experiment_count": 4
+  },
+  "experiments": [
+    {
+      "label": "Experiment 01 — Baseline",
+      "metrics": {
+        "total_runs": 50,
+        "consistency": {
+          "dominant_intent": "billing_issue",
+          "dominant_count": 17,
+          "consistency_rate": 0.34,
+          "consistency_rate_pct": 34.0
+        },
+        "unique_intents": {
+          "unique_intent_count": 4,
+          "intent_counts": {
+            "cancel_order": 11,
+            "billing_issue": 17,
+            "refund_request": 8,
+            "general_support": 14
+          }
+        },
+        "routing": {
+          "unique_routing_flows": 4,
+          "dominant_flow": "Billing Support Flow",
+          "dominant_flow_pct": 34.0,
+          "routing_distribution": {
+            "Order Cancellation Flow": {
+              "count": 11,
+              "pct": 22.0
+            },
+            "Billing Support Flow": {
+              "count": 17,
+              "pct": 34.0
+            },
+            "Refund Flow": {
+              "count": 8,
+              "pct": 16.0
+            },
+            "General Support Queue": {
+              "count": 14,
+              "pct": 28.0
+            }
+          }
+        },
+        "confidence": {
+          "min": 0.03,
+          "max": 0.9,
+          "mean": 0.453,
+          "std": 0.306,
+          "range": 0.87
+        },
+        "entropy": {
+          "normalized_entropy": 0.8385,
+          "entropy_level": "HIGH"
+        },
+        "reliability": {
+          "reliability_score": 24,
+          "readiness_label": "CRITICAL",
+          "disambiguation_rate": 0.0,
+          "dominant_flow_pct": 34.0
+        }
+      }
+    },
+    {
+      "label": "Experiment 02 -- Structured Classification",
+      "metrics": {
+        "total_runs": 50,
+        "consistency": {
+          "dominant_intent": "billing_issue",
+          "dominant_count": 32,
+          "consistency_rate": 0.64,
+          "consistency_rate_pct": 64.0
+        },
+        "unique_intents": {
+          "unique_intent_count": 4,
+          "intent_counts": {
+            "billing_issue": 32,
+            "cancel_order": 10,
+            "general_support": 2,
+            "refund_request": 6
+          }
+        },
+        "routing": {
+          "unique_routing_flows": 4,
+          "dominant_flow": "Billing Support Flow",
+          "dominant_flow_pct": 64.0,
+          "routing_distribution": {
+            "Billing Support Flow": {
+              "count": 32,
+              "pct": 64.0
+            },
+            "Order Cancellation Flow": {
+              "count": 10,
+              "pct": 20.0
+            },
+            "General Support Queue": {
+              "count": 2,
+              "pct": 4.0
+            },
+            "Refund Flow": {
+              "count": 6,
+              "pct": 12.0
+            }
+          }
+        },
+        "confidence": {
+          "min": 0.311,
+          "max": 0.844,
+          "mean": 0.657,
+          "std": 0.131,
+          "range": 0.533
+        },
+        "entropy": {
+          "normalized_entropy": 0.6156,
+          "entropy_level": "MEDIUM"
+        },
+        "reliability": {
+          "reliability_score": 56,
+          "readiness_label": "NOT READY",
+          "disambiguation_rate": 0.0,
+          "dominant_flow_pct": 64.0
+        }
+      }
+    },
+    {
+      "label": "Experiment 03 -- Disambiguation + Priority Engine",
+      "metrics": {
+        "total_runs": 50,
+        "consistency": {
+          "dominant_intent": "billing_issue",
+          "dominant_count": 44,
+          "consistency_rate": 0.88,
+          "consistency_rate_pct": 88.0
+        },
+        "unique_intents": {
+          "unique_intent_count": 3,
+          "intent_counts": {
+            "billing_issue": 44,
+            "refund_request": 2,
+            "cancel_order": 4
+          }
+        },
+        "routing": {
+          "unique_routing_flows": 3,
+          "dominant_flow": "Billing Support Flow",
+          "dominant_flow_pct": 88.0,
+          "routing_distribution": {
+            "Billing Support Flow": {
+              "count": 44,
+              "pct": 88.0
+            },
+            "Refund Flow": {
+              "count": 2,
+              "pct": 4.0
+            },
+            "Order Cancellation Flow": {
+              "count": 4,
+              "pct": 8.0
+            }
+          }
+        },
+        "confidence": {
+          "min": 0.449,
+          "max": 0.919,
+          "mean": 0.749,
+          "std": 0.106,
+          "range": 0.47
+        },
+        "entropy": {
+          "normalized_entropy": 0.2754,
+          "entropy_level": "LOW"
+        },
+        "reliability": {
+          "reliability_score": 81,
+          "readiness_label": "READY",
+          "disambiguation_rate": 88.0,
+          "dominant_flow_pct": 88.0
+        }
+      }
+    },
+    {
+      "label": "Experiment 04 -- Full Reliability Engineering",
+      "metrics": {
+        "total_runs": 50,
+        "consistency": {
+          "dominant_intent": "billing_issue",
+          "dominant_count": 46,
+          "consistency_rate": 0.92,
+          "consistency_rate_pct": 92.0
+        },
+        "unique_intents": {
+          "unique_intent_count": 4,
+          "intent_counts": {
+            "billing_issue": 46,
+            "refund_request": 1,
+            "cancel_order": 2,
+            "general_support": 1
+          }
+        },
+        "routing": {
+          "unique_routing_flows": 4,
+          "dominant_flow": "Billing Support Flow",
+          "dominant_flow_pct": 92.0,
+          "routing_distribution": {
+            "Billing Support Flow": {
+              "count": 46,
+              "pct": 92.0
+            },
+            "Refund Flow": {
+              "count": 1,
+              "pct": 2.0
+            },
+            "Order Cancellation Flow": {
+              "count": 2,
+              "pct": 4.0
+            },
+            "General Support Queue": {
+              "count": 1,
+              "pct": 2.0
+            }
+          }
+        },
+        "confidence": {
+          "min": 0.44,
+          "max": 0.953,
+          "mean": 0.815,
+          "std": 0.1,
+          "range": 0.513
+        },
+        "entropy": {
+          "normalized_entropy": 0.2249,
+          "entropy_level": "LOW"
+        },
+        "reliability": {
+          "reliability_score": 85,
+          "readiness_label": "READY",
+          "disambiguation_rate": 92.0,
+          "dominant_flow_pct": 92.0
+        }
+      }
+    }
+  ]
+}

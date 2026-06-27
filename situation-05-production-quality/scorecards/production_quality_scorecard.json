@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-06-27T16:45:18.457155+00:00",
+  "title": "PRODUCTION QUALITY SCORECARD",
+  "reliability_score": 91,
+  "consistency_rate_pct": 92.0,
+  "guardrail_effectiveness_pct": 100.0,
+  "overall_health": "HEALTHY",
+  "slo_compliance_pct": 100.0,
+  "incident_severity": "LOW",
+  "production_ready": "YES",
+  "deployment_recommendation": "APPROVED",
+  "overall_quality_score": 92.4,
+  "overall_quality_grade": "A"
+}

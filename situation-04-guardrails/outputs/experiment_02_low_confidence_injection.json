@@ -1,0 +1,3442 @@
+{
+  "experiment_id": "experiment_02_low_confidence_injection",
+  "experiment_name": "Low Confidence Injection",
+  "description": "Injects classifications with confidence 0.15–0.42 (all below 0.50 threshold). Validates ConfidenceThresholdGuardrail and IntentValidationGuardrail.",
+  "expected_outcome": "Guardrail Triggered — all 25 blocked by LOW confidence.",
+  "total_runs": 25,
+  "summary": {
+    "total_allowed": 0,
+    "total_blocked": 25,
+    "total_violations": 75,
+    "detection_rate_pct": 100.0,
+    "block_rate_pct": 100.0,
+    "guardrail_triggered": true
+  },
+  "runs": [
+    {
+      "run_id": "AA11C5E4",
+      "input": "Fui cobrado errado e quero cancelar minha assinatura",
+      "predicted_intent": "billing_issue",
+      "confidence": 0.15,
+      "routing_flow": "Billing Support Flow",
+      "reliability_score": 25,
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "engine_decision": {
+        "allowed": false,
+        "blocked_by": [
+          "IntentValidationGuardrail",
+          "ConfidenceThresholdGuardrail",
+          "ReliabilityScoreGuardrail"
+        ],
+        "warned_by": [],
+        "total_violations": 3,
+        "total_blocks": 3,
+        "total_warnings": 0,
+        "guardrail_results": [
+          {
+            "guardrail_name": "IntentValidationGuardrail",
+            "triggered": true,
+            "violation_type": "LOW_CONFIDENCE",
+            "severity": "HIGH",
+            "message": "Intent 'billing_issue' is valid but confidence 0.15 is insufficient for direct routing. Fallback to human review required.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "intent": "billing_issue",
+              "confidence": 0.15,
+              "minimum_required": 0.5
+            }
+          },
+          {
+            "guardrail_name": "ConfidenceThresholdGuardrail",
+            "triggered": true,
+            "violation_type": "LOW_CONFIDENCE",
+            "severity": "HIGH",
+            "message": "LOW confidence (0.15 < 0.5). Routing blocked. Fallback to human review required.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "confidence": 0.15,
+              "band": "LOW",
+              "threshold": 0.5
+            }
+          },
+          {
+            "guardrail_name": "AmbiguityDetectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "No significant ambiguity (secondary=0.21 < 0.3).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "RoutingProtectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Routing consistent: 'billing_issue' → 'Billing Support Flow'.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ReliabilityScoreGuardrail",
+            "triggered": true,
+            "violation_type": "RELIABILITY_BELOW_THRESHOLD",
+            "severity": "CRITICAL",
+            "message": "CRITICAL: Reliability score 25 < 50. System operating in fully degraded state — regression to pre-Situation-3 levels. Classification blocked.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "reliability_score": 25,
+              "threshold": 50,
+              "status": "CRITICAL"
+            }
+          }
+        ]
+      },
+      "policy_result": {
+        "final_action": "BLOCK",
+        "blocked": true,
+        "escalated": false,
+        "requires_review": false,
+        "triggered_policies": [
+          "LOW_CONFIDENCE_BLOCK",
+          "RELIABILITY_THRESHOLD"
+        ],
+        "decisions": [
+          {
+            "policy_name": "LOW_CONFIDENCE_BLOCK",
+            "triggered": true,
+            "action": "BLOCK",
+            "message": "Policy 'LOW_CONFIDENCE_BLOCK' triggered by violations: ['LOW_CONFIDENCE']. Action: BLOCK.",
+            "metadata": {
+              "matched_violations": [
+                "LOW_CONFIDENCE"
+              ]
+            }
+          },
+          {
+            "policy_name": "MULTI_INTENT_ESCALATION",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'MULTI_INTENT_ESCALATION' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "ROUTING_MISMATCH_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'ROUTING_MISMATCH_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "RELIABILITY_THRESHOLD",
+            "triggered": true,
+            "action": "BLOCK",
+            "message": "Policy 'RELIABILITY_THRESHOLD' triggered by violations: ['RELIABILITY_BELOW_THRESHOLD']. Action: BLOCK.",
+            "metadata": {
+              "matched_violations": [
+                "RELIABILITY_BELOW_THRESHOLD"
+              ]
+            }
+          }
+        ]
+      },
+      "final_allowed": false
+    },
+    {
+      "run_id": "D446ACC6",
+      "input": "Fui cobrado errado e quero cancelar minha assinatura",
+      "predicted_intent": "billing_issue",
+      "confidence": 0.21,
+      "routing_flow": "Billing Support Flow",
+      "reliability_score": 25,
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "engine_decision": {
+        "allowed": false,
+        "blocked_by": [
+          "IntentValidationGuardrail",
+          "ConfidenceThresholdGuardrail",
+          "ReliabilityScoreGuardrail"
+        ],
+        "warned_by": [],
+        "total_violations": 3,
+        "total_blocks": 3,
+        "total_warnings": 0,
+        "guardrail_results": [
+          {
+            "guardrail_name": "IntentValidationGuardrail",
+            "triggered": true,
+            "violation_type": "LOW_CONFIDENCE",
+            "severity": "HIGH",
+            "message": "Intent 'billing_issue' is valid but confidence 0.21 is insufficient for direct routing. Fallback to human review required.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "intent": "billing_issue",
+              "confidence": 0.21,
+              "minimum_required": 0.5
+            }
+          },
+          {
+            "guardrail_name": "ConfidenceThresholdGuardrail",
+            "triggered": true,
+            "violation_type": "LOW_CONFIDENCE",
+            "severity": "HIGH",
+            "message": "LOW confidence (0.21 < 0.5). Routing blocked. Fallback to human review required.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "confidence": 0.21,
+              "band": "LOW",
+              "threshold": 0.5
+            }
+          },
+          {
+            "guardrail_name": "AmbiguityDetectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "No significant ambiguity (secondary=0.21 < 0.3).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "RoutingProtectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Routing consistent: 'billing_issue' → 'Billing Support Flow'.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ReliabilityScoreGuardrail",
+            "triggered": true,
+            "violation_type": "RELIABILITY_BELOW_THRESHOLD",
+            "severity": "CRITICAL",
+            "message": "CRITICAL: Reliability score 25 < 50. System operating in fully degraded state — regression to pre-Situation-3 levels. Classification blocked.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "reliability_score": 25,
+              "threshold": 50,
+              "status": "CRITICAL"
+            }
+          }
+        ]
+      },
+      "policy_result": {
+        "final_action": "BLOCK",
+        "blocked": true,
+        "escalated": false,
+        "requires_review": false,
+        "triggered_policies": [
+          "LOW_CONFIDENCE_BLOCK",
+          "RELIABILITY_THRESHOLD"
+        ],
+        "decisions": [
+          {
+            "policy_name": "LOW_CONFIDENCE_BLOCK",
+            "triggered": true,
+            "action": "BLOCK",
+            "message": "Policy 'LOW_CONFIDENCE_BLOCK' triggered by violations: ['LOW_CONFIDENCE']. Action: BLOCK.",
+            "metadata": {
+              "matched_violations": [
+                "LOW_CONFIDENCE"
+              ]
+            }
+          },
+          {
+            "policy_name": "MULTI_INTENT_ESCALATION",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'MULTI_INTENT_ESCALATION' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "ROUTING_MISMATCH_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'ROUTING_MISMATCH_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "RELIABILITY_THRESHOLD",
+            "triggered": true,
+            "action": "BLOCK",
+            "message": "Policy 'RELIABILITY_THRESHOLD' triggered by violations: ['RELIABILITY_BELOW_THRESHOLD']. Action: BLOCK.",
+            "metadata": {
+              "matched_violations": [
+                "RELIABILITY_BELOW_THRESHOLD"
+              ]
+            }
+          }
+        ]
+      },
+      "final_allowed": false
+    },
+    {
+      "run_id": "3301E5CC",
+      "input": "Fui cobrado errado e quero cancelar minha assinatura",
+      "predicted_intent": "billing_issue",
+      "confidence": 0.28,
+      "routing_flow": "Billing Support Flow",
+      "reliability_score": 25,
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "engine_decision": {
+        "allowed": false,
+        "blocked_by": [
+          "IntentValidationGuardrail",
+          "ConfidenceThresholdGuardrail",
+          "ReliabilityScoreGuardrail"
+        ],
+        "warned_by": [],
+        "total_violations": 3,
+        "total_blocks": 3,
+        "total_warnings": 0,
+        "guardrail_results": [
+          {
+            "guardrail_name": "IntentValidationGuardrail",
+            "triggered": true,
+            "violation_type": "LOW_CONFIDENCE",
+            "severity": "HIGH",
+            "message": "Intent 'billing_issue' is valid but confidence 0.28 is insufficient for direct routing. Fallback to human review required.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "intent": "billing_issue",
+              "confidence": 0.28,
+              "minimum_required": 0.5
+            }
+          },
+          {
+            "guardrail_name": "ConfidenceThresholdGuardrail",
+            "triggered": true,
+            "violation_type": "LOW_CONFIDENCE",
+            "severity": "HIGH",
+            "message": "LOW confidence (0.28 < 0.5). Routing blocked. Fallback to human review required.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "confidence": 0.28,
+              "band": "LOW",
+              "threshold": 0.5
+            }
+          },
+          {
+            "guardrail_name": "AmbiguityDetectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "No significant ambiguity (secondary=0.28 < 0.3).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "RoutingProtectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Routing consistent: 'billing_issue' → 'Billing Support Flow'.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ReliabilityScoreGuardrail",
+            "triggered": true,
+            "violation_type": "RELIABILITY_BELOW_THRESHOLD",
+            "severity": "CRITICAL",
+            "message": "CRITICAL: Reliability score 25 < 50. System operating in fully degraded state — regression to pre-Situation-3 levels. Classification blocked.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "reliability_score": 25,
+              "threshold": 50,
+              "status": "CRITICAL"
+            }
+          }
+        ]
+      },
+      "policy_result": {
+        "final_action": "BLOCK",
+        "blocked": true,
+        "escalated": false,
+        "requires_review": false,
+        "triggered_policies": [
+          "LOW_CONFIDENCE_BLOCK",
+          "RELIABILITY_THRESHOLD"
+        ],
+        "decisions": [
+          {
+            "policy_name": "LOW_CONFIDENCE_BLOCK",
+            "triggered": true,
+            "action": "BLOCK",
+            "message": "Policy 'LOW_CONFIDENCE_BLOCK' triggered by violations: ['LOW_CONFIDENCE']. Action: BLOCK.",
+            "metadata": {
+              "matched_violations": [
+                "LOW_CONFIDENCE"
+              ]
+            }
+          },
+          {
+            "policy_name": "MULTI_INTENT_ESCALATION",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'MULTI_INTENT_ESCALATION' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "ROUTING_MISMATCH_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'ROUTING_MISMATCH_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "RELIABILITY_THRESHOLD",
+            "triggered": true,
+            "action": "BLOCK",
+            "message": "Policy 'RELIABILITY_THRESHOLD' triggered by violations: ['RELIABILITY_BELOW_THRESHOLD']. Action: BLOCK.",
+            "metadata": {
+              "matched_violations": [
+                "RELIABILITY_BELOW_THRESHOLD"
+              ]
+            }
+          }
+        ]
+      },
+      "final_allowed": false
+    },
+    {
+      "run_id": "AE852EE7",
+      "input": "Fui cobrado errado e quero cancelar minha assinatura",
+      "predicted_intent": "billing_issue",
+      "confidence": 0.35,
+      "routing_flow": "Billing Support Flow",
+      "reliability_score": 25,
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "engine_decision": {
+        "allowed": false,
+        "blocked_by": [
+          "IntentValidationGuardrail",
+          "ConfidenceThresholdGuardrail",
+          "ReliabilityScoreGuardrail"
+        ],
+        "warned_by": [],
+        "total_violations": 3,
+        "total_blocks": 3,
+        "total_warnings": 0,
+        "guardrail_results": [
+          {
+            "guardrail_name": "IntentValidationGuardrail",
+            "triggered": true,
+            "violation_type": "LOW_CONFIDENCE",
+            "severity": "HIGH",
+            "message": "Intent 'billing_issue' is valid but confidence 0.35 is insufficient for direct routing. Fallback to human review required.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "intent": "billing_issue",
+              "confidence": 0.35,
+              "minimum_required": 0.5
+            }
+          },
+          {
+            "guardrail_name": "ConfidenceThresholdGuardrail",
+            "triggered": true,
+            "violation_type": "LOW_CONFIDENCE",
+            "severity": "HIGH",
+            "message": "LOW confidence (0.35 < 0.5). Routing blocked. Fallback to human review required.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "confidence": 0.35,
+              "band": "LOW",
+              "threshold": 0.5
+            }
+          },
+          {
+            "guardrail_name": "AmbiguityDetectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "No significant ambiguity (secondary=0.26 < 0.3).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "RoutingProtectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Routing consistent: 'billing_issue' → 'Billing Support Flow'.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ReliabilityScoreGuardrail",
+            "triggered": true,
+            "violation_type": "RELIABILITY_BELOW_THRESHOLD",
+            "severity": "CRITICAL",
+            "message": "CRITICAL: Reliability score 25 < 50. System operating in fully degraded state — regression to pre-Situation-3 levels. Classification blocked.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "reliability_score": 25,
+              "threshold": 50,
+              "status": "CRITICAL"
+            }
+          }
+        ]
+      },
+      "policy_result": {
+        "final_action": "BLOCK",
+        "blocked": true,
+        "escalated": false,
+        "requires_review": false,
+        "triggered_policies": [
+          "LOW_CONFIDENCE_BLOCK",
+          "RELIABILITY_THRESHOLD"
+        ],
+        "decisions": [
+          {
+            "policy_name": "LOW_CONFIDENCE_BLOCK",
+            "triggered": true,
+            "action": "BLOCK",
+            "message": "Policy 'LOW_CONFIDENCE_BLOCK' triggered by violations: ['LOW_CONFIDENCE']. Action: BLOCK.",
+            "metadata": {
+              "matched_violations": [
+                "LOW_CONFIDENCE"
+              ]
+            }
+          },
+          {
+            "policy_name": "MULTI_INTENT_ESCALATION",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'MULTI_INTENT_ESCALATION' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "ROUTING_MISMATCH_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'ROUTING_MISMATCH_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "RELIABILITY_THRESHOLD",
+            "triggered": true,
+            "action": "BLOCK",
+            "message": "Policy 'RELIABILITY_THRESHOLD' triggered by violations: ['RELIABILITY_BELOW_THRESHOLD']. Action: BLOCK.",
+            "metadata": {
+              "matched_violations": [
+                "RELIABILITY_BELOW_THRESHOLD"
+              ]
+            }
+          }
+        ]
+      },
+      "final_allowed": false
+    },
+    {
+      "run_id": "72AC9B9D",
+      "input": "Fui cobrado errado e quero cancelar minha assinatura",
+      "predicted_intent": "billing_issue",
+      "confidence": 0.42,
+      "routing_flow": "Billing Support Flow",
+      "reliability_score": 25,
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "engine_decision": {
+        "allowed": false,
+        "blocked_by": [
+          "IntentValidationGuardrail",
+          "ConfidenceThresholdGuardrail",
+          "ReliabilityScoreGuardrail"
+        ],
+        "warned_by": [],
+        "total_violations": 3,
+        "total_blocks": 3,
+        "total_warnings": 0,
+        "guardrail_results": [
+          {
+            "guardrail_name": "IntentValidationGuardrail",
+            "triggered": true,
+            "violation_type": "LOW_CONFIDENCE",
+            "severity": "HIGH",
+            "message": "Intent 'billing_issue' is valid but confidence 0.42 is insufficient for direct routing. Fallback to human review required.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "intent": "billing_issue",
+              "confidence": 0.42,
+              "minimum_required": 0.5
+            }
+          },
+          {
+            "guardrail_name": "ConfidenceThresholdGuardrail",
+            "triggered": true,
+            "violation_type": "LOW_CONFIDENCE",
+            "severity": "HIGH",
+            "message": "LOW confidence (0.42 < 0.5). Routing blocked. Fallback to human review required.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "confidence": 0.42,
+              "band": "LOW",
+              "threshold": 0.5
+            }
+          },
+          {
+            "guardrail_name": "AmbiguityDetectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "No significant ambiguity (secondary=0.23 < 0.3).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "RoutingProtectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Routing consistent: 'billing_issue' → 'Billing Support Flow'.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ReliabilityScoreGuardrail",
+            "triggered": true,
+            "violation_type": "RELIABILITY_BELOW_THRESHOLD",
+            "severity": "CRITICAL",
+            "message": "CRITICAL: Reliability score 25 < 50. System operating in fully degraded state — regression to pre-Situation-3 levels. Classification blocked.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "reliability_score": 25,
+              "threshold": 50,
+              "status": "CRITICAL"
+            }
+          }
+        ]
+      },
+      "policy_result": {
+        "final_action": "BLOCK",
+        "blocked": true,
+        "escalated": false,
+        "requires_review": false,
+        "triggered_policies": [
+          "LOW_CONFIDENCE_BLOCK",
+          "RELIABILITY_THRESHOLD"
+        ],
+        "decisions": [
+          {
+            "policy_name": "LOW_CONFIDENCE_BLOCK",
+            "triggered": true,
+            "action": "BLOCK",
+            "message": "Policy 'LOW_CONFIDENCE_BLOCK' triggered by violations: ['LOW_CONFIDENCE']. Action: BLOCK.",
+            "metadata": {
+              "matched_violations": [
+                "LOW_CONFIDENCE"
+              ]
+            }
+          },
+          {
+            "policy_name": "MULTI_INTENT_ESCALATION",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'MULTI_INTENT_ESCALATION' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "ROUTING_MISMATCH_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'ROUTING_MISMATCH_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "RELIABILITY_THRESHOLD",
+            "triggered": true,
+            "action": "BLOCK",
+            "message": "Policy 'RELIABILITY_THRESHOLD' triggered by violations: ['RELIABILITY_BELOW_THRESHOLD']. Action: BLOCK.",
+            "metadata": {
+              "matched_violations": [
+                "RELIABILITY_BELOW_THRESHOLD"
+              ]
+            }
+          }
+        ]
+      },
+      "final_allowed": false
+    },
+    {
+      "run_id": "DA41E699",
+      "input": "Fui cobrado errado e quero cancelar minha assinatura",
+      "predicted_intent": "billing_issue",
+      "confidence": 0.15,
+      "routing_flow": "Billing Support Flow",
+      "reliability_score": 25,
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "engine_decision": {
+        "allowed": false,
+        "blocked_by": [
+          "IntentValidationGuardrail",
+          "ConfidenceThresholdGuardrail",
+          "ReliabilityScoreGuardrail"
+        ],
+        "warned_by": [],
+        "total_violations": 3,
+        "total_blocks": 3,
+        "total_warnings": 0,
+        "guardrail_results": [
+          {
+            "guardrail_name": "IntentValidationGuardrail",
+            "triggered": true,
+            "violation_type": "LOW_CONFIDENCE",
+            "severity": "HIGH",
+            "message": "Intent 'billing_issue' is valid but confidence 0.15 is insufficient for direct routing. Fallback to human review required.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "intent": "billing_issue",
+              "confidence": 0.15,
+              "minimum_required": 0.5
+            }
+          },
+          {
+            "guardrail_name": "ConfidenceThresholdGuardrail",
+            "triggered": true,
+            "violation_type": "LOW_CONFIDENCE",
+            "severity": "HIGH",
+            "message": "LOW confidence (0.15 < 0.5). Routing blocked. Fallback to human review required.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "confidence": 0.15,
+              "band": "LOW",
+              "threshold": 0.5
+            }
+          },
+          {
+            "guardrail_name": "AmbiguityDetectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "No significant ambiguity (secondary=0.21 < 0.3).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "RoutingProtectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Routing consistent: 'billing_issue' → 'Billing Support Flow'.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ReliabilityScoreGuardrail",
+            "triggered": true,
+            "violation_type": "RELIABILITY_BELOW_THRESHOLD",
+            "severity": "CRITICAL",
+            "message": "CRITICAL: Reliability score 25 < 50. System operating in fully degraded state — regression to pre-Situation-3 levels. Classification blocked.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "reliability_score": 25,
+              "threshold": 50,
+              "status": "CRITICAL"
+            }
+          }
+        ]
+      },
+      "policy_result": {
+        "final_action": "BLOCK",
+        "blocked": true,
+        "escalated": false,
+        "requires_review": false,
+        "triggered_policies": [
+          "LOW_CONFIDENCE_BLOCK",
+          "RELIABILITY_THRESHOLD"
+        ],
+        "decisions": [
+          {
+            "policy_name": "LOW_CONFIDENCE_BLOCK",
+            "triggered": true,
+            "action": "BLOCK",
+            "message": "Policy 'LOW_CONFIDENCE_BLOCK' triggered by violations: ['LOW_CONFIDENCE']. Action: BLOCK.",
+            "metadata": {
+              "matched_violations": [
+                "LOW_CONFIDENCE"
+              ]
+            }
+          },
+          {
+            "policy_name": "MULTI_INTENT_ESCALATION",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'MULTI_INTENT_ESCALATION' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "ROUTING_MISMATCH_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'ROUTING_MISMATCH_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "RELIABILITY_THRESHOLD",
+            "triggered": true,
+            "action": "BLOCK",
+            "message": "Policy 'RELIABILITY_THRESHOLD' triggered by violations: ['RELIABILITY_BELOW_THRESHOLD']. Action: BLOCK.",
+            "metadata": {
+              "matched_violations": [
+                "RELIABILITY_BELOW_THRESHOLD"
+              ]
+            }
+          }
+        ]
+      },
+      "final_allowed": false
+    },
+    {
+      "run_id": "8109FE5E",
+      "input": "Fui cobrado errado e quero cancelar minha assinatura",
+      "predicted_intent": "billing_issue",
+      "confidence": 0.21,
+      "routing_flow": "Billing Support Flow",
+      "reliability_score": 25,
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "engine_decision": {
+        "allowed": false,
+        "blocked_by": [
+          "IntentValidationGuardrail",
+          "ConfidenceThresholdGuardrail",
+          "ReliabilityScoreGuardrail"
+        ],
+        "warned_by": [],
+        "total_violations": 3,
+        "total_blocks": 3,
+        "total_warnings": 0,
+        "guardrail_results": [
+          {
+            "guardrail_name": "IntentValidationGuardrail",
+            "triggered": true,
+            "violation_type": "LOW_CONFIDENCE",
+            "severity": "HIGH",
+            "message": "Intent 'billing_issue' is valid but confidence 0.21 is insufficient for direct routing. Fallback to human review required.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "intent": "billing_issue",
+              "confidence": 0.21,
+              "minimum_required": 0.5
+            }
+          },
+          {
+            "guardrail_name": "ConfidenceThresholdGuardrail",
+            "triggered": true,
+            "violation_type": "LOW_CONFIDENCE",
+            "severity": "HIGH",
+            "message": "LOW confidence (0.21 < 0.5). Routing blocked. Fallback to human review required.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "confidence": 0.21,
+              "band": "LOW",
+              "threshold": 0.5
+            }
+          },
+          {
+            "guardrail_name": "AmbiguityDetectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "No significant ambiguity (secondary=0.21 < 0.3).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "RoutingProtectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Routing consistent: 'billing_issue' → 'Billing Support Flow'.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ReliabilityScoreGuardrail",
+            "triggered": true,
+            "violation_type": "RELIABILITY_BELOW_THRESHOLD",
+            "severity": "CRITICAL",
+            "message": "CRITICAL: Reliability score 25 < 50. System operating in fully degraded state — regression to pre-Situation-3 levels. Classification blocked.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "reliability_score": 25,
+              "threshold": 50,
+              "status": "CRITICAL"
+            }
+          }
+        ]
+      },
+      "policy_result": {
+        "final_action": "BLOCK",
+        "blocked": true,
+        "escalated": false,
+        "requires_review": false,
+        "triggered_policies": [
+          "LOW_CONFIDENCE_BLOCK",
+          "RELIABILITY_THRESHOLD"
+        ],
+        "decisions": [
+          {
+            "policy_name": "LOW_CONFIDENCE_BLOCK",
+            "triggered": true,
+            "action": "BLOCK",
+            "message": "Policy 'LOW_CONFIDENCE_BLOCK' triggered by violations: ['LOW_CONFIDENCE']. Action: BLOCK.",
+            "metadata": {
+              "matched_violations": [
+                "LOW_CONFIDENCE"
+              ]
+            }
+          },
+          {
+            "policy_name": "MULTI_INTENT_ESCALATION",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'MULTI_INTENT_ESCALATION' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "ROUTING_MISMATCH_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'ROUTING_MISMATCH_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "RELIABILITY_THRESHOLD",
+            "triggered": true,
+            "action": "BLOCK",
+            "message": "Policy 'RELIABILITY_THRESHOLD' triggered by violations: ['RELIABILITY_BELOW_THRESHOLD']. Action: BLOCK.",
+            "metadata": {
+              "matched_violations": [
+                "RELIABILITY_BELOW_THRESHOLD"
+              ]
+            }
+          }
+        ]
+      },
+      "final_allowed": false
+    },
+    {
+      "run_id": "520714CB",
+      "input": "Fui cobrado errado e quero cancelar minha assinatura",
+      "predicted_intent": "billing_issue",
+      "confidence": 0.28,
+      "routing_flow": "Billing Support Flow",
+      "reliability_score": 25,
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "engine_decision": {
+        "allowed": false,
+        "blocked_by": [
+          "IntentValidationGuardrail",
+          "ConfidenceThresholdGuardrail",
+          "ReliabilityScoreGuardrail"
+        ],
+        "warned_by": [],
+        "total_violations": 3,
+        "total_blocks": 3,
+        "total_warnings": 0,
+        "guardrail_results": [
+          {
+            "guardrail_name": "IntentValidationGuardrail",
+            "triggered": true,
+            "violation_type": "LOW_CONFIDENCE",
+            "severity": "HIGH",
+            "message": "Intent 'billing_issue' is valid but confidence 0.28 is insufficient for direct routing. Fallback to human review required.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "intent": "billing_issue",
+              "confidence": 0.28,
+              "minimum_required": 0.5
+            }
+          },
+          {
+            "guardrail_name": "ConfidenceThresholdGuardrail",
+            "triggered": true,
+            "violation_type": "LOW_CONFIDENCE",
+            "severity": "HIGH",
+            "message": "LOW confidence (0.28 < 0.5). Routing blocked. Fallback to human review required.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "confidence": 0.28,
+              "band": "LOW",
+              "threshold": 0.5
+            }
+          },
+          {
+            "guardrail_name": "AmbiguityDetectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "No significant ambiguity (secondary=0.28 < 0.3).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "RoutingProtectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Routing consistent: 'billing_issue' → 'Billing Support Flow'.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ReliabilityScoreGuardrail",
+            "triggered": true,
+            "violation_type": "RELIABILITY_BELOW_THRESHOLD",
+            "severity": "CRITICAL",
+            "message": "CRITICAL: Reliability score 25 < 50. System operating in fully degraded state — regression to pre-Situation-3 levels. Classification blocked.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "reliability_score": 25,
+              "threshold": 50,
+              "status": "CRITICAL"
+            }
+          }
+        ]
+      },
+      "policy_result": {
+        "final_action": "BLOCK",
+        "blocked": true,
+        "escalated": false,
+        "requires_review": false,
+        "triggered_policies": [
+          "LOW_CONFIDENCE_BLOCK",
+          "RELIABILITY_THRESHOLD"
+        ],
+        "decisions": [
+          {
+            "policy_name": "LOW_CONFIDENCE_BLOCK",
+            "triggered": true,
+            "action": "BLOCK",
+            "message": "Policy 'LOW_CONFIDENCE_BLOCK' triggered by violations: ['LOW_CONFIDENCE']. Action: BLOCK.",
+            "metadata": {
+              "matched_violations": [
+                "LOW_CONFIDENCE"
+              ]
+            }
+          },
+          {
+            "policy_name": "MULTI_INTENT_ESCALATION",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'MULTI_INTENT_ESCALATION' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "ROUTING_MISMATCH_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'ROUTING_MISMATCH_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "RELIABILITY_THRESHOLD",
+            "triggered": true,
+            "action": "BLOCK",
+            "message": "Policy 'RELIABILITY_THRESHOLD' triggered by violations: ['RELIABILITY_BELOW_THRESHOLD']. Action: BLOCK.",
+            "metadata": {
+              "matched_violations": [
+                "RELIABILITY_BELOW_THRESHOLD"
+              ]
+            }
+          }
+        ]
+      },
+      "final_allowed": false
+    },
+    {
+      "run_id": "4FF91851",
+      "input": "Fui cobrado errado e quero cancelar minha assinatura",
+      "predicted_intent": "billing_issue",
+      "confidence": 0.35,
+      "routing_flow": "Billing Support Flow",
+      "reliability_score": 25,
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "engine_decision": {
+        "allowed": false,
+        "blocked_by": [
+          "IntentValidationGuardrail",
+          "ConfidenceThresholdGuardrail",
+          "ReliabilityScoreGuardrail"
+        ],
+        "warned_by": [],
+        "total_violations": 3,
+        "total_blocks": 3,
+        "total_warnings": 0,
+        "guardrail_results": [
+          {
+            "guardrail_name": "IntentValidationGuardrail",
+            "triggered": true,
+            "violation_type": "LOW_CONFIDENCE",
+            "severity": "HIGH",
+            "message": "Intent 'billing_issue' is valid but confidence 0.35 is insufficient for direct routing. Fallback to human review required.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "intent": "billing_issue",
+              "confidence": 0.35,
+              "minimum_required": 0.5
+            }
+          },
+          {
+            "guardrail_name": "ConfidenceThresholdGuardrail",
+            "triggered": true,
+            "violation_type": "LOW_CONFIDENCE",
+            "severity": "HIGH",
+            "message": "LOW confidence (0.35 < 0.5). Routing blocked. Fallback to human review required.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "confidence": 0.35,
+              "band": "LOW",
+              "threshold": 0.5
+            }
+          },
+          {
+            "guardrail_name": "AmbiguityDetectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "No significant ambiguity (secondary=0.26 < 0.3).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "RoutingProtectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Routing consistent: 'billing_issue' → 'Billing Support Flow'.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ReliabilityScoreGuardrail",
+            "triggered": true,
+            "violation_type": "RELIABILITY_BELOW_THRESHOLD",
+            "severity": "CRITICAL",
+            "message": "CRITICAL: Reliability score 25 < 50. System operating in fully degraded state — regression to pre-Situation-3 levels. Classification blocked.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "reliability_score": 25,
+              "threshold": 50,
+              "status": "CRITICAL"
+            }
+          }
+        ]
+      },
+      "policy_result": {
+        "final_action": "BLOCK",
+        "blocked": true,
+        "escalated": false,
+        "requires_review": false,
+        "triggered_policies": [
+          "LOW_CONFIDENCE_BLOCK",
+          "RELIABILITY_THRESHOLD"
+        ],
+        "decisions": [
+          {
+            "policy_name": "LOW_CONFIDENCE_BLOCK",
+            "triggered": true,
+            "action": "BLOCK",
+            "message": "Policy 'LOW_CONFIDENCE_BLOCK' triggered by violations: ['LOW_CONFIDENCE']. Action: BLOCK.",
+            "metadata": {
+              "matched_violations": [
+                "LOW_CONFIDENCE"
+              ]
+            }
+          },
+          {
+            "policy_name": "MULTI_INTENT_ESCALATION",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'MULTI_INTENT_ESCALATION' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "ROUTING_MISMATCH_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'ROUTING_MISMATCH_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "RELIABILITY_THRESHOLD",
+            "triggered": true,
+            "action": "BLOCK",
+            "message": "Policy 'RELIABILITY_THRESHOLD' triggered by violations: ['RELIABILITY_BELOW_THRESHOLD']. Action: BLOCK.",
+            "metadata": {
+              "matched_violations": [
+                "RELIABILITY_BELOW_THRESHOLD"
+              ]
+            }
+          }
+        ]
+      },
+      "final_allowed": false
+    },
+    {
+      "run_id": "96F931AA",
+      "input": "Fui cobrado errado e quero cancelar minha assinatura",
+      "predicted_intent": "billing_issue",
+      "confidence": 0.42,
+      "routing_flow": "Billing Support Flow",
+      "reliability_score": 25,
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "engine_decision": {
+        "allowed": false,
+        "blocked_by": [
+          "IntentValidationGuardrail",
+          "ConfidenceThresholdGuardrail",
+          "ReliabilityScoreGuardrail"
+        ],
+        "warned_by": [],
+        "total_violations": 3,
+        "total_blocks": 3,
+        "total_warnings": 0,
+        "guardrail_results": [
+          {
+            "guardrail_name": "IntentValidationGuardrail",
+            "triggered": true,
+            "violation_type": "LOW_CONFIDENCE",
+            "severity": "HIGH",
+            "message": "Intent 'billing_issue' is valid but confidence 0.42 is insufficient for direct routing. Fallback to human review required.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "intent": "billing_issue",
+              "confidence": 0.42,
+              "minimum_required": 0.5
+            }
+          },
+          {
+            "guardrail_name": "ConfidenceThresholdGuardrail",
+            "triggered": true,
+            "violation_type": "LOW_CONFIDENCE",
+            "severity": "HIGH",
+            "message": "LOW confidence (0.42 < 0.5). Routing blocked. Fallback to human review required.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "confidence": 0.42,
+              "band": "LOW",
+              "threshold": 0.5
+            }
+          },
+          {
+            "guardrail_name": "AmbiguityDetectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "No significant ambiguity (secondary=0.23 < 0.3).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "RoutingProtectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Routing consistent: 'billing_issue' → 'Billing Support Flow'.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ReliabilityScoreGuardrail",
+            "triggered": true,
+            "violation_type": "RELIABILITY_BELOW_THRESHOLD",
+            "severity": "CRITICAL",
+            "message": "CRITICAL: Reliability score 25 < 50. System operating in fully degraded state — regression to pre-Situation-3 levels. Classification blocked.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "reliability_score": 25,
+              "threshold": 50,
+              "status": "CRITICAL"
+            }
+          }
+        ]
+      },
+      "policy_result": {
+        "final_action": "BLOCK",
+        "blocked": true,
+        "escalated": false,
+        "requires_review": false,
+        "triggered_policies": [
+          "LOW_CONFIDENCE_BLOCK",
+          "RELIABILITY_THRESHOLD"
+        ],
+        "decisions": [
+          {
+            "policy_name": "LOW_CONFIDENCE_BLOCK",
+            "triggered": true,
+            "action": "BLOCK",
+            "message": "Policy 'LOW_CONFIDENCE_BLOCK' triggered by violations: ['LOW_CONFIDENCE']. Action: BLOCK.",
+            "metadata": {
+              "matched_violations": [
+                "LOW_CONFIDENCE"
+              ]
+            }
+          },
+          {
+            "policy_name": "MULTI_INTENT_ESCALATION",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'MULTI_INTENT_ESCALATION' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "ROUTING_MISMATCH_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'ROUTING_MISMATCH_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "RELIABILITY_THRESHOLD",
+            "triggered": true,
+            "action": "BLOCK",
+            "message": "Policy 'RELIABILITY_THRESHOLD' triggered by violations: ['RELIABILITY_BELOW_THRESHOLD']. Action: BLOCK.",
+            "metadata": {
+              "matched_violations": [
+                "RELIABILITY_BELOW_THRESHOLD"
+              ]
+            }
+          }
+        ]
+      },
+      "final_allowed": false
+    },
+    {
+      "run_id": "9D9E94E8",
+      "input": "Fui cobrado errado e quero cancelar minha assinatura",
+      "predicted_intent": "billing_issue",
+      "confidence": 0.15,
+      "routing_flow": "Billing Support Flow",
+      "reliability_score": 25,
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "engine_decision": {
+        "allowed": false,
+        "blocked_by": [
+          "IntentValidationGuardrail",
+          "ConfidenceThresholdGuardrail",
+          "ReliabilityScoreGuardrail"
+        ],
+        "warned_by": [],
+        "total_violations": 3,
+        "total_blocks": 3,
+        "total_warnings": 0,
+        "guardrail_results": [
+          {
+            "guardrail_name": "IntentValidationGuardrail",
+            "triggered": true,
+            "violation_type": "LOW_CONFIDENCE",
+            "severity": "HIGH",
+            "message": "Intent 'billing_issue' is valid but confidence 0.15 is insufficient for direct routing. Fallback to human review required.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "intent": "billing_issue",
+              "confidence": 0.15,
+              "minimum_required": 0.5
+            }
+          },
+          {
+            "guardrail_name": "ConfidenceThresholdGuardrail",
+            "triggered": true,
+            "violation_type": "LOW_CONFIDENCE",
+            "severity": "HIGH",
+            "message": "LOW confidence (0.15 < 0.5). Routing blocked. Fallback to human review required.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "confidence": 0.15,
+              "band": "LOW",
+              "threshold": 0.5
+            }
+          },
+          {
+            "guardrail_name": "AmbiguityDetectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "No significant ambiguity (secondary=0.21 < 0.3).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "RoutingProtectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Routing consistent: 'billing_issue' → 'Billing Support Flow'.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ReliabilityScoreGuardrail",
+            "triggered": true,
+            "violation_type": "RELIABILITY_BELOW_THRESHOLD",
+            "severity": "CRITICAL",
+            "message": "CRITICAL: Reliability score 25 < 50. System operating in fully degraded state — regression to pre-Situation-3 levels. Classification blocked.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "reliability_score": 25,
+              "threshold": 50,
+              "status": "CRITICAL"
+            }
+          }
+        ]
+      },
+      "policy_result": {
+        "final_action": "BLOCK",
+        "blocked": true,
+        "escalated": false,
+        "requires_review": false,
+        "triggered_policies": [
+          "LOW_CONFIDENCE_BLOCK",
+          "RELIABILITY_THRESHOLD"
+        ],
+        "decisions": [
+          {
+            "policy_name": "LOW_CONFIDENCE_BLOCK",
+            "triggered": true,
+            "action": "BLOCK",
+            "message": "Policy 'LOW_CONFIDENCE_BLOCK' triggered by violations: ['LOW_CONFIDENCE']. Action: BLOCK.",
+            "metadata": {
+              "matched_violations": [
+                "LOW_CONFIDENCE"
+              ]
+            }
+          },
+          {
+            "policy_name": "MULTI_INTENT_ESCALATION",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'MULTI_INTENT_ESCALATION' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "ROUTING_MISMATCH_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'ROUTING_MISMATCH_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "RELIABILITY_THRESHOLD",
+            "triggered": true,
+            "action": "BLOCK",
+            "message": "Policy 'RELIABILITY_THRESHOLD' triggered by violations: ['RELIABILITY_BELOW_THRESHOLD']. Action: BLOCK.",
+            "metadata": {
+              "matched_violations": [
+                "RELIABILITY_BELOW_THRESHOLD"
+              ]
+            }
+          }
+        ]
+      },
+      "final_allowed": false
+    },
+    {
+      "run_id": "8173FCC7",
+      "input": "Fui cobrado errado e quero cancelar minha assinatura",
+      "predicted_intent": "billing_issue",
+      "confidence": 0.21,
+      "routing_flow": "Billing Support Flow",
+      "reliability_score": 25,
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "engine_decision": {
+        "allowed": false,
+        "blocked_by": [
+          "IntentValidationGuardrail",
+          "ConfidenceThresholdGuardrail",
+          "ReliabilityScoreGuardrail"
+        ],
+        "warned_by": [],
+        "total_violations": 3,
+        "total_blocks": 3,
+        "total_warnings": 0,
+        "guardrail_results": [
+          {
+            "guardrail_name": "IntentValidationGuardrail",
+            "triggered": true,
+            "violation_type": "LOW_CONFIDENCE",
+            "severity": "HIGH",
+            "message": "Intent 'billing_issue' is valid but confidence 0.21 is insufficient for direct routing. Fallback to human review required.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "intent": "billing_issue",
+              "confidence": 0.21,
+              "minimum_required": 0.5
+            }
+          },
+          {
+            "guardrail_name": "ConfidenceThresholdGuardrail",
+            "triggered": true,
+            "violation_type": "LOW_CONFIDENCE",
+            "severity": "HIGH",
+            "message": "LOW confidence (0.21 < 0.5). Routing blocked. Fallback to human review required.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "confidence": 0.21,
+              "band": "LOW",
+              "threshold": 0.5
+            }
+          },
+          {
+            "guardrail_name": "AmbiguityDetectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "No significant ambiguity (secondary=0.21 < 0.3).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "RoutingProtectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Routing consistent: 'billing_issue' → 'Billing Support Flow'.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ReliabilityScoreGuardrail",
+            "triggered": true,
+            "violation_type": "RELIABILITY_BELOW_THRESHOLD",
+            "severity": "CRITICAL",
+            "message": "CRITICAL: Reliability score 25 < 50. System operating in fully degraded state — regression to pre-Situation-3 levels. Classification blocked.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "reliability_score": 25,
+              "threshold": 50,
+              "status": "CRITICAL"
+            }
+          }
+        ]
+      },
+      "policy_result": {
+        "final_action": "BLOCK",
+        "blocked": true,
+        "escalated": false,
+        "requires_review": false,
+        "triggered_policies": [
+          "LOW_CONFIDENCE_BLOCK",
+          "RELIABILITY_THRESHOLD"
+        ],
+        "decisions": [
+          {
+            "policy_name": "LOW_CONFIDENCE_BLOCK",
+            "triggered": true,
+            "action": "BLOCK",
+            "message": "Policy 'LOW_CONFIDENCE_BLOCK' triggered by violations: ['LOW_CONFIDENCE']. Action: BLOCK.",
+            "metadata": {
+              "matched_violations": [
+                "LOW_CONFIDENCE"
+              ]
+            }
+          },
+          {
+            "policy_name": "MULTI_INTENT_ESCALATION",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'MULTI_INTENT_ESCALATION' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "ROUTING_MISMATCH_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'ROUTING_MISMATCH_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "RELIABILITY_THRESHOLD",
+            "triggered": true,
+            "action": "BLOCK",
+            "message": "Policy 'RELIABILITY_THRESHOLD' triggered by violations: ['RELIABILITY_BELOW_THRESHOLD']. Action: BLOCK.",
+            "metadata": {
+              "matched_violations": [
+                "RELIABILITY_BELOW_THRESHOLD"
+              ]
+            }
+          }
+        ]
+      },
+      "final_allowed": false
+    },
+    {
+      "run_id": "386BC63D",
+      "input": "Fui cobrado errado e quero cancelar minha assinatura",
+      "predicted_intent": "billing_issue",
+      "confidence": 0.28,
+      "routing_flow": "Billing Support Flow",
+      "reliability_score": 25,
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "engine_decision": {
+        "allowed": false,
+        "blocked_by": [
+          "IntentValidationGuardrail",
+          "ConfidenceThresholdGuardrail",
+          "ReliabilityScoreGuardrail"
+        ],
+        "warned_by": [],
+        "total_violations": 3,
+        "total_blocks": 3,
+        "total_warnings": 0,
+        "guardrail_results": [
+          {
+            "guardrail_name": "IntentValidationGuardrail",
+            "triggered": true,
+            "violation_type": "LOW_CONFIDENCE",
+            "severity": "HIGH",
+            "message": "Intent 'billing_issue' is valid but confidence 0.28 is insufficient for direct routing. Fallback to human review required.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "intent": "billing_issue",
+              "confidence": 0.28,
+              "minimum_required": 0.5
+            }
+          },
+          {
+            "guardrail_name": "ConfidenceThresholdGuardrail",
+            "triggered": true,
+            "violation_type": "LOW_CONFIDENCE",
+            "severity": "HIGH",
+            "message": "LOW confidence (0.28 < 0.5). Routing blocked. Fallback to human review required.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "confidence": 0.28,
+              "band": "LOW",
+              "threshold": 0.5
+            }
+          },
+          {
+            "guardrail_name": "AmbiguityDetectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "No significant ambiguity (secondary=0.28 < 0.3).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "RoutingProtectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Routing consistent: 'billing_issue' → 'Billing Support Flow'.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ReliabilityScoreGuardrail",
+            "triggered": true,
+            "violation_type": "RELIABILITY_BELOW_THRESHOLD",
+            "severity": "CRITICAL",
+            "message": "CRITICAL: Reliability score 25 < 50. System operating in fully degraded state — regression to pre-Situation-3 levels. Classification blocked.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "reliability_score": 25,
+              "threshold": 50,
+              "status": "CRITICAL"
+            }
+          }
+        ]
+      },
+      "policy_result": {
+        "final_action": "BLOCK",
+        "blocked": true,
+        "escalated": false,
+        "requires_review": false,
+        "triggered_policies": [
+          "LOW_CONFIDENCE_BLOCK",
+          "RELIABILITY_THRESHOLD"
+        ],
+        "decisions": [
+          {
+            "policy_name": "LOW_CONFIDENCE_BLOCK",
+            "triggered": true,
+            "action": "BLOCK",
+            "message": "Policy 'LOW_CONFIDENCE_BLOCK' triggered by violations: ['LOW_CONFIDENCE']. Action: BLOCK.",
+            "metadata": {
+              "matched_violations": [
+                "LOW_CONFIDENCE"
+              ]
+            }
+          },
+          {
+            "policy_name": "MULTI_INTENT_ESCALATION",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'MULTI_INTENT_ESCALATION' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "ROUTING_MISMATCH_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'ROUTING_MISMATCH_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "RELIABILITY_THRESHOLD",
+            "triggered": true,
+            "action": "BLOCK",
+            "message": "Policy 'RELIABILITY_THRESHOLD' triggered by violations: ['RELIABILITY_BELOW_THRESHOLD']. Action: BLOCK.",
+            "metadata": {
+              "matched_violations": [
+                "RELIABILITY_BELOW_THRESHOLD"
+              ]
+            }
+          }
+        ]
+      },
+      "final_allowed": false
+    },
+    {
+      "run_id": "B1F6E6CE",
+      "input": "Fui cobrado errado e quero cancelar minha assinatura",
+      "predicted_intent": "billing_issue",
+      "confidence": 0.35,
+      "routing_flow": "Billing Support Flow",
+      "reliability_score": 25,
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "engine_decision": {
+        "allowed": false,
+        "blocked_by": [
+          "IntentValidationGuardrail",
+          "ConfidenceThresholdGuardrail",
+          "ReliabilityScoreGuardrail"
+        ],
+        "warned_by": [],
+        "total_violations": 3,
+        "total_blocks": 3,
+        "total_warnings": 0,
+        "guardrail_results": [
+          {
+            "guardrail_name": "IntentValidationGuardrail",
+            "triggered": true,
+            "violation_type": "LOW_CONFIDENCE",
+            "severity": "HIGH",
+            "message": "Intent 'billing_issue' is valid but confidence 0.35 is insufficient for direct routing. Fallback to human review required.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "intent": "billing_issue",
+              "confidence": 0.35,
+              "minimum_required": 0.5
+            }
+          },
+          {
+            "guardrail_name": "ConfidenceThresholdGuardrail",
+            "triggered": true,
+            "violation_type": "LOW_CONFIDENCE",
+            "severity": "HIGH",
+            "message": "LOW confidence (0.35 < 0.5). Routing blocked. Fallback to human review required.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "confidence": 0.35,
+              "band": "LOW",
+              "threshold": 0.5
+            }
+          },
+          {
+            "guardrail_name": "AmbiguityDetectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "No significant ambiguity (secondary=0.26 < 0.3).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "RoutingProtectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Routing consistent: 'billing_issue' → 'Billing Support Flow'.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ReliabilityScoreGuardrail",
+            "triggered": true,
+            "violation_type": "RELIABILITY_BELOW_THRESHOLD",
+            "severity": "CRITICAL",
+            "message": "CRITICAL: Reliability score 25 < 50. System operating in fully degraded state — regression to pre-Situation-3 levels. Classification blocked.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "reliability_score": 25,
+              "threshold": 50,
+              "status": "CRITICAL"
+            }
+          }
+        ]
+      },
+      "policy_result": {
+        "final_action": "BLOCK",
+        "blocked": true,
+        "escalated": false,
+        "requires_review": false,
+        "triggered_policies": [
+          "LOW_CONFIDENCE_BLOCK",
+          "RELIABILITY_THRESHOLD"
+        ],
+        "decisions": [
+          {
+            "policy_name": "LOW_CONFIDENCE_BLOCK",
+            "triggered": true,
+            "action": "BLOCK",
+            "message": "Policy 'LOW_CONFIDENCE_BLOCK' triggered by violations: ['LOW_CONFIDENCE']. Action: BLOCK.",
+            "metadata": {
+              "matched_violations": [
+                "LOW_CONFIDENCE"
+              ]
+            }
+          },
+          {
+            "policy_name": "MULTI_INTENT_ESCALATION",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'MULTI_INTENT_ESCALATION' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "ROUTING_MISMATCH_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'ROUTING_MISMATCH_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "RELIABILITY_THRESHOLD",
+            "triggered": true,
+            "action": "BLOCK",
+            "message": "Policy 'RELIABILITY_THRESHOLD' triggered by violations: ['RELIABILITY_BELOW_THRESHOLD']. Action: BLOCK.",
+            "metadata": {
+              "matched_violations": [
+                "RELIABILITY_BELOW_THRESHOLD"
+              ]
+            }
+          }
+        ]
+      },
+      "final_allowed": false
+    },
+    {
+      "run_id": "FDCE2B3A",
+      "input": "Fui cobrado errado e quero cancelar minha assinatura",
+      "predicted_intent": "billing_issue",
+      "confidence": 0.42,
+      "routing_flow": "Billing Support Flow",
+      "reliability_score": 25,
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "engine_decision": {
+        "allowed": false,
+        "blocked_by": [
+          "IntentValidationGuardrail",
+          "ConfidenceThresholdGuardrail",
+          "ReliabilityScoreGuardrail"
+        ],
+        "warned_by": [],
+        "total_violations": 3,
+        "total_blocks": 3,
+        "total_warnings": 0,
+        "guardrail_results": [
+          {
+            "guardrail_name": "IntentValidationGuardrail",
+            "triggered": true,
+            "violation_type": "LOW_CONFIDENCE",
+            "severity": "HIGH",
+            "message": "Intent 'billing_issue' is valid but confidence 0.42 is insufficient for direct routing. Fallback to human review required.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "intent": "billing_issue",
+              "confidence": 0.42,
+              "minimum_required": 0.5
+            }
+          },
+          {
+            "guardrail_name": "ConfidenceThresholdGuardrail",
+            "triggered": true,
+            "violation_type": "LOW_CONFIDENCE",
+            "severity": "HIGH",
+            "message": "LOW confidence (0.42 < 0.5). Routing blocked. Fallback to human review required.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "confidence": 0.42,
+              "band": "LOW",
+              "threshold": 0.5
+            }
+          },
+          {
+            "guardrail_name": "AmbiguityDetectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "No significant ambiguity (secondary=0.23 < 0.3).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "RoutingProtectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Routing consistent: 'billing_issue' → 'Billing Support Flow'.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ReliabilityScoreGuardrail",
+            "triggered": true,
+            "violation_type": "RELIABILITY_BELOW_THRESHOLD",
+            "severity": "CRITICAL",
+            "message": "CRITICAL: Reliability score 25 < 50. System operating in fully degraded state — regression to pre-Situation-3 levels. Classification blocked.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "reliability_score": 25,
+              "threshold": 50,
+              "status": "CRITICAL"
+            }
+          }
+        ]
+      },
+      "policy_result": {
+        "final_action": "BLOCK",
+        "blocked": true,
+        "escalated": false,
+        "requires_review": false,
+        "triggered_policies": [
+          "LOW_CONFIDENCE_BLOCK",
+          "RELIABILITY_THRESHOLD"
+        ],
+        "decisions": [
+          {
+            "policy_name": "LOW_CONFIDENCE_BLOCK",
+            "triggered": true,
+            "action": "BLOCK",
+            "message": "Policy 'LOW_CONFIDENCE_BLOCK' triggered by violations: ['LOW_CONFIDENCE']. Action: BLOCK.",
+            "metadata": {
+              "matched_violations": [
+                "LOW_CONFIDENCE"
+              ]
+            }
+          },
+          {
+            "policy_name": "MULTI_INTENT_ESCALATION",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'MULTI_INTENT_ESCALATION' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "ROUTING_MISMATCH_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'ROUTING_MISMATCH_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "RELIABILITY_THRESHOLD",
+            "triggered": true,
+            "action": "BLOCK",
+            "message": "Policy 'RELIABILITY_THRESHOLD' triggered by violations: ['RELIABILITY_BELOW_THRESHOLD']. Action: BLOCK.",
+            "metadata": {
+              "matched_violations": [
+                "RELIABILITY_BELOW_THRESHOLD"
+              ]
+            }
+          }
+        ]
+      },
+      "final_allowed": false
+    },
+    {
+      "run_id": "FF863718",
+      "input": "Fui cobrado errado e quero cancelar minha assinatura",
+      "predicted_intent": "billing_issue",
+      "confidence": 0.15,
+      "routing_flow": "Billing Support Flow",
+      "reliability_score": 25,
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "engine_decision": {
+        "allowed": false,
+        "blocked_by": [
+          "IntentValidationGuardrail",
+          "ConfidenceThresholdGuardrail",
+          "ReliabilityScoreGuardrail"
+        ],
+        "warned_by": [],
+        "total_violations": 3,
+        "total_blocks": 3,
+        "total_warnings": 0,
+        "guardrail_results": [
+          {
+            "guardrail_name": "IntentValidationGuardrail",
+            "triggered": true,
+            "violation_type": "LOW_CONFIDENCE",
+            "severity": "HIGH",
+            "message": "Intent 'billing_issue' is valid but confidence 0.15 is insufficient for direct routing. Fallback to human review required.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "intent": "billing_issue",
+              "confidence": 0.15,
+              "minimum_required": 0.5
+            }
+          },
+          {
+            "guardrail_name": "ConfidenceThresholdGuardrail",
+            "triggered": true,
+            "violation_type": "LOW_CONFIDENCE",
+            "severity": "HIGH",
+            "message": "LOW confidence (0.15 < 0.5). Routing blocked. Fallback to human review required.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "confidence": 0.15,
+              "band": "LOW",
+              "threshold": 0.5
+            }
+          },
+          {
+            "guardrail_name": "AmbiguityDetectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "No significant ambiguity (secondary=0.21 < 0.3).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "RoutingProtectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Routing consistent: 'billing_issue' → 'Billing Support Flow'.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ReliabilityScoreGuardrail",
+            "triggered": true,
+            "violation_type": "RELIABILITY_BELOW_THRESHOLD",
+            "severity": "CRITICAL",
+            "message": "CRITICAL: Reliability score 25 < 50. System operating in fully degraded state — regression to pre-Situation-3 levels. Classification blocked.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "reliability_score": 25,
+              "threshold": 50,
+              "status": "CRITICAL"
+            }
+          }
+        ]
+      },
+      "policy_result": {
+        "final_action": "BLOCK",
+        "blocked": true,
+        "escalated": false,
+        "requires_review": false,
+        "triggered_policies": [
+          "LOW_CONFIDENCE_BLOCK",
+          "RELIABILITY_THRESHOLD"
+        ],
+        "decisions": [
+          {
+            "policy_name": "LOW_CONFIDENCE_BLOCK",
+            "triggered": true,
+            "action": "BLOCK",
+            "message": "Policy 'LOW_CONFIDENCE_BLOCK' triggered by violations: ['LOW_CONFIDENCE']. Action: BLOCK.",
+            "metadata": {
+              "matched_violations": [
+                "LOW_CONFIDENCE"
+              ]
+            }
+          },
+          {
+            "policy_name": "MULTI_INTENT_ESCALATION",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'MULTI_INTENT_ESCALATION' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "ROUTING_MISMATCH_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'ROUTING_MISMATCH_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "RELIABILITY_THRESHOLD",
+            "triggered": true,
+            "action": "BLOCK",
+            "message": "Policy 'RELIABILITY_THRESHOLD' triggered by violations: ['RELIABILITY_BELOW_THRESHOLD']. Action: BLOCK.",
+            "metadata": {
+              "matched_violations": [
+                "RELIABILITY_BELOW_THRESHOLD"
+              ]
+            }
+          }
+        ]
+      },
+      "final_allowed": false
+    },
+    {
+      "run_id": "39688C1B",
+      "input": "Fui cobrado errado e quero cancelar minha assinatura",
+      "predicted_intent": "billing_issue",
+      "confidence": 0.21,
+      "routing_flow": "Billing Support Flow",
+      "reliability_score": 25,
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "engine_decision": {
+        "allowed": false,
+        "blocked_by": [
+          "IntentValidationGuardrail",
+          "ConfidenceThresholdGuardrail",
+          "ReliabilityScoreGuardrail"
+        ],
+        "warned_by": [],
+        "total_violations": 3,
+        "total_blocks": 3,
+        "total_warnings": 0,
+        "guardrail_results": [
+          {
+            "guardrail_name": "IntentValidationGuardrail",
+            "triggered": true,
+            "violation_type": "LOW_CONFIDENCE",
+            "severity": "HIGH",
+            "message": "Intent 'billing_issue' is valid but confidence 0.21 is insufficient for direct routing. Fallback to human review required.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "intent": "billing_issue",
+              "confidence": 0.21,
+              "minimum_required": 0.5
+            }
+          },
+          {
+            "guardrail_name": "ConfidenceThresholdGuardrail",
+            "triggered": true,
+            "violation_type": "LOW_CONFIDENCE",
+            "severity": "HIGH",
+            "message": "LOW confidence (0.21 < 0.5). Routing blocked. Fallback to human review required.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "confidence": 0.21,
+              "band": "LOW",
+              "threshold": 0.5
+            }
+          },
+          {
+            "guardrail_name": "AmbiguityDetectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "No significant ambiguity (secondary=0.21 < 0.3).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "RoutingProtectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Routing consistent: 'billing_issue' → 'Billing Support Flow'.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ReliabilityScoreGuardrail",
+            "triggered": true,
+            "violation_type": "RELIABILITY_BELOW_THRESHOLD",
+            "severity": "CRITICAL",
+            "message": "CRITICAL: Reliability score 25 < 50. System operating in fully degraded state — regression to pre-Situation-3 levels. Classification blocked.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "reliability_score": 25,
+              "threshold": 50,
+              "status": "CRITICAL"
+            }
+          }
+        ]
+      },
+      "policy_result": {
+        "final_action": "BLOCK",
+        "blocked": true,
+        "escalated": false,
+        "requires_review": false,
+        "triggered_policies": [
+          "LOW_CONFIDENCE_BLOCK",
+          "RELIABILITY_THRESHOLD"
+        ],
+        "decisions": [
+          {
+            "policy_name": "LOW_CONFIDENCE_BLOCK",
+            "triggered": true,
+            "action": "BLOCK",
+            "message": "Policy 'LOW_CONFIDENCE_BLOCK' triggered by violations: ['LOW_CONFIDENCE']. Action: BLOCK.",
+            "metadata": {
+              "matched_violations": [
+                "LOW_CONFIDENCE"
+              ]
+            }
+          },
+          {
+            "policy_name": "MULTI_INTENT_ESCALATION",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'MULTI_INTENT_ESCALATION' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "ROUTING_MISMATCH_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'ROUTING_MISMATCH_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "RELIABILITY_THRESHOLD",
+            "triggered": true,
+            "action": "BLOCK",
+            "message": "Policy 'RELIABILITY_THRESHOLD' triggered by violations: ['RELIABILITY_BELOW_THRESHOLD']. Action: BLOCK.",
+            "metadata": {
+              "matched_violations": [
+                "RELIABILITY_BELOW_THRESHOLD"
+              ]
+            }
+          }
+        ]
+      },
+      "final_allowed": false
+    },
+    {
+      "run_id": "A4165396",
+      "input": "Fui cobrado errado e quero cancelar minha assinatura",
+      "predicted_intent": "billing_issue",
+      "confidence": 0.28,
+      "routing_flow": "Billing Support Flow",
+      "reliability_score": 25,
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "engine_decision": {
+        "allowed": false,
+        "blocked_by": [
+          "IntentValidationGuardrail",
+          "ConfidenceThresholdGuardrail",
+          "ReliabilityScoreGuardrail"
+        ],
+        "warned_by": [],
+        "total_violations": 3,
+        "total_blocks": 3,
+        "total_warnings": 0,
+        "guardrail_results": [
+          {
+            "guardrail_name": "IntentValidationGuardrail",
+            "triggered": true,
+            "violation_type": "LOW_CONFIDENCE",
+            "severity": "HIGH",
+            "message": "Intent 'billing_issue' is valid but confidence 0.28 is insufficient for direct routing. Fallback to human review required.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "intent": "billing_issue",
+              "confidence": 0.28,
+              "minimum_required": 0.5
+            }
+          },
+          {
+            "guardrail_name": "ConfidenceThresholdGuardrail",
+            "triggered": true,
+            "violation_type": "LOW_CONFIDENCE",
+            "severity": "HIGH",
+            "message": "LOW confidence (0.28 < 0.5). Routing blocked. Fallback to human review required.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "confidence": 0.28,
+              "band": "LOW",
+              "threshold": 0.5
+            }
+          },
+          {
+            "guardrail_name": "AmbiguityDetectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "No significant ambiguity (secondary=0.28 < 0.3).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "RoutingProtectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Routing consistent: 'billing_issue' → 'Billing Support Flow'.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ReliabilityScoreGuardrail",
+            "triggered": true,
+            "violation_type": "RELIABILITY_BELOW_THRESHOLD",
+            "severity": "CRITICAL",
+            "message": "CRITICAL: Reliability score 25 < 50. System operating in fully degraded state — regression to pre-Situation-3 levels. Classification blocked.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "reliability_score": 25,
+              "threshold": 50,
+              "status": "CRITICAL"
+            }
+          }
+        ]
+      },
+      "policy_result": {
+        "final_action": "BLOCK",
+        "blocked": true,
+        "escalated": false,
+        "requires_review": false,
+        "triggered_policies": [
+          "LOW_CONFIDENCE_BLOCK",
+          "RELIABILITY_THRESHOLD"
+        ],
+        "decisions": [
+          {
+            "policy_name": "LOW_CONFIDENCE_BLOCK",
+            "triggered": true,
+            "action": "BLOCK",
+            "message": "Policy 'LOW_CONFIDENCE_BLOCK' triggered by violations: ['LOW_CONFIDENCE']. Action: BLOCK.",
+            "metadata": {
+              "matched_violations": [
+                "LOW_CONFIDENCE"
+              ]
+            }
+          },
+          {
+            "policy_name": "MULTI_INTENT_ESCALATION",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'MULTI_INTENT_ESCALATION' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "ROUTING_MISMATCH_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'ROUTING_MISMATCH_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "RELIABILITY_THRESHOLD",
+            "triggered": true,
+            "action": "BLOCK",
+            "message": "Policy 'RELIABILITY_THRESHOLD' triggered by violations: ['RELIABILITY_BELOW_THRESHOLD']. Action: BLOCK.",
+            "metadata": {
+              "matched_violations": [
+                "RELIABILITY_BELOW_THRESHOLD"
+              ]
+            }
+          }
+        ]
+      },
+      "final_allowed": false
+    },
+    {
+      "run_id": "8F4C46A2",
+      "input": "Fui cobrado errado e quero cancelar minha assinatura",
+      "predicted_intent": "billing_issue",
+      "confidence": 0.35,
+      "routing_flow": "Billing Support Flow",
+      "reliability_score": 25,
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "engine_decision": {
+        "allowed": false,
+        "blocked_by": [
+          "IntentValidationGuardrail",
+          "ConfidenceThresholdGuardrail",
+          "ReliabilityScoreGuardrail"
+        ],
+        "warned_by": [],
+        "total_violations": 3,
+        "total_blocks": 3,
+        "total_warnings": 0,
+        "guardrail_results": [
+          {
+            "guardrail_name": "IntentValidationGuardrail",
+            "triggered": true,
+            "violation_type": "LOW_CONFIDENCE",
+            "severity": "HIGH",
+            "message": "Intent 'billing_issue' is valid but confidence 0.35 is insufficient for direct routing. Fallback to human review required.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "intent": "billing_issue",
+              "confidence": 0.35,
+              "minimum_required": 0.5
+            }
+          },
+          {
+            "guardrail_name": "ConfidenceThresholdGuardrail",
+            "triggered": true,
+            "violation_type": "LOW_CONFIDENCE",
+            "severity": "HIGH",
+            "message": "LOW confidence (0.35 < 0.5). Routing blocked. Fallback to human review required.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "confidence": 0.35,
+              "band": "LOW",
+              "threshold": 0.5
+            }
+          },
+          {
+            "guardrail_name": "AmbiguityDetectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "No significant ambiguity (secondary=0.26 < 0.3).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "RoutingProtectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Routing consistent: 'billing_issue' → 'Billing Support Flow'.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ReliabilityScoreGuardrail",
+            "triggered": true,
+            "violation_type": "RELIABILITY_BELOW_THRESHOLD",
+            "severity": "CRITICAL",
+            "message": "CRITICAL: Reliability score 25 < 50. System operating in fully degraded state — regression to pre-Situation-3 levels. Classification blocked.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "reliability_score": 25,
+              "threshold": 50,
+              "status": "CRITICAL"
+            }
+          }
+        ]
+      },
+      "policy_result": {
+        "final_action": "BLOCK",
+        "blocked": true,
+        "escalated": false,
+        "requires_review": false,
+        "triggered_policies": [
+          "LOW_CONFIDENCE_BLOCK",
+          "RELIABILITY_THRESHOLD"
+        ],
+        "decisions": [
+          {
+            "policy_name": "LOW_CONFIDENCE_BLOCK",
+            "triggered": true,
+            "action": "BLOCK",
+            "message": "Policy 'LOW_CONFIDENCE_BLOCK' triggered by violations: ['LOW_CONFIDENCE']. Action: BLOCK.",
+            "metadata": {
+              "matched_violations": [
+                "LOW_CONFIDENCE"
+              ]
+            }
+          },
+          {
+            "policy_name": "MULTI_INTENT_ESCALATION",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'MULTI_INTENT_ESCALATION' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "ROUTING_MISMATCH_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'ROUTING_MISMATCH_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "RELIABILITY_THRESHOLD",
+            "triggered": true,
+            "action": "BLOCK",
+            "message": "Policy 'RELIABILITY_THRESHOLD' triggered by violations: ['RELIABILITY_BELOW_THRESHOLD']. Action: BLOCK.",
+            "metadata": {
+              "matched_violations": [
+                "RELIABILITY_BELOW_THRESHOLD"
+              ]
+            }
+          }
+        ]
+      },
+      "final_allowed": false
+    },
+    {
+      "run_id": "83CF73B9",
+      "input": "Fui cobrado errado e quero cancelar minha assinatura",
+      "predicted_intent": "billing_issue",
+      "confidence": 0.42,
+      "routing_flow": "Billing Support Flow",
+      "reliability_score": 25,
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "engine_decision": {
+        "allowed": false,
+        "blocked_by": [
+          "IntentValidationGuardrail",
+          "ConfidenceThresholdGuardrail",
+          "ReliabilityScoreGuardrail"
+        ],
+        "warned_by": [],
+        "total_violations": 3,
+        "total_blocks": 3,
+        "total_warnings": 0,
+        "guardrail_results": [
+          {
+            "guardrail_name": "IntentValidationGuardrail",
+            "triggered": true,
+            "violation_type": "LOW_CONFIDENCE",
+            "severity": "HIGH",
+            "message": "Intent 'billing_issue' is valid but confidence 0.42 is insufficient for direct routing. Fallback to human review required.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "intent": "billing_issue",
+              "confidence": 0.42,
+              "minimum_required": 0.5
+            }
+          },
+          {
+            "guardrail_name": "ConfidenceThresholdGuardrail",
+            "triggered": true,
+            "violation_type": "LOW_CONFIDENCE",
+            "severity": "HIGH",
+            "message": "LOW confidence (0.42 < 0.5). Routing blocked. Fallback to human review required.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "confidence": 0.42,
+              "band": "LOW",
+              "threshold": 0.5
+            }
+          },
+          {
+            "guardrail_name": "AmbiguityDetectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "No significant ambiguity (secondary=0.23 < 0.3).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "RoutingProtectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Routing consistent: 'billing_issue' → 'Billing Support Flow'.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ReliabilityScoreGuardrail",
+            "triggered": true,
+            "violation_type": "RELIABILITY_BELOW_THRESHOLD",
+            "severity": "CRITICAL",
+            "message": "CRITICAL: Reliability score 25 < 50. System operating in fully degraded state — regression to pre-Situation-3 levels. Classification blocked.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "reliability_score": 25,
+              "threshold": 50,
+              "status": "CRITICAL"
+            }
+          }
+        ]
+      },
+      "policy_result": {
+        "final_action": "BLOCK",
+        "blocked": true,
+        "escalated": false,
+        "requires_review": false,
+        "triggered_policies": [
+          "LOW_CONFIDENCE_BLOCK",
+          "RELIABILITY_THRESHOLD"
+        ],
+        "decisions": [
+          {
+            "policy_name": "LOW_CONFIDENCE_BLOCK",
+            "triggered": true,
+            "action": "BLOCK",
+            "message": "Policy 'LOW_CONFIDENCE_BLOCK' triggered by violations: ['LOW_CONFIDENCE']. Action: BLOCK.",
+            "metadata": {
+              "matched_violations": [
+                "LOW_CONFIDENCE"
+              ]
+            }
+          },
+          {
+            "policy_name": "MULTI_INTENT_ESCALATION",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'MULTI_INTENT_ESCALATION' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "ROUTING_MISMATCH_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'ROUTING_MISMATCH_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "RELIABILITY_THRESHOLD",
+            "triggered": true,
+            "action": "BLOCK",
+            "message": "Policy 'RELIABILITY_THRESHOLD' triggered by violations: ['RELIABILITY_BELOW_THRESHOLD']. Action: BLOCK.",
+            "metadata": {
+              "matched_violations": [
+                "RELIABILITY_BELOW_THRESHOLD"
+              ]
+            }
+          }
+        ]
+      },
+      "final_allowed": false
+    },
+    {
+      "run_id": "2B0FC814",
+      "input": "Fui cobrado errado e quero cancelar minha assinatura",
+      "predicted_intent": "billing_issue",
+      "confidence": 0.15,
+      "routing_flow": "Billing Support Flow",
+      "reliability_score": 25,
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "engine_decision": {
+        "allowed": false,
+        "blocked_by": [
+          "IntentValidationGuardrail",
+          "ConfidenceThresholdGuardrail",
+          "ReliabilityScoreGuardrail"
+        ],
+        "warned_by": [],
+        "total_violations": 3,
+        "total_blocks": 3,
+        "total_warnings": 0,
+        "guardrail_results": [
+          {
+            "guardrail_name": "IntentValidationGuardrail",
+            "triggered": true,
+            "violation_type": "LOW_CONFIDENCE",
+            "severity": "HIGH",
+            "message": "Intent 'billing_issue' is valid but confidence 0.15 is insufficient for direct routing. Fallback to human review required.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "intent": "billing_issue",
+              "confidence": 0.15,
+              "minimum_required": 0.5
+            }
+          },
+          {
+            "guardrail_name": "ConfidenceThresholdGuardrail",
+            "triggered": true,
+            "violation_type": "LOW_CONFIDENCE",
+            "severity": "HIGH",
+            "message": "LOW confidence (0.15 < 0.5). Routing blocked. Fallback to human review required.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "confidence": 0.15,
+              "band": "LOW",
+              "threshold": 0.5
+            }
+          },
+          {
+            "guardrail_name": "AmbiguityDetectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "No significant ambiguity (secondary=0.21 < 0.3).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "RoutingProtectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Routing consistent: 'billing_issue' → 'Billing Support Flow'.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ReliabilityScoreGuardrail",
+            "triggered": true,
+            "violation_type": "RELIABILITY_BELOW_THRESHOLD",
+            "severity": "CRITICAL",
+            "message": "CRITICAL: Reliability score 25 < 50. System operating in fully degraded state — regression to pre-Situation-3 levels. Classification blocked.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "reliability_score": 25,
+              "threshold": 50,
+              "status": "CRITICAL"
+            }
+          }
+        ]
+      },
+      "policy_result": {
+        "final_action": "BLOCK",
+        "blocked": true,
+        "escalated": false,
+        "requires_review": false,
+        "triggered_policies": [
+          "LOW_CONFIDENCE_BLOCK",
+          "RELIABILITY_THRESHOLD"
+        ],
+        "decisions": [
+          {
+            "policy_name": "LOW_CONFIDENCE_BLOCK",
+            "triggered": true,
+            "action": "BLOCK",
+            "message": "Policy 'LOW_CONFIDENCE_BLOCK' triggered by violations: ['LOW_CONFIDENCE']. Action: BLOCK.",
+            "metadata": {
+              "matched_violations": [
+                "LOW_CONFIDENCE"
+              ]
+            }
+          },
+          {
+            "policy_name": "MULTI_INTENT_ESCALATION",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'MULTI_INTENT_ESCALATION' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "ROUTING_MISMATCH_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'ROUTING_MISMATCH_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "RELIABILITY_THRESHOLD",
+            "triggered": true,
+            "action": "BLOCK",
+            "message": "Policy 'RELIABILITY_THRESHOLD' triggered by violations: ['RELIABILITY_BELOW_THRESHOLD']. Action: BLOCK.",
+            "metadata": {
+              "matched_violations": [
+                "RELIABILITY_BELOW_THRESHOLD"
+              ]
+            }
+          }
+        ]
+      },
+      "final_allowed": false
+    },
+    {
+      "run_id": "553753E7",
+      "input": "Fui cobrado errado e quero cancelar minha assinatura",
+      "predicted_intent": "billing_issue",
+      "confidence": 0.21,
+      "routing_flow": "Billing Support Flow",
+      "reliability_score": 25,
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "engine_decision": {
+        "allowed": false,
+        "blocked_by": [
+          "IntentValidationGuardrail",
+          "ConfidenceThresholdGuardrail",
+          "ReliabilityScoreGuardrail"
+        ],
+        "warned_by": [],
+        "total_violations": 3,
+        "total_blocks": 3,
+        "total_warnings": 0,
+        "guardrail_results": [
+          {
+            "guardrail_name": "IntentValidationGuardrail",
+            "triggered": true,
+            "violation_type": "LOW_CONFIDENCE",
+            "severity": "HIGH",
+            "message": "Intent 'billing_issue' is valid but confidence 0.21 is insufficient for direct routing. Fallback to human review required.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "intent": "billing_issue",
+              "confidence": 0.21,
+              "minimum_required": 0.5
+            }
+          },
+          {
+            "guardrail_name": "ConfidenceThresholdGuardrail",
+            "triggered": true,
+            "violation_type": "LOW_CONFIDENCE",
+            "severity": "HIGH",
+            "message": "LOW confidence (0.21 < 0.5). Routing blocked. Fallback to human review required.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "confidence": 0.21,
+              "band": "LOW",
+              "threshold": 0.5
+            }
+          },
+          {
+            "guardrail_name": "AmbiguityDetectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "No significant ambiguity (secondary=0.21 < 0.3).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "RoutingProtectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Routing consistent: 'billing_issue' → 'Billing Support Flow'.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ReliabilityScoreGuardrail",
+            "triggered": true,
+            "violation_type": "RELIABILITY_BELOW_THRESHOLD",
+            "severity": "CRITICAL",
+            "message": "CRITICAL: Reliability score 25 < 50. System operating in fully degraded state — regression to pre-Situation-3 levels. Classification blocked.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "reliability_score": 25,
+              "threshold": 50,
+              "status": "CRITICAL"
+            }
+          }
+        ]
+      },
+      "policy_result": {
+        "final_action": "BLOCK",
+        "blocked": true,
+        "escalated": false,
+        "requires_review": false,
+        "triggered_policies": [
+          "LOW_CONFIDENCE_BLOCK",
+          "RELIABILITY_THRESHOLD"
+        ],
+        "decisions": [
+          {
+            "policy_name": "LOW_CONFIDENCE_BLOCK",
+            "triggered": true,
+            "action": "BLOCK",
+            "message": "Policy 'LOW_CONFIDENCE_BLOCK' triggered by violations: ['LOW_CONFIDENCE']. Action: BLOCK.",
+            "metadata": {
+              "matched_violations": [
+                "LOW_CONFIDENCE"
+              ]
+            }
+          },
+          {
+            "policy_name": "MULTI_INTENT_ESCALATION",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'MULTI_INTENT_ESCALATION' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "ROUTING_MISMATCH_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'ROUTING_MISMATCH_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "RELIABILITY_THRESHOLD",
+            "triggered": true,
+            "action": "BLOCK",
+            "message": "Policy 'RELIABILITY_THRESHOLD' triggered by violations: ['RELIABILITY_BELOW_THRESHOLD']. Action: BLOCK.",
+            "metadata": {
+              "matched_violations": [
+                "RELIABILITY_BELOW_THRESHOLD"
+              ]
+            }
+          }
+        ]
+      },
+      "final_allowed": false
+    },
+    {
+      "run_id": "25CDFD14",
+      "input": "Fui cobrado errado e quero cancelar minha assinatura",
+      "predicted_intent": "billing_issue",
+      "confidence": 0.28,
+      "routing_flow": "Billing Support Flow",
+      "reliability_score": 25,
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "engine_decision": {
+        "allowed": false,
+        "blocked_by": [
+          "IntentValidationGuardrail",
+          "ConfidenceThresholdGuardrail",
+          "ReliabilityScoreGuardrail"
+        ],
+        "warned_by": [],
+        "total_violations": 3,
+        "total_blocks": 3,
+        "total_warnings": 0,
+        "guardrail_results": [
+          {
+            "guardrail_name": "IntentValidationGuardrail",
+            "triggered": true,
+            "violation_type": "LOW_CONFIDENCE",
+            "severity": "HIGH",
+            "message": "Intent 'billing_issue' is valid but confidence 0.28 is insufficient for direct routing. Fallback to human review required.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "intent": "billing_issue",
+              "confidence": 0.28,
+              "minimum_required": 0.5
+            }
+          },
+          {
+            "guardrail_name": "ConfidenceThresholdGuardrail",
+            "triggered": true,
+            "violation_type": "LOW_CONFIDENCE",
+            "severity": "HIGH",
+            "message": "LOW confidence (0.28 < 0.5). Routing blocked. Fallback to human review required.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "confidence": 0.28,
+              "band": "LOW",
+              "threshold": 0.5
+            }
+          },
+          {
+            "guardrail_name": "AmbiguityDetectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "No significant ambiguity (secondary=0.28 < 0.3).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "RoutingProtectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Routing consistent: 'billing_issue' → 'Billing Support Flow'.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ReliabilityScoreGuardrail",
+            "triggered": true,
+            "violation_type": "RELIABILITY_BELOW_THRESHOLD",
+            "severity": "CRITICAL",
+            "message": "CRITICAL: Reliability score 25 < 50. System operating in fully degraded state — regression to pre-Situation-3 levels. Classification blocked.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "reliability_score": 25,
+              "threshold": 50,
+              "status": "CRITICAL"
+            }
+          }
+        ]
+      },
+      "policy_result": {
+        "final_action": "BLOCK",
+        "blocked": true,
+        "escalated": false,
+        "requires_review": false,
+        "triggered_policies": [
+          "LOW_CONFIDENCE_BLOCK",
+          "RELIABILITY_THRESHOLD"
+        ],
+        "decisions": [
+          {
+            "policy_name": "LOW_CONFIDENCE_BLOCK",
+            "triggered": true,
+            "action": "BLOCK",
+            "message": "Policy 'LOW_CONFIDENCE_BLOCK' triggered by violations: ['LOW_CONFIDENCE']. Action: BLOCK.",
+            "metadata": {
+              "matched_violations": [
+                "LOW_CONFIDENCE"
+              ]
+            }
+          },
+          {
+            "policy_name": "MULTI_INTENT_ESCALATION",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'MULTI_INTENT_ESCALATION' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "ROUTING_MISMATCH_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'ROUTING_MISMATCH_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "RELIABILITY_THRESHOLD",
+            "triggered": true,
+            "action": "BLOCK",
+            "message": "Policy 'RELIABILITY_THRESHOLD' triggered by violations: ['RELIABILITY_BELOW_THRESHOLD']. Action: BLOCK.",
+            "metadata": {
+              "matched_violations": [
+                "RELIABILITY_BELOW_THRESHOLD"
+              ]
+            }
+          }
+        ]
+      },
+      "final_allowed": false
+    },
+    {
+      "run_id": "40D21774",
+      "input": "Fui cobrado errado e quero cancelar minha assinatura",
+      "predicted_intent": "billing_issue",
+      "confidence": 0.35,
+      "routing_flow": "Billing Support Flow",
+      "reliability_score": 25,
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "engine_decision": {
+        "allowed": false,
+        "blocked_by": [
+          "IntentValidationGuardrail",
+          "ConfidenceThresholdGuardrail",
+          "ReliabilityScoreGuardrail"
+        ],
+        "warned_by": [],
+        "total_violations": 3,
+        "total_blocks": 3,
+        "total_warnings": 0,
+        "guardrail_results": [
+          {
+            "guardrail_name": "IntentValidationGuardrail",
+            "triggered": true,
+            "violation_type": "LOW_CONFIDENCE",
+            "severity": "HIGH",
+            "message": "Intent 'billing_issue' is valid but confidence 0.35 is insufficient for direct routing. Fallback to human review required.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "intent": "billing_issue",
+              "confidence": 0.35,
+              "minimum_required": 0.5
+            }
+          },
+          {
+            "guardrail_name": "ConfidenceThresholdGuardrail",
+            "triggered": true,
+            "violation_type": "LOW_CONFIDENCE",
+            "severity": "HIGH",
+            "message": "LOW confidence (0.35 < 0.5). Routing blocked. Fallback to human review required.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "confidence": 0.35,
+              "band": "LOW",
+              "threshold": 0.5
+            }
+          },
+          {
+            "guardrail_name": "AmbiguityDetectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "No significant ambiguity (secondary=0.26 < 0.3).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "RoutingProtectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Routing consistent: 'billing_issue' → 'Billing Support Flow'.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ReliabilityScoreGuardrail",
+            "triggered": true,
+            "violation_type": "RELIABILITY_BELOW_THRESHOLD",
+            "severity": "CRITICAL",
+            "message": "CRITICAL: Reliability score 25 < 50. System operating in fully degraded state — regression to pre-Situation-3 levels. Classification blocked.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "reliability_score": 25,
+              "threshold": 50,
+              "status": "CRITICAL"
+            }
+          }
+        ]
+      },
+      "policy_result": {
+        "final_action": "BLOCK",
+        "blocked": true,
+        "escalated": false,
+        "requires_review": false,
+        "triggered_policies": [
+          "LOW_CONFIDENCE_BLOCK",
+          "RELIABILITY_THRESHOLD"
+        ],
+        "decisions": [
+          {
+            "policy_name": "LOW_CONFIDENCE_BLOCK",
+            "triggered": true,
+            "action": "BLOCK",
+            "message": "Policy 'LOW_CONFIDENCE_BLOCK' triggered by violations: ['LOW_CONFIDENCE']. Action: BLOCK.",
+            "metadata": {
+              "matched_violations": [
+                "LOW_CONFIDENCE"
+              ]
+            }
+          },
+          {
+            "policy_name": "MULTI_INTENT_ESCALATION",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'MULTI_INTENT_ESCALATION' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "ROUTING_MISMATCH_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'ROUTING_MISMATCH_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "RELIABILITY_THRESHOLD",
+            "triggered": true,
+            "action": "BLOCK",
+            "message": "Policy 'RELIABILITY_THRESHOLD' triggered by violations: ['RELIABILITY_BELOW_THRESHOLD']. Action: BLOCK.",
+            "metadata": {
+              "matched_violations": [
+                "RELIABILITY_BELOW_THRESHOLD"
+              ]
+            }
+          }
+        ]
+      },
+      "final_allowed": false
+    },
+    {
+      "run_id": "B46191CF",
+      "input": "Fui cobrado errado e quero cancelar minha assinatura",
+      "predicted_intent": "billing_issue",
+      "confidence": 0.42,
+      "routing_flow": "Billing Support Flow",
+      "reliability_score": 25,
+      "validation": {
+        "valid": true,
+        "errors": []
+      },
+      "engine_decision": {
+        "allowed": false,
+        "blocked_by": [
+          "IntentValidationGuardrail",
+          "ConfidenceThresholdGuardrail",
+          "ReliabilityScoreGuardrail"
+        ],
+        "warned_by": [],
+        "total_violations": 3,
+        "total_blocks": 3,
+        "total_warnings": 0,
+        "guardrail_results": [
+          {
+            "guardrail_name": "IntentValidationGuardrail",
+            "triggered": true,
+            "violation_type": "LOW_CONFIDENCE",
+            "severity": "HIGH",
+            "message": "Intent 'billing_issue' is valid but confidence 0.42 is insufficient for direct routing. Fallback to human review required.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "intent": "billing_issue",
+              "confidence": 0.42,
+              "minimum_required": 0.5
+            }
+          },
+          {
+            "guardrail_name": "ConfidenceThresholdGuardrail",
+            "triggered": true,
+            "violation_type": "LOW_CONFIDENCE",
+            "severity": "HIGH",
+            "message": "LOW confidence (0.42 < 0.5). Routing blocked. Fallback to human review required.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "confidence": 0.42,
+              "band": "LOW",
+              "threshold": 0.5
+            }
+          },
+          {
+            "guardrail_name": "AmbiguityDetectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "No significant ambiguity (secondary=0.23 < 0.3).",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "RoutingProtectionGuardrail",
+            "triggered": false,
+            "violation_type": null,
+            "severity": null,
+            "message": "Routing consistent: 'billing_issue' → 'Billing Support Flow'.",
+            "action": "ALLOW",
+            "blocked": false,
+            "metadata": {}
+          },
+          {
+            "guardrail_name": "ReliabilityScoreGuardrail",
+            "triggered": true,
+            "violation_type": "RELIABILITY_BELOW_THRESHOLD",
+            "severity": "CRITICAL",
+            "message": "CRITICAL: Reliability score 25 < 50. System operating in fully degraded state — regression to pre-Situation-3 levels. Classification blocked.",
+            "action": "BLOCK",
+            "blocked": true,
+            "metadata": {
+              "reliability_score": 25,
+              "threshold": 50,
+              "status": "CRITICAL"
+            }
+          }
+        ]
+      },
+      "policy_result": {
+        "final_action": "BLOCK",
+        "blocked": true,
+        "escalated": false,
+        "requires_review": false,
+        "triggered_policies": [
+          "LOW_CONFIDENCE_BLOCK",
+          "RELIABILITY_THRESHOLD"
+        ],
+        "decisions": [
+          {
+            "policy_name": "LOW_CONFIDENCE_BLOCK",
+            "triggered": true,
+            "action": "BLOCK",
+            "message": "Policy 'LOW_CONFIDENCE_BLOCK' triggered by violations: ['LOW_CONFIDENCE']. Action: BLOCK.",
+            "metadata": {
+              "matched_violations": [
+                "LOW_CONFIDENCE"
+              ]
+            }
+          },
+          {
+            "policy_name": "MULTI_INTENT_ESCALATION",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'MULTI_INTENT_ESCALATION' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "ROUTING_MISMATCH_BLOCK",
+            "triggered": false,
+            "action": "LOG",
+            "message": "Policy 'ROUTING_MISMATCH_BLOCK' — no matching violations.",
+            "metadata": {}
+          },
+          {
+            "policy_name": "RELIABILITY_THRESHOLD",
+            "triggered": true,
+            "action": "BLOCK",
+            "message": "Policy 'RELIABILITY_THRESHOLD' triggered by violations: ['RELIABILITY_BELOW_THRESHOLD']. Action: BLOCK.",
+            "metadata": {
+              "matched_violations": [
+                "RELIABILITY_BELOW_THRESHOLD"
+              ]
+            }
+          }
+        ]
+      },
+      "final_allowed": false
+    }
+  ]
+}

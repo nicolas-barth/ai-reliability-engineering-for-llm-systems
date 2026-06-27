@@ -1,0 +1,51 @@
+run_number,run_id,predicted_intent,confidence,routing_flow,execution_mode,timestamp
+1,1F8EF736,cancel_order,0.53,Order Cancellation Flow,real_llm,2026-06-27T16:41:31.716633+00:00
+2,7212D92B,billing_issue,0.9,Billing Support Flow,real_llm,2026-06-27T16:41:33.654898+00:00
+3,44DB7B1F,cancel_order,0.54,Order Cancellation Flow,real_llm,2026-06-27T16:41:35.461942+00:00
+4,D7B30EEB,cancel_order,0.51,Order Cancellation Flow,real_llm,2026-06-27T16:41:37.964338+00:00
+5,A68ED2ED,refund_request,0.27,Refund Flow,real_llm,2026-06-27T16:41:39.811870+00:00
+6,5DCDDDE6,cancel_order,0.56,Order Cancellation Flow,real_llm,2026-06-27T16:41:41.936308+00:00
+7,9064506A,general_support,0.03,General Support Queue,real_llm,2026-06-27T16:41:44.535397+00:00
+8,BB7F1BB2,general_support,0.05,General Support Queue,real_llm,2026-06-27T16:41:46.657193+00:00
+9,A28CD1B2,refund_request,0.27,Refund Flow,real_llm,2026-06-27T16:41:48.959434+00:00
+10,F77F92C9,cancel_order,0.52,Order Cancellation Flow,real_llm,2026-06-27T16:41:51.089388+00:00
+11,62A6B7C1,billing_issue,0.84,Billing Support Flow,real_llm,2026-06-27T16:41:52.779327+00:00
+12,293C3F5C,billing_issue,0.88,Billing Support Flow,real_llm,2026-06-27T16:41:54.421907+00:00
+13,647F23B5,general_support,0.07,General Support Queue,real_llm,2026-06-27T16:41:57.165283+00:00
+14,B774D7AE,billing_issue,0.73,Billing Support Flow,real_llm,2026-06-27T16:41:59.201785+00:00
+15,F88E14EE,cancel_order,0.55,Order Cancellation Flow,real_llm,2026-06-27T16:42:01.306851+00:00
+16,E6142FEC,billing_issue,0.86,Billing Support Flow,real_llm,2026-06-27T16:42:03.051539+00:00
+17,8E3945EB,billing_issue,0.72,Billing Support Flow,real_llm,2026-06-27T16:42:04.916053+00:00
+18,CA8E0EAB,refund_request,0.29,Refund Flow,real_llm,2026-06-27T16:42:06.754263+00:00
+19,6034D528,billing_issue,0.73,Billing Support Flow,real_llm,2026-06-27T16:42:08.686764+00:00
+20,8D8C01B7,general_support,0.06,General Support Queue,real_llm,2026-06-27T16:42:11.081769+00:00
+21,720F979C,refund_request,0.27,Refund Flow,real_llm,2026-06-27T16:42:12.819849+00:00
+22,D34AD557,billing_issue,0.73,Billing Support Flow,real_llm,2026-06-27T16:42:15.691761+00:00
+23,7B097CCA,general_support,0.3,General Support Queue,real_llm,2026-06-27T16:42:17.308854+00:00
+24,EE6C7946,billing_issue,0.88,Billing Support Flow,real_llm,2026-06-27T16:42:19.032897+00:00
+25,0F8665E1,billing_issue,0.69,Billing Support Flow,real_llm,2026-06-27T16:42:20.800005+00:00
+26,449425FE,refund_request,0.29,Refund Flow,real_llm,2026-06-27T16:42:22.581751+00:00
+27,EDE0BAB1,refund_request,0.25,Refund Flow,real_llm,2026-06-27T16:42:24.306571+00:00
+28,188C20E2,billing_issue,0.83,Billing Support Flow,real_llm,2026-06-27T16:42:26.998502+00:00
+29,566E4FA2,general_support,0.04,General Support Queue,real_llm,2026-06-27T16:42:28.976256+00:00
+30,E9495D83,billing_issue,0.88,Billing Support Flow,real_llm,2026-06-27T16:42:30.981563+00:00
+31,9C8DDE1A,cancel_order,0.34,Order Cancellation Flow,real_llm,2026-06-27T16:42:32.667710+00:00
+32,378BA9E0,general_support,0.05,General Support Queue,real_llm,2026-06-27T16:42:34.832286+00:00
+33,1BB1AAEE,general_support,0.07,General Support Queue,real_llm,2026-06-27T16:42:36.936806+00:00
+34,939EAD4D,general_support,0.07,General Support Queue,real_llm,2026-06-27T16:42:39.005407+00:00
+35,E456DA11,cancel_order,0.54,Order Cancellation Flow,real_llm,2026-06-27T16:42:40.695584+00:00
+36,E390DC62,billing_issue,0.87,Billing Support Flow,real_llm,2026-06-27T16:42:42.421790+00:00
+37,E3CC7286,billing_issue,0.89,Billing Support Flow,real_llm,2026-06-27T16:42:44.052857+00:00
+38,EE03B9CA,general_support,0.04,General Support Queue,real_llm,2026-06-27T16:42:46.981207+00:00
+39,3E34786E,general_support,0.04,General Support Queue,real_llm,2026-06-27T16:42:48.724759+00:00
+40,5D3D16BC,cancel_order,0.56,Order Cancellation Flow,real_llm,2026-06-27T16:42:50.535865+00:00
+41,5A0839B8,general_support,0.03,General Support Queue,real_llm,2026-06-27T16:42:52.311946+00:00
+42,883E1B50,cancel_order,0.51,Order Cancellation Flow,real_llm,2026-06-27T16:42:54.036652+00:00
+43,5E483019,cancel_order,0.55,Order Cancellation Flow,real_llm,2026-06-27T16:42:55.962315+00:00
+44,193DDDF4,general_support,0.07,General Support Queue,real_llm,2026-06-27T16:42:57.861113+00:00
+45,71086BB6,refund_request,0.27,Refund Flow,real_llm,2026-06-27T16:42:59.874472+00:00
+46,CF247D61,refund_request,0.31,Refund Flow,real_llm,2026-06-27T16:43:01.569853+00:00
+47,94445547,billing_issue,0.73,Billing Support Flow,real_llm,2026-06-27T16:43:03.331115+00:00
+48,015E0D1C,billing_issue,0.74,Billing Support Flow,real_llm,2026-06-27T16:43:05.261740+00:00
+49,BC466D18,general_support,0.07,General Support Queue,real_llm,2026-06-27T16:43:07.073844+00:00
+50,20CC2433,billing_issue,0.85,Billing Support Flow,real_llm,2026-06-27T16:43:09.019303+00:00

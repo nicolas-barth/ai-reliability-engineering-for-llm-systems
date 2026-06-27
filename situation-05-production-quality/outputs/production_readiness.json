@@ -1,0 +1,66 @@
+{
+  "timestamp": "2026-06-27T16:45:18.457155+00:00",
+  "gates": [
+    {
+      "id": "G-01",
+      "name": "Architecture",
+      "pass": true,
+      "evidence": "Structured output + disambiguation + priority engine in place",
+      "status": "PASS"
+    },
+    {
+      "id": "G-02",
+      "name": "Reliability",
+      "pass": true,
+      "evidence": "Reliability Score 91/100 (target \u2265 80)",
+      "status": "PASS"
+    },
+    {
+      "id": "G-03",
+      "name": "Consistency",
+      "pass": true,
+      "evidence": "Consistency 92.0% (target \u2265 85%)",
+      "status": "PASS"
+    },
+    {
+      "id": "G-04",
+      "name": "Guardrails",
+      "pass": true,
+      "evidence": "Guardrail effectiveness 100.0% (target \u2265 95%)",
+      "status": "PASS"
+    },
+    {
+      "id": "G-05",
+      "name": "Observability",
+      "pass": true,
+      "evidence": "Health dashboard, SLOs, alerting, incident management implemented",
+      "status": "PASS"
+    },
+    {
+      "id": "G-06",
+      "name": "Monitoring",
+      "pass": true,
+      "evidence": "All production KPIs tracked and evaluated",
+      "status": "PASS"
+    },
+    {
+      "id": "G-07",
+      "name": "SLO Compliance",
+      "pass": true,
+      "evidence": "8/8 SLOs passing",
+      "status": "PASS"
+    },
+    {
+      "id": "G-08",
+      "name": "No Critical Incidents",
+      "pass": true,
+      "evidence": "P1 incidents: 0",
+      "status": "PASS"
+    }
+  ],
+  "all_gates_pass": true,
+  "production_ready": "YES",
+  "deployment_recommendation": "APPROVED",
+  "passed_gates": 8,
+  "failed_gates": 0
+}

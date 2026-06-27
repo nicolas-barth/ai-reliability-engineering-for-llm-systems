@@ -1,0 +1,1002 @@
+[
+  {
+    "run_id": "SYN30000",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "billing_issue",
+    "confidence": 0.862,
+    "intent_distribution": {
+      "billing_issue": 0.881,
+      "cancel_order": 0.03,
+      "refund_request": 0.03,
+      "shipping_issue": 0.03,
+      "general_support": 0.03
+    },
+    "routing_flow": "Billing Support Flow",
+    "generated_response": "Identificamos o problema na sua cobrança. Vou corrigir imediatamente.",
+    "execution_mode": "synthetic_reliable_l3",
+    "timestamp": "2026-06-27T16:45:14.646191+00:00",
+    "strategy_level": 3,
+    "disambiguation_applied": true,
+    "run_number": 1
+  },
+  {
+    "run_id": "SYN30001",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "billing_issue",
+    "confidence": 0.734,
+    "intent_distribution": {
+      "billing_issue": 0.763,
+      "cancel_order": 0.059,
+      "refund_request": 0.059,
+      "shipping_issue": 0.059,
+      "general_support": 0.059
+    },
+    "routing_flow": "Billing Support Flow",
+    "generated_response": "Identificamos o problema na sua cobrança. Vou corrigir imediatamente.",
+    "execution_mode": "synthetic_reliable_l3",
+    "timestamp": "2026-06-27T16:45:14.646205+00:00",
+    "strategy_level": 3,
+    "disambiguation_applied": true,
+    "run_number": 2
+  },
+  {
+    "run_id": "SYN30002",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "billing_issue",
+    "confidence": 0.938,
+    "intent_distribution": {
+      "billing_issue": 0.947,
+      "cancel_order": 0.013,
+      "refund_request": 0.013,
+      "shipping_issue": 0.013,
+      "general_support": 0.013
+    },
+    "routing_flow": "Billing Support Flow",
+    "generated_response": "Identificamos o problema na sua cobrança. Vou corrigir imediatamente.",
+    "execution_mode": "synthetic_reliable_l3",
+    "timestamp": "2026-06-27T16:45:14.646215+00:00",
+    "strategy_level": 3,
+    "disambiguation_applied": true,
+    "run_number": 3
+  },
+  {
+    "run_id": "SYN30003",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "billing_issue",
+    "confidence": 0.939,
+    "intent_distribution": {
+      "billing_issue": 0.948,
+      "cancel_order": 0.013,
+      "refund_request": 0.013,
+      "shipping_issue": 0.013,
+      "general_support": 0.013
+    },
+    "routing_flow": "Billing Support Flow",
+    "generated_response": "Identificamos o problema na sua cobrança. Vou corrigir imediatamente.",
+    "execution_mode": "synthetic_reliable_l3",
+    "timestamp": "2026-06-27T16:45:14.646224+00:00",
+    "strategy_level": 3,
+    "disambiguation_applied": true,
+    "run_number": 4
+  },
+  {
+    "run_id": "SYN30004",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "billing_issue",
+    "confidence": 0.804,
+    "intent_distribution": {
+      "billing_issue": 0.827,
+      "cancel_order": 0.043,
+      "refund_request": 0.043,
+      "shipping_issue": 0.043,
+      "general_support": 0.043
+    },
+    "routing_flow": "Billing Support Flow",
+    "generated_response": "Identificamos o problema na sua cobrança. Vou corrigir imediatamente.",
+    "execution_mode": "synthetic_reliable_l3",
+    "timestamp": "2026-06-27T16:45:14.646236+00:00",
+    "strategy_level": 3,
+    "disambiguation_applied": true,
+    "run_number": 5
+  },
+  {
+    "run_id": "SYN30005",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "billing_issue",
+    "confidence": 0.87,
+    "intent_distribution": {
+      "billing_issue": 0.886,
+      "cancel_order": 0.029,
+      "refund_request": 0.029,
+      "shipping_issue": 0.029,
+      "general_support": 0.029
+    },
+    "routing_flow": "Billing Support Flow",
+    "generated_response": "Identificamos o problema na sua cobrança. Vou corrigir imediatamente.",
+    "execution_mode": "synthetic_reliable_l3",
+    "timestamp": "2026-06-27T16:45:14.646245+00:00",
+    "strategy_level": 3,
+    "disambiguation_applied": true,
+    "run_number": 6
+  },
+  {
+    "run_id": "SYN30006",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "billing_issue",
+    "confidence": 0.724,
+    "intent_distribution": {
+      "billing_issue": 0.754,
+      "cancel_order": 0.061,
+      "refund_request": 0.061,
+      "shipping_issue": 0.061,
+      "general_support": 0.061
+    },
+    "routing_flow": "Billing Support Flow",
+    "generated_response": "Identificamos o problema na sua cobrança. Vou corrigir imediatamente.",
+    "execution_mode": "synthetic_reliable_l3",
+    "timestamp": "2026-06-27T16:45:14.646252+00:00",
+    "strategy_level": 3,
+    "disambiguation_applied": true,
+    "run_number": 7
+  },
+  {
+    "run_id": "SYN30007",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "billing_issue",
+    "confidence": 0.84,
+    "intent_distribution": {
+      "billing_issue": 0.861,
+      "cancel_order": 0.035,
+      "refund_request": 0.035,
+      "shipping_issue": 0.035,
+      "general_support": 0.035
+    },
+    "routing_flow": "Billing Support Flow",
+    "generated_response": "Identificamos o problema na sua cobrança. Vou corrigir imediatamente.",
+    "execution_mode": "synthetic_reliable_l3",
+    "timestamp": "2026-06-27T16:45:14.646261+00:00",
+    "strategy_level": 3,
+    "disambiguation_applied": true,
+    "run_number": 8
+  },
+  {
+    "run_id": "SYN30008",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "refund_request",
+    "confidence": 0.637,
+    "intent_distribution": {
+      "billing_issue": 0.081,
+      "cancel_order": 0.081,
+      "refund_request": 0.674,
+      "shipping_issue": 0.081,
+      "general_support": 0.081
+    },
+    "routing_flow": "Refund Flow",
+    "generated_response": "Sua solicitação de reembolso será processada em 3-5 dias úteis.",
+    "execution_mode": "synthetic_reliable_l3",
+    "timestamp": "2026-06-27T16:45:14.646268+00:00",
+    "strategy_level": 3,
+    "disambiguation_applied": false,
+    "run_number": 9
+  },
+  {
+    "run_id": "SYN30009",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "cancel_order",
+    "confidence": 0.619,
+    "intent_distribution": {
+      "billing_issue": 0.086,
+      "cancel_order": 0.656,
+      "refund_request": 0.086,
+      "shipping_issue": 0.086,
+      "general_support": 0.086
+    },
+    "routing_flow": "Order Cancellation Flow",
+    "generated_response": "Vou processar o cancelamento da sua assinatura agora.",
+    "execution_mode": "synthetic_reliable_l3",
+    "timestamp": "2026-06-27T16:45:14.646276+00:00",
+    "strategy_level": 3,
+    "disambiguation_applied": false,
+    "run_number": 10
+  },
+  {
+    "run_id": "SYN30010",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "billing_issue",
+    "confidence": 0.819,
+    "intent_distribution": {
+      "billing_issue": 0.843,
+      "cancel_order": 0.039,
+      "refund_request": 0.039,
+      "shipping_issue": 0.039,
+      "general_support": 0.039
+    },
+    "routing_flow": "Billing Support Flow",
+    "generated_response": "Identificamos o problema na sua cobrança. Vou corrigir imediatamente.",
+    "execution_mode": "synthetic_reliable_l3",
+    "timestamp": "2026-06-27T16:45:14.646284+00:00",
+    "strategy_level": 3,
+    "disambiguation_applied": true,
+    "run_number": 11
+  },
+  {
+    "run_id": "SYN30011",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "billing_issue",
+    "confidence": 0.921,
+    "intent_distribution": {
+      "billing_issue": 0.931,
+      "cancel_order": 0.017,
+      "refund_request": 0.017,
+      "shipping_issue": 0.017,
+      "general_support": 0.017
+    },
+    "routing_flow": "Billing Support Flow",
+    "generated_response": "Identificamos o problema na sua cobrança. Vou corrigir imediatamente.",
+    "execution_mode": "synthetic_reliable_l3",
+    "timestamp": "2026-06-27T16:45:14.646290+00:00",
+    "strategy_level": 3,
+    "disambiguation_applied": true,
+    "run_number": 12
+  },
+  {
+    "run_id": "SYN30012",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "billing_issue",
+    "confidence": 0.754,
+    "intent_distribution": {
+      "billing_issue": 0.784,
+      "cancel_order": 0.054,
+      "refund_request": 0.054,
+      "shipping_issue": 0.054,
+      "general_support": 0.054
+    },
+    "routing_flow": "Billing Support Flow",
+    "generated_response": "Identificamos o problema na sua cobrança. Vou corrigir imediatamente.",
+    "execution_mode": "synthetic_reliable_l3",
+    "timestamp": "2026-06-27T16:45:14.646298+00:00",
+    "strategy_level": 3,
+    "disambiguation_applied": true,
+    "run_number": 13
+  },
+  {
+    "run_id": "SYN30013",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "cancel_order",
+    "confidence": 0.651,
+    "intent_distribution": {
+      "billing_issue": 0.078,
+      "cancel_order": 0.687,
+      "refund_request": 0.078,
+      "shipping_issue": 0.078,
+      "general_support": 0.078
+    },
+    "routing_flow": "Order Cancellation Flow",
+    "generated_response": "Vou processar o cancelamento da sua assinatura agora.",
+    "execution_mode": "synthetic_reliable_l3",
+    "timestamp": "2026-06-27T16:45:14.646304+00:00",
+    "strategy_level": 3,
+    "disambiguation_applied": false,
+    "run_number": 14
+  },
+  {
+    "run_id": "SYN30014",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "billing_issue",
+    "confidence": 0.741,
+    "intent_distribution": {
+      "billing_issue": 0.771,
+      "cancel_order": 0.057,
+      "refund_request": 0.057,
+      "shipping_issue": 0.057,
+      "general_support": 0.057
+    },
+    "routing_flow": "Billing Support Flow",
+    "generated_response": "Identificamos o problema na sua cobrança. Vou corrigir imediatamente.",
+    "execution_mode": "synthetic_reliable_l3",
+    "timestamp": "2026-06-27T16:45:14.646313+00:00",
+    "strategy_level": 3,
+    "disambiguation_applied": true,
+    "run_number": 15
+  },
+  {
+    "run_id": "SYN30015",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "billing_issue",
+    "confidence": 0.812,
+    "intent_distribution": {
+      "billing_issue": 0.835,
+      "cancel_order": 0.041,
+      "refund_request": 0.041,
+      "shipping_issue": 0.041,
+      "general_support": 0.041
+    },
+    "routing_flow": "Billing Support Flow",
+    "generated_response": "Identificamos o problema na sua cobrança. Vou corrigir imediatamente.",
+    "execution_mode": "synthetic_reliable_l3",
+    "timestamp": "2026-06-27T16:45:14.646320+00:00",
+    "strategy_level": 3,
+    "disambiguation_applied": true,
+    "run_number": 16
+  },
+  {
+    "run_id": "SYN30016",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "billing_issue",
+    "confidence": 0.932,
+    "intent_distribution": {
+      "billing_issue": 0.943,
+      "cancel_order": 0.014,
+      "refund_request": 0.014,
+      "shipping_issue": 0.014,
+      "general_support": 0.014
+    },
+    "routing_flow": "Billing Support Flow",
+    "generated_response": "Identificamos o problema na sua cobrança. Vou corrigir imediatamente.",
+    "execution_mode": "synthetic_reliable_l3",
+    "timestamp": "2026-06-27T16:45:14.646327+00:00",
+    "strategy_level": 3,
+    "disambiguation_applied": true,
+    "run_number": 17
+  },
+  {
+    "run_id": "SYN30017",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "billing_issue",
+    "confidence": 0.867,
+    "intent_distribution": {
+      "billing_issue": 0.886,
+      "cancel_order": 0.029,
+      "refund_request": 0.029,
+      "shipping_issue": 0.029,
+      "general_support": 0.029
+    },
+    "routing_flow": "Billing Support Flow",
+    "generated_response": "Identificamos o problema na sua cobrança. Vou corrigir imediatamente.",
+    "execution_mode": "synthetic_reliable_l3",
+    "timestamp": "2026-06-27T16:45:14.646334+00:00",
+    "strategy_level": 3,
+    "disambiguation_applied": true,
+    "run_number": 18
+  },
+  {
+    "run_id": "SYN30018",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "billing_issue",
+    "confidence": 0.727,
+    "intent_distribution": {
+      "billing_issue": 0.758,
+      "cancel_order": 0.06,
+      "refund_request": 0.06,
+      "shipping_issue": 0.06,
+      "general_support": 0.06
+    },
+    "routing_flow": "Billing Support Flow",
+    "generated_response": "Identificamos o problema na sua cobrança. Vou corrigir imediatamente.",
+    "execution_mode": "synthetic_reliable_l3",
+    "timestamp": "2026-06-27T16:45:14.646341+00:00",
+    "strategy_level": 3,
+    "disambiguation_applied": true,
+    "run_number": 19
+  },
+  {
+    "run_id": "SYN30019",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "billing_issue",
+    "confidence": 0.926,
+    "intent_distribution": {
+      "billing_issue": 0.935,
+      "cancel_order": 0.016,
+      "refund_request": 0.016,
+      "shipping_issue": 0.016,
+      "general_support": 0.016
+    },
+    "routing_flow": "Billing Support Flow",
+    "generated_response": "Identificamos o problema na sua cobrança. Vou corrigir imediatamente.",
+    "execution_mode": "synthetic_reliable_l3",
+    "timestamp": "2026-06-27T16:45:14.646348+00:00",
+    "strategy_level": 3,
+    "disambiguation_applied": true,
+    "run_number": 20
+  },
+  {
+    "run_id": "SYN30020",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "billing_issue",
+    "confidence": 0.878,
+    "intent_distribution": {
+      "billing_issue": 0.894,
+      "cancel_order": 0.026,
+      "refund_request": 0.026,
+      "shipping_issue": 0.026,
+      "general_support": 0.026
+    },
+    "routing_flow": "Billing Support Flow",
+    "generated_response": "Identificamos o problema na sua cobrança. Vou corrigir imediatamente.",
+    "execution_mode": "synthetic_reliable_l3",
+    "timestamp": "2026-06-27T16:45:14.646356+00:00",
+    "strategy_level": 3,
+    "disambiguation_applied": true,
+    "run_number": 21
+  },
+  {
+    "run_id": "SYN30021",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "billing_issue",
+    "confidence": 0.845,
+    "intent_distribution": {
+      "billing_issue": 0.865,
+      "cancel_order": 0.034,
+      "refund_request": 0.034,
+      "shipping_issue": 0.034,
+      "general_support": 0.034
+    },
+    "routing_flow": "Billing Support Flow",
+    "generated_response": "Identificamos o problema na sua cobrança. Vou corrigir imediatamente.",
+    "execution_mode": "synthetic_reliable_l3",
+    "timestamp": "2026-06-27T16:45:14.646362+00:00",
+    "strategy_level": 3,
+    "disambiguation_applied": true,
+    "run_number": 22
+  },
+  {
+    "run_id": "SYN30022",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "billing_issue",
+    "confidence": 0.789,
+    "intent_distribution": {
+      "billing_issue": 0.814,
+      "cancel_order": 0.046,
+      "refund_request": 0.046,
+      "shipping_issue": 0.046,
+      "general_support": 0.046
+    },
+    "routing_flow": "Billing Support Flow",
+    "generated_response": "Identificamos o problema na sua cobrança. Vou corrigir imediatamente.",
+    "execution_mode": "synthetic_reliable_l3",
+    "timestamp": "2026-06-27T16:45:14.646369+00:00",
+    "strategy_level": 3,
+    "disambiguation_applied": true,
+    "run_number": 23
+  },
+  {
+    "run_id": "SYN30023",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "billing_issue",
+    "confidence": 0.792,
+    "intent_distribution": {
+      "billing_issue": 0.818,
+      "cancel_order": 0.045,
+      "refund_request": 0.045,
+      "shipping_issue": 0.045,
+      "general_support": 0.045
+    },
+    "routing_flow": "Billing Support Flow",
+    "generated_response": "Identificamos o problema na sua cobrança. Vou corrigir imediatamente.",
+    "execution_mode": "synthetic_reliable_l3",
+    "timestamp": "2026-06-27T16:45:14.646376+00:00",
+    "strategy_level": 3,
+    "disambiguation_applied": true,
+    "run_number": 24
+  },
+  {
+    "run_id": "SYN30024",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "billing_issue",
+    "confidence": 0.764,
+    "intent_distribution": {
+      "billing_issue": 0.793,
+      "cancel_order": 0.052,
+      "refund_request": 0.052,
+      "shipping_issue": 0.052,
+      "general_support": 0.052
+    },
+    "routing_flow": "Billing Support Flow",
+    "generated_response": "Identificamos o problema na sua cobrança. Vou corrigir imediatamente.",
+    "execution_mode": "synthetic_reliable_l3",
+    "timestamp": "2026-06-27T16:45:14.646383+00:00",
+    "strategy_level": 3,
+    "disambiguation_applied": true,
+    "run_number": 25
+  },
+  {
+    "run_id": "SYN30025",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "billing_issue",
+    "confidence": 0.869,
+    "intent_distribution": {
+      "billing_issue": 0.886,
+      "cancel_order": 0.029,
+      "refund_request": 0.029,
+      "shipping_issue": 0.029,
+      "general_support": 0.029
+    },
+    "routing_flow": "Billing Support Flow",
+    "generated_response": "Identificamos o problema na sua cobrança. Vou corrigir imediatamente.",
+    "execution_mode": "synthetic_reliable_l3",
+    "timestamp": "2026-06-27T16:45:14.646390+00:00",
+    "strategy_level": 3,
+    "disambiguation_applied": true,
+    "run_number": 26
+  },
+  {
+    "run_id": "SYN30026",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "billing_issue",
+    "confidence": 0.732,
+    "intent_distribution": {
+      "billing_issue": 0.763,
+      "cancel_order": 0.059,
+      "refund_request": 0.059,
+      "shipping_issue": 0.059,
+      "general_support": 0.059
+    },
+    "routing_flow": "Billing Support Flow",
+    "generated_response": "Identificamos o problema na sua cobrança. Vou corrigir imediatamente.",
+    "execution_mode": "synthetic_reliable_l3",
+    "timestamp": "2026-06-27T16:45:14.646397+00:00",
+    "strategy_level": 3,
+    "disambiguation_applied": true,
+    "run_number": 27
+  },
+  {
+    "run_id": "SYN30027",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "billing_issue",
+    "confidence": 0.947,
+    "intent_distribution": {
+      "billing_issue": 0.956,
+      "cancel_order": 0.011,
+      "refund_request": 0.011,
+      "shipping_issue": 0.011,
+      "general_support": 0.011
+    },
+    "routing_flow": "Billing Support Flow",
+    "generated_response": "Identificamos o problema na sua cobrança. Vou corrigir imediatamente.",
+    "execution_mode": "synthetic_reliable_l3",
+    "timestamp": "2026-06-27T16:45:14.646404+00:00",
+    "strategy_level": 3,
+    "disambiguation_applied": true,
+    "run_number": 28
+  },
+  {
+    "run_id": "SYN30028",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "billing_issue",
+    "confidence": 0.745,
+    "intent_distribution": {
+      "billing_issue": 0.775,
+      "cancel_order": 0.056,
+      "refund_request": 0.056,
+      "shipping_issue": 0.056,
+      "general_support": 0.056
+    },
+    "routing_flow": "Billing Support Flow",
+    "generated_response": "Identificamos o problema na sua cobrança. Vou corrigir imediatamente.",
+    "execution_mode": "synthetic_reliable_l3",
+    "timestamp": "2026-06-27T16:45:14.646411+00:00",
+    "strategy_level": 3,
+    "disambiguation_applied": true,
+    "run_number": 29
+  },
+  {
+    "run_id": "SYN30029",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "billing_issue",
+    "confidence": 0.87,
+    "intent_distribution": {
+      "billing_issue": 0.886,
+      "cancel_order": 0.029,
+      "refund_request": 0.029,
+      "shipping_issue": 0.029,
+      "general_support": 0.029
+    },
+    "routing_flow": "Billing Support Flow",
+    "generated_response": "Identificamos o problema na sua cobrança. Vou corrigir imediatamente.",
+    "execution_mode": "synthetic_reliable_l3",
+    "timestamp": "2026-06-27T16:45:14.646418+00:00",
+    "strategy_level": 3,
+    "disambiguation_applied": true,
+    "run_number": 30
+  },
+  {
+    "run_id": "SYN30030",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "billing_issue",
+    "confidence": 0.858,
+    "intent_distribution": {
+      "billing_issue": 0.877,
+      "cancel_order": 0.031,
+      "refund_request": 0.031,
+      "shipping_issue": 0.031,
+      "general_support": 0.031
+    },
+    "routing_flow": "Billing Support Flow",
+    "generated_response": "Identificamos o problema na sua cobrança. Vou corrigir imediatamente.",
+    "execution_mode": "synthetic_reliable_l3",
+    "timestamp": "2026-06-27T16:45:14.646425+00:00",
+    "strategy_level": 3,
+    "disambiguation_applied": true,
+    "run_number": 31
+  },
+  {
+    "run_id": "SYN30031",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "general_support",
+    "confidence": 0.44,
+    "intent_distribution": {
+      "billing_issue": 0.13,
+      "cancel_order": 0.13,
+      "refund_request": 0.13,
+      "shipping_issue": 0.13,
+      "general_support": 0.48
+    },
+    "routing_flow": "General Support Queue",
+    "generated_response": "Recebemos sua solicitação e um especialista irá analisá-la.",
+    "execution_mode": "synthetic_reliable_l3",
+    "timestamp": "2026-06-27T16:45:14.646433+00:00",
+    "strategy_level": 3,
+    "disambiguation_applied": false,
+    "run_number": 32
+  },
+  {
+    "run_id": "SYN30032",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "billing_issue",
+    "confidence": 0.787,
+    "intent_distribution": {
+      "billing_issue": 0.814,
+      "cancel_order": 0.047,
+      "refund_request": 0.047,
+      "shipping_issue": 0.047,
+      "general_support": 0.047
+    },
+    "routing_flow": "Billing Support Flow",
+    "generated_response": "Identificamos o problema na sua cobrança. Vou corrigir imediatamente.",
+    "execution_mode": "synthetic_reliable_l3",
+    "timestamp": "2026-06-27T16:45:14.646440+00:00",
+    "strategy_level": 3,
+    "disambiguation_applied": true,
+    "run_number": 33
+  },
+  {
+    "run_id": "SYN30033",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "billing_issue",
+    "confidence": 0.825,
+    "intent_distribution": {
+      "billing_issue": 0.848,
+      "cancel_order": 0.038,
+      "refund_request": 0.038,
+      "shipping_issue": 0.038,
+      "general_support": 0.038
+    },
+    "routing_flow": "Billing Support Flow",
+    "generated_response": "Identificamos o problema na sua cobrança. Vou corrigir imediatamente.",
+    "execution_mode": "synthetic_reliable_l3",
+    "timestamp": "2026-06-27T16:45:14.646447+00:00",
+    "strategy_level": 3,
+    "disambiguation_applied": true,
+    "run_number": 34
+  },
+  {
+    "run_id": "SYN30034",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "billing_issue",
+    "confidence": 0.799,
+    "intent_distribution": {
+      "billing_issue": 0.823,
+      "cancel_order": 0.044,
+      "refund_request": 0.044,
+      "shipping_issue": 0.044,
+      "general_support": 0.044
+    },
+    "routing_flow": "Billing Support Flow",
+    "generated_response": "Identificamos o problema na sua cobrança. Vou corrigir imediatamente.",
+    "execution_mode": "synthetic_reliable_l3",
+    "timestamp": "2026-06-27T16:45:14.646458+00:00",
+    "strategy_level": 3,
+    "disambiguation_applied": true,
+    "run_number": 35
+  },
+  {
+    "run_id": "SYN30035",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "billing_issue",
+    "confidence": 0.953,
+    "intent_distribution": {
+      "billing_issue": 0.96,
+      "cancel_order": 0.01,
+      "refund_request": 0.01,
+      "shipping_issue": 0.01,
+      "general_support": 0.01
+    },
+    "routing_flow": "Billing Support Flow",
+    "generated_response": "Identificamos o problema na sua cobrança. Vou corrigir imediatamente.",
+    "execution_mode": "synthetic_reliable_l3",
+    "timestamp": "2026-06-27T16:45:14.646466+00:00",
+    "strategy_level": 3,
+    "disambiguation_applied": true,
+    "run_number": 36
+  },
+  {
+    "run_id": "SYN30036",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "billing_issue",
+    "confidence": 0.875,
+    "intent_distribution": {
+      "billing_issue": 0.89,
+      "cancel_order": 0.027,
+      "refund_request": 0.027,
+      "shipping_issue": 0.027,
+      "general_support": 0.027
+    },
+    "routing_flow": "Billing Support Flow",
+    "generated_response": "Identificamos o problema na sua cobrança. Vou corrigir imediatamente.",
+    "execution_mode": "synthetic_reliable_l3",
+    "timestamp": "2026-06-27T16:45:14.646473+00:00",
+    "strategy_level": 3,
+    "disambiguation_applied": true,
+    "run_number": 37
+  },
+  {
+    "run_id": "SYN30037",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "billing_issue",
+    "confidence": 0.844,
+    "intent_distribution": {
+      "billing_issue": 0.865,
+      "cancel_order": 0.034,
+      "refund_request": 0.034,
+      "shipping_issue": 0.034,
+      "general_support": 0.034
+    },
+    "routing_flow": "Billing Support Flow",
+    "generated_response": "Identificamos o problema na sua cobrança. Vou corrigir imediatamente.",
+    "execution_mode": "synthetic_reliable_l3",
+    "timestamp": "2026-06-27T16:45:14.646480+00:00",
+    "strategy_level": 3,
+    "disambiguation_applied": true,
+    "run_number": 38
+  },
+  {
+    "run_id": "SYN30038",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "billing_issue",
+    "confidence": 0.879,
+    "intent_distribution": {
+      "billing_issue": 0.894,
+      "cancel_order": 0.026,
+      "refund_request": 0.026,
+      "shipping_issue": 0.026,
+      "general_support": 0.026
+    },
+    "routing_flow": "Billing Support Flow",
+    "generated_response": "Identificamos o problema na sua cobrança. Vou corrigir imediatamente.",
+    "execution_mode": "synthetic_reliable_l3",
+    "timestamp": "2026-06-27T16:45:14.646487+00:00",
+    "strategy_level": 3,
+    "disambiguation_applied": true,
+    "run_number": 39
+  },
+  {
+    "run_id": "SYN30039",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "billing_issue",
+    "confidence": 0.839,
+    "intent_distribution": {
+      "billing_issue": 0.861,
+      "cancel_order": 0.035,
+      "refund_request": 0.035,
+      "shipping_issue": 0.035,
+      "general_support": 0.035
+    },
+    "routing_flow": "Billing Support Flow",
+    "generated_response": "Identificamos o problema na sua cobrança. Vou corrigir imediatamente.",
+    "execution_mode": "synthetic_reliable_l3",
+    "timestamp": "2026-06-27T16:45:14.646493+00:00",
+    "strategy_level": 3,
+    "disambiguation_applied": true,
+    "run_number": 40
+  },
+  {
+    "run_id": "SYN30040",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "billing_issue",
+    "confidence": 0.756,
+    "intent_distribution": {
+      "billing_issue": 0.784,
+      "cancel_order": 0.054,
+      "refund_request": 0.054,
+      "shipping_issue": 0.054,
+      "general_support": 0.054
+    },
+    "routing_flow": "Billing Support Flow",
+    "generated_response": "Identificamos o problema na sua cobrança. Vou corrigir imediatamente.",
+    "execution_mode": "synthetic_reliable_l3",
+    "timestamp": "2026-06-27T16:45:14.646500+00:00",
+    "strategy_level": 3,
+    "disambiguation_applied": true,
+    "run_number": 41
+  },
+  {
+    "run_id": "SYN30041",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "billing_issue",
+    "confidence": 0.725,
+    "intent_distribution": {
+      "billing_issue": 0.758,
+      "cancel_order": 0.061,
+      "refund_request": 0.061,
+      "shipping_issue": 0.061,
+      "general_support": 0.061
+    },
+    "routing_flow": "Billing Support Flow",
+    "generated_response": "Identificamos o problema na sua cobrança. Vou corrigir imediatamente.",
+    "execution_mode": "synthetic_reliable_l3",
+    "timestamp": "2026-06-27T16:45:14.646507+00:00",
+    "strategy_level": 3,
+    "disambiguation_applied": true,
+    "run_number": 42
+  },
+  {
+    "run_id": "SYN30042",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "billing_issue",
+    "confidence": 0.953,
+    "intent_distribution": {
+      "billing_issue": 0.96,
+      "cancel_order": 0.01,
+      "refund_request": 0.01,
+      "shipping_issue": 0.01,
+      "general_support": 0.01
+    },
+    "routing_flow": "Billing Support Flow",
+    "generated_response": "Identificamos o problema na sua cobrança. Vou corrigir imediatamente.",
+    "execution_mode": "synthetic_reliable_l3",
+    "timestamp": "2026-06-27T16:45:14.646514+00:00",
+    "strategy_level": 3,
+    "disambiguation_applied": true,
+    "run_number": 43
+  },
+  {
+    "run_id": "SYN30043",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "billing_issue",
+    "confidence": 0.923,
+    "intent_distribution": {
+      "billing_issue": 0.935,
+      "cancel_order": 0.016,
+      "refund_request": 0.016,
+      "shipping_issue": 0.016,
+      "general_support": 0.016
+    },
+    "routing_flow": "Billing Support Flow",
+    "generated_response": "Identificamos o problema na sua cobrança. Vou corrigir imediatamente.",
+    "execution_mode": "synthetic_reliable_l3",
+    "timestamp": "2026-06-27T16:45:14.646520+00:00",
+    "strategy_level": 3,
+    "disambiguation_applied": true,
+    "run_number": 44
+  },
+  {
+    "run_id": "SYN30044",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "billing_issue",
+    "confidence": 0.743,
+    "intent_distribution": {
+      "billing_issue": 0.772,
+      "cancel_order": 0.057,
+      "refund_request": 0.057,
+      "shipping_issue": 0.057,
+      "general_support": 0.057
+    },
+    "routing_flow": "Billing Support Flow",
+    "generated_response": "Identificamos o problema na sua cobrança. Vou corrigir imediatamente.",
+    "execution_mode": "synthetic_reliable_l3",
+    "timestamp": "2026-06-27T16:45:14.646528+00:00",
+    "strategy_level": 3,
+    "disambiguation_applied": true,
+    "run_number": 45
+  },
+  {
+    "run_id": "SYN30045",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "billing_issue",
+    "confidence": 0.867,
+    "intent_distribution": {
+      "billing_issue": 0.886,
+      "cancel_order": 0.029,
+      "refund_request": 0.029,
+      "shipping_issue": 0.029,
+      "general_support": 0.029
+    },
+    "routing_flow": "Billing Support Flow",
+    "generated_response": "Identificamos o problema na sua cobrança. Vou corrigir imediatamente.",
+    "execution_mode": "synthetic_reliable_l3",
+    "timestamp": "2026-06-27T16:45:14.646535+00:00",
+    "strategy_level": 3,
+    "disambiguation_applied": true,
+    "run_number": 46
+  },
+  {
+    "run_id": "SYN30046",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "billing_issue",
+    "confidence": 0.908,
+    "intent_distribution": {
+      "billing_issue": 0.919,
+      "cancel_order": 0.02,
+      "refund_request": 0.02,
+      "shipping_issue": 0.02,
+      "general_support": 0.02
+    },
+    "routing_flow": "Billing Support Flow",
+    "generated_response": "Identificamos o problema na sua cobrança. Vou corrigir imediatamente.",
+    "execution_mode": "synthetic_reliable_l3",
+    "timestamp": "2026-06-27T16:45:14.646542+00:00",
+    "strategy_level": 3,
+    "disambiguation_applied": true,
+    "run_number": 47
+  },
+  {
+    "run_id": "SYN30047",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "billing_issue",
+    "confidence": 0.935,
+    "intent_distribution": {
+      "billing_issue": 0.943,
+      "cancel_order": 0.014,
+      "refund_request": 0.014,
+      "shipping_issue": 0.014,
+      "general_support": 0.014
+    },
+    "routing_flow": "Billing Support Flow",
+    "generated_response": "Identificamos o problema na sua cobrança. Vou corrigir imediatamente.",
+    "execution_mode": "synthetic_reliable_l3",
+    "timestamp": "2026-06-27T16:45:14.646548+00:00",
+    "strategy_level": 3,
+    "disambiguation_applied": true,
+    "run_number": 48
+  },
+  {
+    "run_id": "SYN30048",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "billing_issue",
+    "confidence": 0.736,
+    "intent_distribution": {
+      "billing_issue": 0.767,
+      "cancel_order": 0.058,
+      "refund_request": 0.058,
+      "shipping_issue": 0.058,
+      "general_support": 0.058
+    },
+    "routing_flow": "Billing Support Flow",
+    "generated_response": "Identificamos o problema na sua cobrança. Vou corrigir imediatamente.",
+    "execution_mode": "synthetic_reliable_l3",
+    "timestamp": "2026-06-27T16:45:14.646557+00:00",
+    "strategy_level": 3,
+    "disambiguation_applied": true,
+    "run_number": 49
+  },
+  {
+    "run_id": "SYN30049",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "billing_issue",
+    "confidence": 0.752,
+    "intent_distribution": {
+      "billing_issue": 0.78,
+      "cancel_order": 0.055,
+      "refund_request": 0.055,
+      "shipping_issue": 0.055,
+      "general_support": 0.055
+    },
+    "routing_flow": "Billing Support Flow",
+    "generated_response": "Identificamos o problema na sua cobrança. Vou corrigir imediatamente.",
+    "execution_mode": "synthetic_reliable_l3",
+    "timestamp": "2026-06-27T16:45:14.646566+00:00",
+    "strategy_level": 3,
+    "disambiguation_applied": true,
+    "run_number": 50
+  }
+]

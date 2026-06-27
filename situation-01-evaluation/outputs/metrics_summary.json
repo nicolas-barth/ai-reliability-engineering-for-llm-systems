@@ -1,0 +1,112 @@
+{
+  "total_runs": 50,
+  "consistency": {
+    "dominant_intent": "billing_issue",
+    "dominant_count": 17,
+    "total_runs": 50,
+    "consistency_rate": 0.34,
+    "consistency_rate_pct": 34.0
+  },
+  "unique_intents": {
+    "unique_intent_count": 4,
+    "intent_counts": {
+      "billing_issue": 17,
+      "general_support": 14,
+      "cancel_order": 11,
+      "refund_request": 8
+    }
+  },
+  "routing": {
+    "unique_routing_flows": 4,
+    "routing_distribution": {
+      "Billing Support Flow": {
+        "count": 17,
+        "pct": 34.0
+      },
+      "General Support Queue": {
+        "count": 14,
+        "pct": 28.0
+      },
+      "Order Cancellation Flow": {
+        "count": 11,
+        "pct": 22.0
+      },
+      "Refund Flow": {
+        "count": 8,
+        "pct": 16.0
+      }
+    }
+  },
+  "confidence": {
+    "min": 0.03,
+    "max": 0.9,
+    "mean": 0.4534,
+    "std": 0.3061,
+    "range": 0.87,
+    "values": [
+      0.53,
+      0.9,
+      0.54,
+      0.51,
+      0.27,
+      0.56,
+      0.03,
+      0.05,
+      0.27,
+      0.52,
+      0.84,
+      0.88,
+      0.07,
+      0.73,
+      0.55,
+      0.86,
+      0.72,
+      0.29,
+      0.73,
+      0.06,
+      0.27,
+      0.73,
+      0.3,
+      0.88,
+      0.69,
+      0.29,
+      0.25,
+      0.83,
+      0.04,
+      0.88,
+      0.34,
+      0.05,
+      0.07,
+      0.07,
+      0.54,
+      0.87,
+      0.89,
+      0.04,
+      0.04,
+      0.56,
+      0.03,
+      0.51,
+      0.55,
+      0.07,
+      0.27,
+      0.31,
+      0.73,
+      0.74,
+      0.07,
+      0.85
+    ]
+  },
+  "entropy": {
+    "shannon_entropy": 1.947,
+    "max_possible_entropy": 2.3219,
+    "normalized_entropy": 0.8385,
+    "interpretation": "HIGH — significant probabilistic dispersion"
+  },
+  "drift": {
+    "mean_similarity_to_baseline": 0.3617,
+    "mean_drift": 0.6383,
+    "min_similarity": 0.1508,
+    "max_similarity": 0.6721,
+    "drift_interpretation": "HIGH"
+  }
+}

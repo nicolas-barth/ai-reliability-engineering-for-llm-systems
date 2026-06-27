@@ -1,0 +1,69 @@
+{
+  "timestamp": "2026-06-27T16:45:18.457155+00:00",
+  "indicators": [
+    {
+      "id": "H-01",
+      "name": "Consistency",
+      "metric": "consistency_rate_pct",
+      "value": 92.0,
+      "unit": "%",
+      "status": "HEALTHY",
+      "threshold_healthy": 85,
+      "threshold_warning": 70
+    },
+    {
+      "id": "H-02",
+      "name": "Reliability",
+      "metric": "reliability_score",
+      "value": 91,
+      "unit": "pts",
+      "status": "HEALTHY",
+      "threshold_healthy": 80,
+      "threshold_warning": 65
+    },
+    {
+      "id": "H-03",
+      "name": "Drift",
+      "metric": "drift_reduction_pct",
+      "value": 74.7,
+      "unit": "%",
+      "status": "HEALTHY",
+      "threshold_healthy": 50,
+      "threshold_warning": 25
+    },
+    {
+      "id": "H-04",
+      "name": "Entropy",
+      "metric": "entropy",
+      "value": 0.202,
+      "unit": "",
+      "status": "HEALTHY",
+      "threshold_healthy": 0.4,
+      "threshold_warning": 0.6
+    },
+    {
+      "id": "H-05",
+      "name": "Guardrails",
+      "metric": "guardrail_effectiveness_pct",
+      "value": 100.0,
+      "unit": "%",
+      "status": "HEALTHY",
+      "threshold_healthy": 95,
+      "threshold_warning": 80
+    },
+    {
+      "id": "H-06",
+      "name": "False Positives",
+      "metric": "false_positive_rate_pct",
+      "value": 0.0,
+      "unit": "%",
+      "status": "HEALTHY",
+      "threshold_healthy": 5,
+      "threshold_warning": 10
+    }
+  ],
+  "overall_status": "HEALTHY",
+  "healthy_count": 6,
+  "warning_count": 0,
+  "critical_count": 0
+}

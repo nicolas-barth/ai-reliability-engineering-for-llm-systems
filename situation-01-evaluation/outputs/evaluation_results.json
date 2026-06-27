@@ -1,0 +1,902 @@
+[
+  {
+    "run_id": "1F8EF736",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "cancel_order",
+    "confidence": 0.53,
+    "intent_distribution": {
+      "cancel_order": 0.57,
+      "refund_request": 0.0,
+      "billing_issue": 0.43,
+      "shipping_issue": 0.0,
+      "general_support": 0.0
+    },
+    "routing_flow": "Order Cancellation Flow",
+    "generated_response": "Entendo que você gostaria de cancelar sua assinatura. Podemos prosseguir com o cancelamento e verificar a cobrança errada.",
+    "execution_mode": "real_llm",
+    "timestamp": "2026-06-27T16:41:31.716633+00:00",
+    "run_number": 1
+  },
+  {
+    "run_id": "7212D92B",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "billing_issue",
+    "confidence": 0.9,
+    "intent_distribution": {
+      "cancel_order": 0.15,
+      "refund_request": 0.0,
+      "billing_issue": 0.85,
+      "shipping_issue": 0.0,
+      "general_support": 0.0
+    },
+    "routing_flow": "Billing Support Flow",
+    "generated_response": "Lamentamos que tenha havido uma cobrança errada. Podemos ajudar a resolver essa inconsistência financeira imediatamente.",
+    "execution_mode": "real_llm",
+    "timestamp": "2026-06-27T16:41:33.654898+00:00",
+    "run_number": 2
+  },
+  {
+    "run_id": "44DB7B1F",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "cancel_order",
+    "confidence": 0.54,
+    "intent_distribution": {
+      "cancel_order": 0.57,
+      "refund_request": 0.0,
+      "billing_issue": 0.43,
+      "shipping_issue": 0.0,
+      "general_support": 0.0
+    },
+    "routing_flow": "Order Cancellation Flow",
+    "generated_response": "Entendi que você deseja cancelar sua assinatura. Posso ajudar com o processo de cancelamento.",
+    "execution_mode": "real_llm",
+    "timestamp": "2026-06-27T16:41:35.461942+00:00",
+    "run_number": 3
+  },
+  {
+    "run_id": "D7B30EEB",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "cancel_order",
+    "confidence": 0.51,
+    "intent_distribution": {
+      "cancel_order": 0.57,
+      "refund_request": 0.0,
+      "billing_issue": 0.43,
+      "shipping_issue": 0.0,
+      "general_support": 0.0
+    },
+    "routing_flow": "Order Cancellation Flow",
+    "generated_response": "Entendo que você foi cobrado de forma errada e deseja cancelar sua assinatura. Posso ajudar a cancelar o serviço para você?",
+    "execution_mode": "real_llm",
+    "timestamp": "2026-06-27T16:41:37.964338+00:00",
+    "run_number": 4
+  },
+  {
+    "run_id": "A68ED2ED",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "refund_request",
+    "confidence": 0.27,
+    "intent_distribution": {
+      "cancel_order": 0.2,
+      "refund_request": 0.2,
+      "billing_issue": 0.2,
+      "shipping_issue": 0.2,
+      "general_support": 0.2
+    },
+    "routing_flow": "Refund Flow",
+    "generated_response": "Entendo que houve uma cobrança incorreta e você deseja um reembolso. Vou ajudá-lo a iniciar o processo de devolução.",
+    "execution_mode": "real_llm",
+    "timestamp": "2026-06-27T16:41:39.811870+00:00",
+    "run_number": 5
+  },
+  {
+    "run_id": "5DCDDDE6",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "cancel_order",
+    "confidence": 0.56,
+    "intent_distribution": {
+      "cancel_order": 0.57,
+      "refund_request": 0.1,
+      "billing_issue": 0.2,
+      "shipping_issue": 0.0,
+      "general_support": 0.13
+    },
+    "routing_flow": "Order Cancellation Flow",
+    "generated_response": "Para cancelar sua assinatura, por favor, confirme se é isso que você deseja. Se você também precisa resolver uma cobrança errada, posso te ajudar com isso.",
+    "execution_mode": "real_llm",
+    "timestamp": "2026-06-27T16:41:41.936308+00:00",
+    "run_number": 6
+  },
+  {
+    "run_id": "9064506A",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "general_support",
+    "confidence": 0.03,
+    "intent_distribution": {
+      "cancel_order": 0.5,
+      "refund_request": 0.0,
+      "billing_issue": 0.5,
+      "shipping_issue": 0.0,
+      "general_support": 0.0
+    },
+    "routing_flow": "General Support Queue",
+    "generated_response": "Não consegui identificar claramente qual é a sua necessidade principal. Você poderia esclarecer se sua prioridade é resolver a cobrança errada ou cancelar sua assinatura?",
+    "execution_mode": "real_llm",
+    "timestamp": "2026-06-27T16:41:44.535397+00:00",
+    "run_number": 7
+  },
+  {
+    "run_id": "BB7F1BB2",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "general_support",
+    "confidence": 0.05,
+    "intent_distribution": {
+      "cancel_order": 0.2,
+      "refund_request": 0.2,
+      "billing_issue": 0.2,
+      "shipping_issue": 0.2,
+      "general_support": 0.2
+    },
+    "routing_flow": "General Support Queue",
+    "generated_response": "Não consegui identificar qual é o seu principal problema. Você pode me dar mais detalhes sobre a cobrança e a sua assinatura?",
+    "execution_mode": "real_llm",
+    "timestamp": "2026-06-27T16:41:46.657193+00:00",
+    "run_number": 8
+  },
+  {
+    "run_id": "A28CD1B2",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "refund_request",
+    "confidence": 0.27,
+    "intent_distribution": {
+      "cancel_order": 0.3,
+      "refund_request": 0.34,
+      "billing_issue": 0.3,
+      "shipping_issue": 0.0,
+      "general_support": 0.06
+    },
+    "routing_flow": "Refund Flow",
+    "generated_response": "Parece que você deseja solicitar um reembolso pela cobrança errada. Além disso, posso ajudá-lo a cancelar sua assinatura, se for isso que você quer.",
+    "execution_mode": "real_llm",
+    "timestamp": "2026-06-27T16:41:48.959434+00:00",
+    "run_number": 9
+  },
+  {
+    "run_id": "F77F92C9",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "cancel_order",
+    "confidence": 0.52,
+    "intent_distribution": {
+      "cancel_order": 0.57,
+      "refund_request": 0.0,
+      "billing_issue": 0.43,
+      "shipping_issue": 0.0,
+      "general_support": 0.0
+    },
+    "routing_flow": "Order Cancellation Flow",
+    "generated_response": "Entendo que você foi cobrado de forma incorreta e deseja cancelar a sua assinatura. Posso ajudar com o processo de cancelamento.",
+    "execution_mode": "real_llm",
+    "timestamp": "2026-06-27T16:41:51.089388+00:00",
+    "run_number": 10
+  },
+  {
+    "run_id": "62A6B7C1",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "billing_issue",
+    "confidence": 0.84,
+    "intent_distribution": {
+      "cancel_order": 0.15,
+      "refund_request": 0.0,
+      "billing_issue": 0.85,
+      "shipping_issue": 0.0,
+      "general_support": 0.0
+    },
+    "routing_flow": "Billing Support Flow",
+    "generated_response": "Lamento saber que você foi cobrado errado. Vamos resolver essa inconsistência financeira para garantir que você não tenha mais problemas com sua cobrança.",
+    "execution_mode": "real_llm",
+    "timestamp": "2026-06-27T16:41:52.779327+00:00",
+    "run_number": 11
+  },
+  {
+    "run_id": "293C3F5C",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "billing_issue",
+    "confidence": 0.88,
+    "intent_distribution": {
+      "cancel_order": 0.15,
+      "refund_request": 0.0,
+      "billing_issue": 0.85,
+      "shipping_issue": 0.0,
+      "general_support": 0.0
+    },
+    "routing_flow": "Billing Support Flow",
+    "generated_response": "Lamentamos pela cobrança errada. Por favor, nos informe mais detalhes sobre a inconsistência financeira para que possamos resolver isso o mais rápido possível.",
+    "execution_mode": "real_llm",
+    "timestamp": "2026-06-27T16:41:54.421907+00:00",
+    "run_number": 12
+  },
+  {
+    "run_id": "647F23B5",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "general_support",
+    "confidence": 0.07,
+    "intent_distribution": {
+      "cancel_order": 0.4,
+      "refund_request": 0.0,
+      "billing_issue": 0.6,
+      "shipping_issue": 0.0,
+      "general_support": 0.0
+    },
+    "routing_flow": "General Support Queue",
+    "generated_response": "Não consegui identificar exatamente qual é seu problema principal. Você poderia esclarecer se precisa de ajuda com a cobrança incorreta ou se deseja cancelar sua assinatura?",
+    "execution_mode": "real_llm",
+    "timestamp": "2026-06-27T16:41:57.165283+00:00",
+    "run_number": 13
+  },
+  {
+    "run_id": "B774D7AE",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "billing_issue",
+    "confidence": 0.73,
+    "intent_distribution": {
+      "cancel_order": 0.2,
+      "refund_request": 0.0,
+      "billing_issue": 0.7,
+      "shipping_issue": 0.0,
+      "general_support": 0.1
+    },
+    "routing_flow": "Billing Support Flow",
+    "generated_response": "Sinto muito pela cobrança errada que você recebeu. Posso ajudar a resolver essa inconsistência financeira imediatamente.",
+    "execution_mode": "real_llm",
+    "timestamp": "2026-06-27T16:41:59.201785+00:00",
+    "run_number": 14
+  },
+  {
+    "run_id": "F88E14EE",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "cancel_order",
+    "confidence": 0.55,
+    "intent_distribution": {
+      "cancel_order": 0.57,
+      "refund_request": 0.0,
+      "billing_issue": 0.43,
+      "shipping_issue": 0.0,
+      "general_support": 0.0
+    },
+    "routing_flow": "Order Cancellation Flow",
+    "generated_response": "Entendo que você foi cobrado incorretamente e deseja cancelar sua assinatura. Posso ajudar a encerrar o serviço para você.",
+    "execution_mode": "real_llm",
+    "timestamp": "2026-06-27T16:42:01.306851+00:00",
+    "run_number": 15
+  },
+  {
+    "run_id": "E6142FEC",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "billing_issue",
+    "confidence": 0.86,
+    "intent_distribution": {
+      "cancel_order": 0.15,
+      "refund_request": 0.0,
+      "billing_issue": 0.85,
+      "shipping_issue": 0.0,
+      "general_support": 0.0
+    },
+    "routing_flow": "Billing Support Flow",
+    "generated_response": "Lamento pela cobrança errada. Vamos resolver essa inconsistência financeira para que você possa seguir com o cancelamento da sua assinatura, se desejar.",
+    "execution_mode": "real_llm",
+    "timestamp": "2026-06-27T16:42:03.051539+00:00",
+    "run_number": 16
+  },
+  {
+    "run_id": "8E3945EB",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "billing_issue",
+    "confidence": 0.72,
+    "intent_distribution": {
+      "cancel_order": 0.32,
+      "refund_request": 0.0,
+      "billing_issue": 0.68,
+      "shipping_issue": 0.0,
+      "general_support": 0.0
+    },
+    "routing_flow": "Billing Support Flow",
+    "generated_response": "Lamento pela inconsistência na cobrança. Vamos resolver esse problema rapidamente.",
+    "execution_mode": "real_llm",
+    "timestamp": "2026-06-27T16:42:04.916053+00:00",
+    "run_number": 17
+  },
+  {
+    "run_id": "CA8E0EAB",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "refund_request",
+    "confidence": 0.29,
+    "intent_distribution": {
+      "cancel_order": 0.2,
+      "refund_request": 0.2,
+      "billing_issue": 0.2,
+      "shipping_issue": 0.2,
+      "general_support": 0.2
+    },
+    "routing_flow": "Refund Flow",
+    "generated_response": "Parece que você está enfrentando um problema com a cobrança. Podemos ajudar com o reembolso da cobrança incorreta que foi realizada.",
+    "execution_mode": "real_llm",
+    "timestamp": "2026-06-27T16:42:06.754263+00:00",
+    "run_number": 18
+  },
+  {
+    "run_id": "6034D528",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "billing_issue",
+    "confidence": 0.73,
+    "intent_distribution": {
+      "cancel_order": 0.28,
+      "refund_request": 0.0,
+      "billing_issue": 0.72,
+      "shipping_issue": 0.0,
+      "general_support": 0.0
+    },
+    "routing_flow": "Billing Support Flow",
+    "generated_response": "Lamentamos pela cobrança incorreta. Poderia fornecer mais detalhes para que possamos resolver a inconsistência financeira?",
+    "execution_mode": "real_llm",
+    "timestamp": "2026-06-27T16:42:08.686764+00:00",
+    "run_number": 19
+  },
+  {
+    "run_id": "8D8C01B7",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "general_support",
+    "confidence": 0.06,
+    "intent_distribution": {
+      "cancel_order": 0.2,
+      "refund_request": 0.2,
+      "billing_issue": 0.2,
+      "shipping_issue": 0.2,
+      "general_support": 0.2
+    },
+    "routing_flow": "General Support Queue",
+    "generated_response": "Não consegui identificar qual é o seu problema principal. Você pode fornecer mais detalhes sobre a cobrança ou sobre o cancelamento da sua assinatura?",
+    "execution_mode": "real_llm",
+    "timestamp": "2026-06-27T16:42:11.081769+00:00",
+    "run_number": 20
+  },
+  {
+    "run_id": "720F979C",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "refund_request",
+    "confidence": 0.27,
+    "intent_distribution": {
+      "cancel_order": 0.2,
+      "refund_request": 0.2,
+      "billing_issue": 0.2,
+      "shipping_issue": 0.2,
+      "general_support": 0.2
+    },
+    "routing_flow": "Refund Flow",
+    "generated_response": "Parece que você está enfrentando uma inconsistência financeira e deseja um reembolso. Vamos cuidar disso para você.",
+    "execution_mode": "real_llm",
+    "timestamp": "2026-06-27T16:42:12.819849+00:00",
+    "run_number": 21
+  },
+  {
+    "run_id": "D34AD557",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "billing_issue",
+    "confidence": 0.73,
+    "intent_distribution": {
+      "cancel_order": 0.3,
+      "refund_request": 0.0,
+      "billing_issue": 0.7,
+      "shipping_issue": 0.0,
+      "general_support": 0.0
+    },
+    "routing_flow": "Billing Support Flow",
+    "generated_response": "Lamento pela cobrança errada. Vou ajudá-lo a resolver essa inconsistência financeira.",
+    "execution_mode": "real_llm",
+    "timestamp": "2026-06-27T16:42:15.691761+00:00",
+    "run_number": 22
+  },
+  {
+    "run_id": "7B097CCA",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "general_support",
+    "confidence": 0.3,
+    "intent_distribution": {
+      "cancel_order": 0.2,
+      "refund_request": 0.2,
+      "billing_issue": 0.2,
+      "shipping_issue": 0.2,
+      "general_support": 0.2
+    },
+    "routing_flow": "General Support Queue",
+    "generated_response": "Entendo que houve uma cobrança errada e você deseja cancelar a assinatura. Poderia me fornecer mais detalhes para que eu possa ajudar melhor?",
+    "execution_mode": "real_llm",
+    "timestamp": "2026-06-27T16:42:17.308854+00:00",
+    "run_number": 23
+  },
+  {
+    "run_id": "EE6C7946",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "billing_issue",
+    "confidence": 0.88,
+    "intent_distribution": {
+      "cancel_order": 0.15,
+      "refund_request": 0.0,
+      "billing_issue": 0.85,
+      "shipping_issue": 0.0,
+      "general_support": 0.0
+    },
+    "routing_flow": "Billing Support Flow",
+    "generated_response": "Lamento pela cobrança errada. Posso ajudar a resolver a inconsistência financeira que ocorreu na sua assinatura.",
+    "execution_mode": "real_llm",
+    "timestamp": "2026-06-27T16:42:19.032897+00:00",
+    "run_number": 24
+  },
+  {
+    "run_id": "0F8665E1",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "billing_issue",
+    "confidence": 0.69,
+    "intent_distribution": {
+      "cancel_order": 0.3,
+      "refund_request": 0.0,
+      "billing_issue": 0.7,
+      "shipping_issue": 0.0,
+      "general_support": 0.0
+    },
+    "routing_flow": "Billing Support Flow",
+    "generated_response": "Lamento pela cobrança errada que você recebeu. Vamos resolver essa inconsistência financeira imediatamente.",
+    "execution_mode": "real_llm",
+    "timestamp": "2026-06-27T16:42:20.800005+00:00",
+    "run_number": 25
+  },
+  {
+    "run_id": "449425FE",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "refund_request",
+    "confidence": 0.29,
+    "intent_distribution": {
+      "cancel_order": 0.3,
+      "refund_request": 0.3,
+      "billing_issue": 0.3,
+      "shipping_issue": 0.0,
+      "general_support": 0.1
+    },
+    "routing_flow": "Refund Flow",
+    "generated_response": "Lamentamos pela cobrança incorreta. Para solicitar o reembolso da cobrança, por favor, confirme os detalhes da sua assinatura.",
+    "execution_mode": "real_llm",
+    "timestamp": "2026-06-27T16:42:22.581751+00:00",
+    "run_number": 26
+  },
+  {
+    "run_id": "EDE0BAB1",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "refund_request",
+    "confidence": 0.25,
+    "intent_distribution": {
+      "cancel_order": 0.2,
+      "refund_request": 0.2,
+      "billing_issue": 0.2,
+      "shipping_issue": 0.2,
+      "general_support": 0.2
+    },
+    "routing_flow": "Refund Flow",
+    "generated_response": "Entendo que você foi cobrado de forma errada e deseja um reembolso. Vamos resolver isso para você e garantir que a cobrança incorreta seja corrigida.",
+    "execution_mode": "real_llm",
+    "timestamp": "2026-06-27T16:42:24.306571+00:00",
+    "run_number": 27
+  },
+  {
+    "run_id": "188C20E2",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "billing_issue",
+    "confidence": 0.83,
+    "intent_distribution": {
+      "cancel_order": 0.15,
+      "refund_request": 0.0,
+      "billing_issue": 0.85,
+      "shipping_issue": 0.0,
+      "general_support": 0.0
+    },
+    "routing_flow": "Billing Support Flow",
+    "generated_response": "Lamento pela cobrança incorreta. Por favor, forneça mais detalhes para que possamos corrigir a inconsistência financeira.",
+    "execution_mode": "real_llm",
+    "timestamp": "2026-06-27T16:42:26.998502+00:00",
+    "run_number": 28
+  },
+  {
+    "run_id": "566E4FA2",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "general_support",
+    "confidence": 0.04,
+    "intent_distribution": {
+      "cancel_order": 0.2,
+      "refund_request": 0.2,
+      "billing_issue": 0.2,
+      "shipping_issue": 0.2,
+      "general_support": 0.2
+    },
+    "routing_flow": "General Support Queue",
+    "generated_response": "Não consegui determinar claramente sua principal necessidade. Você poderia fornecer mais informações sobre o que está acontecendo?",
+    "execution_mode": "real_llm",
+    "timestamp": "2026-06-27T16:42:28.976256+00:00",
+    "run_number": 29
+  },
+  {
+    "run_id": "E9495D83",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "billing_issue",
+    "confidence": 0.88,
+    "intent_distribution": {
+      "cancel_order": 0.15,
+      "refund_request": 0.0,
+      "billing_issue": 0.85,
+      "shipping_issue": 0.0,
+      "general_support": 0.0
+    },
+    "routing_flow": "Billing Support Flow",
+    "generated_response": "Lamentamos que você tenha sido cobrado errado. Podemos ajudar a resolver a inconsistência financeira relacionada à sua cobrança.",
+    "execution_mode": "real_llm",
+    "timestamp": "2026-06-27T16:42:30.981563+00:00",
+    "run_number": 30
+  },
+  {
+    "run_id": "9C8DDE1A",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "cancel_order",
+    "confidence": 0.34,
+    "intent_distribution": {
+      "cancel_order": 0.32,
+      "refund_request": 0.28,
+      "billing_issue": 0.3,
+      "shipping_issue": 0.0,
+      "general_support": 0.1
+    },
+    "routing_flow": "Order Cancellation Flow",
+    "generated_response": "Entendi que você deseja cancelar sua assinatura. Além disso, vamos precisar revisar a cobrança errada; posso ajudar com isso também?",
+    "execution_mode": "real_llm",
+    "timestamp": "2026-06-27T16:42:32.667710+00:00",
+    "run_number": 31
+  },
+  {
+    "run_id": "378BA9E0",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "general_support",
+    "confidence": 0.05,
+    "intent_distribution": {
+      "cancel_order": 0.2,
+      "refund_request": 0.2,
+      "billing_issue": 0.2,
+      "shipping_issue": 0.2,
+      "general_support": 0.2
+    },
+    "routing_flow": "General Support Queue",
+    "generated_response": "Não consegui identificar qual é o seu problema principal, mas você mencionou uma cobrança errada e o desejo de cancelar sua assinatura. Posso ajudar com alguma dessas questões?",
+    "execution_mode": "real_llm",
+    "timestamp": "2026-06-27T16:42:34.832286+00:00",
+    "run_number": 32
+  },
+  {
+    "run_id": "1BB1AAEE",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "general_support",
+    "confidence": 0.07,
+    "intent_distribution": {
+      "cancel_order": 0.2,
+      "refund_request": 0.2,
+      "billing_issue": 0.2,
+      "shipping_issue": 0.2,
+      "general_support": 0.2
+    },
+    "routing_flow": "General Support Queue",
+    "generated_response": "Não consegui determinar qual é a sua principal necessidade. Você mencionou uma cobrança errada e o desejo de cancelar sua assinatura. Como posso ajudá-lo?",
+    "execution_mode": "real_llm",
+    "timestamp": "2026-06-27T16:42:36.936806+00:00",
+    "run_number": 33
+  },
+  {
+    "run_id": "939EAD4D",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "general_support",
+    "confidence": 0.07,
+    "intent_distribution": {
+      "cancel_order": 0.2,
+      "refund_request": 0.2,
+      "billing_issue": 0.2,
+      "shipping_issue": 0.2,
+      "general_support": 0.2
+    },
+    "routing_flow": "General Support Queue",
+    "generated_response": "Não consegui determinar qual é o seu principal problema. Poderia esclarecer se a questão é sobre a cobrança ou o cancelamento da assinatura?",
+    "execution_mode": "real_llm",
+    "timestamp": "2026-06-27T16:42:39.005407+00:00",
+    "run_number": 34
+  },
+  {
+    "run_id": "E456DA11",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "cancel_order",
+    "confidence": 0.54,
+    "intent_distribution": {
+      "cancel_order": 0.57,
+      "refund_request": 0.0,
+      "billing_issue": 0.43,
+      "shipping_issue": 0.0,
+      "general_support": 0.0
+    },
+    "routing_flow": "Order Cancellation Flow",
+    "generated_response": "Entendo que você deseja cancelar sua assinatura. Posso ajudar com o processo de cancelamento.",
+    "execution_mode": "real_llm",
+    "timestamp": "2026-06-27T16:42:40.695584+00:00",
+    "run_number": 35
+  },
+  {
+    "run_id": "E390DC62",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "billing_issue",
+    "confidence": 0.87,
+    "intent_distribution": {
+      "cancel_order": 0.15,
+      "refund_request": 0.0,
+      "billing_issue": 0.85,
+      "shipping_issue": 0.0,
+      "general_support": 0.0
+    },
+    "routing_flow": "Billing Support Flow",
+    "generated_response": "Lamento pela cobrança errada. Podemos corrigir isso imediatamente. Você também gostaria de continuar o processo de cancelamento da sua assinatura?",
+    "execution_mode": "real_llm",
+    "timestamp": "2026-06-27T16:42:42.421790+00:00",
+    "run_number": 36
+  },
+  {
+    "run_id": "E3CC7286",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "billing_issue",
+    "confidence": 0.89,
+    "intent_distribution": {
+      "cancel_order": 0.15,
+      "refund_request": 0.0,
+      "billing_issue": 0.85,
+      "shipping_issue": 0.0,
+      "general_support": 0.0
+    },
+    "routing_flow": "Billing Support Flow",
+    "generated_response": "Lamentamos a cobrança incorreta. Por favor, informe-nos sobre o valor da inconsistência financeira para que possamos resolver isso o mais rápido possível.",
+    "execution_mode": "real_llm",
+    "timestamp": "2026-06-27T16:42:44.052857+00:00",
+    "run_number": 37
+  },
+  {
+    "run_id": "EE03B9CA",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "general_support",
+    "confidence": 0.04,
+    "intent_distribution": {
+      "cancel_order": 0.2,
+      "refund_request": 0.2,
+      "billing_issue": 0.2,
+      "shipping_issue": 0.2,
+      "general_support": 0.2
+    },
+    "routing_flow": "General Support Queue",
+    "generated_response": "Não consegui identificar exatamente qual é o seu problema principal. Poderia fornecer mais detalhes sobre a cobrança e o cancelamento da sua assinatura?",
+    "execution_mode": "real_llm",
+    "timestamp": "2026-06-27T16:42:46.981207+00:00",
+    "run_number": 38
+  },
+  {
+    "run_id": "3E34786E",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "general_support",
+    "confidence": 0.04,
+    "intent_distribution": {
+      "cancel_order": 0.5,
+      "refund_request": 0.0,
+      "billing_issue": 0.5,
+      "shipping_issue": 0.0,
+      "general_support": 0.0
+    },
+    "routing_flow": "General Support Queue",
+    "generated_response": "Não consegui identificar qual é o seu problema principal. Você poderia esclarecer se a questão mais urgente é a cobrança ou o cancelamento da sua assinatura?",
+    "execution_mode": "real_llm",
+    "timestamp": "2026-06-27T16:42:48.724759+00:00",
+    "run_number": 39
+  },
+  {
+    "run_id": "5D3D16BC",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "cancel_order",
+    "confidence": 0.56,
+    "intent_distribution": {
+      "cancel_order": 0.57,
+      "refund_request": 0.0,
+      "billing_issue": 0.43,
+      "shipping_issue": 0.0,
+      "general_support": 0.0
+    },
+    "routing_flow": "Order Cancellation Flow",
+    "generated_response": "Para prosseguir com o cancelamento da sua assinatura, posso ajudar. Você também gostaria de resolver a cobrança errada?",
+    "execution_mode": "real_llm",
+    "timestamp": "2026-06-27T16:42:50.535865+00:00",
+    "run_number": 40
+  },
+  {
+    "run_id": "5A0839B8",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "general_support",
+    "confidence": 0.03,
+    "intent_distribution": {
+      "cancel_order": 0.5,
+      "refund_request": 0.0,
+      "billing_issue": 0.5,
+      "shipping_issue": 0.0,
+      "general_support": 0.0
+    },
+    "routing_flow": "General Support Queue",
+    "generated_response": "Não consegui identificar claramente qual é o seu problema principal. Você pode especificar se prefere discutir a cobrança ou o cancelamento da assinatura?",
+    "execution_mode": "real_llm",
+    "timestamp": "2026-06-27T16:42:52.311946+00:00",
+    "run_number": 41
+  },
+  {
+    "run_id": "883E1B50",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "cancel_order",
+    "confidence": 0.51,
+    "intent_distribution": {
+      "cancel_order": 0.57,
+      "refund_request": 0.0,
+      "billing_issue": 0.43,
+      "shipping_issue": 0.0,
+      "general_support": 0.0
+    },
+    "routing_flow": "Order Cancellation Flow",
+    "generated_response": "Entendo que você deseja cancelar sua assinatura. Posso ajudar com o processo de encerramento do serviço.",
+    "execution_mode": "real_llm",
+    "timestamp": "2026-06-27T16:42:54.036652+00:00",
+    "run_number": 42
+  },
+  {
+    "run_id": "5E483019",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "cancel_order",
+    "confidence": 0.55,
+    "intent_distribution": {
+      "cancel_order": 0.57,
+      "refund_request": 0.0,
+      "billing_issue": 0.43,
+      "shipping_issue": 0.0,
+      "general_support": 0.0
+    },
+    "routing_flow": "Order Cancellation Flow",
+    "generated_response": "Entendi que você foi cobrado errado e gostaria de cancelar sua assinatura. Posso ajudar com o processo de cancelamento agora?",
+    "execution_mode": "real_llm",
+    "timestamp": "2026-06-27T16:42:55.962315+00:00",
+    "run_number": 43
+  },
+  {
+    "run_id": "193DDDF4",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "general_support",
+    "confidence": 0.07,
+    "intent_distribution": {
+      "cancel_order": 0.2,
+      "refund_request": 0.2,
+      "billing_issue": 0.2,
+      "shipping_issue": 0.2,
+      "general_support": 0.2
+    },
+    "routing_flow": "General Support Queue",
+    "generated_response": "Não consegui identificar claramente qual é o seu problema principal. Você poderia fornecer mais detalhes sobre a cobrança incorreta ou o cancelamento da assinatura?",
+    "execution_mode": "real_llm",
+    "timestamp": "2026-06-27T16:42:57.861113+00:00",
+    "run_number": 44
+  },
+  {
+    "run_id": "71086BB6",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "refund_request",
+    "confidence": 0.27,
+    "intent_distribution": {
+      "cancel_order": 0.2,
+      "refund_request": 0.2,
+      "billing_issue": 0.2,
+      "shipping_issue": 0.2,
+      "general_support": 0.2
+    },
+    "routing_flow": "Refund Flow",
+    "generated_response": "Pido desculpas pela cobrança errada. Para processar o seu reembolso, por favor, forneça mais detalhes sobre a cobrança e nós resolveremos isso rapidamente.",
+    "execution_mode": "real_llm",
+    "timestamp": "2026-06-27T16:42:59.874472+00:00",
+    "run_number": 45
+  },
+  {
+    "run_id": "CF247D61",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "refund_request",
+    "confidence": 0.31,
+    "intent_distribution": {
+      "cancel_order": 0.2,
+      "refund_request": 0.2,
+      "billing_issue": 0.2,
+      "shipping_issue": 0.2,
+      "general_support": 0.2
+    },
+    "routing_flow": "Refund Flow",
+    "generated_response": "Entendo que você foi cobrado errado e deseja um reembolso. Vamos resolver isso para garantir que você receba o valor de volta corretamente.",
+    "execution_mode": "real_llm",
+    "timestamp": "2026-06-27T16:43:01.569853+00:00",
+    "run_number": 46
+  },
+  {
+    "run_id": "94445547",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "billing_issue",
+    "confidence": 0.73,
+    "intent_distribution": {
+      "cancel_order": 0.32,
+      "refund_request": 0.0,
+      "billing_issue": 0.68,
+      "shipping_issue": 0.0,
+      "general_support": 0.0
+    },
+    "routing_flow": "Billing Support Flow",
+    "generated_response": "Lamentamos que você tenha tido uma cobrança errada. Podemos ajudar a resolver a inconsistência financeira para você.",
+    "execution_mode": "real_llm",
+    "timestamp": "2026-06-27T16:43:03.331115+00:00",
+    "run_number": 47
+  },
+  {
+    "run_id": "015E0D1C",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "billing_issue",
+    "confidence": 0.74,
+    "intent_distribution": {
+      "cancel_order": 0.3,
+      "refund_request": 0.0,
+      "billing_issue": 0.7,
+      "shipping_issue": 0.0,
+      "general_support": 0.0
+    },
+    "routing_flow": "Billing Support Flow",
+    "generated_response": "Lamentamos pela cobrança errada. Podemos ajudar a resolver essa inconsistência financeira para que tudo fique certo.",
+    "execution_mode": "real_llm",
+    "timestamp": "2026-06-27T16:43:05.261740+00:00",
+    "run_number": 48
+  },
+  {
+    "run_id": "BC466D18",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "general_support",
+    "confidence": 0.07,
+    "intent_distribution": {
+      "cancel_order": 0.2,
+      "refund_request": 0.2,
+      "billing_issue": 0.2,
+      "shipping_issue": 0.2,
+      "general_support": 0.2
+    },
+    "routing_flow": "General Support Queue",
+    "generated_response": "Não consegui identificar qual é a sua principal necessidade. Você pode esclarecer se prefere resolver o problema de cobrança ou cancelar a sua assinatura?",
+    "execution_mode": "real_llm",
+    "timestamp": "2026-06-27T16:43:07.073844+00:00",
+    "run_number": 49
+  },
+  {
+    "run_id": "20CC2433",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "predicted_intent": "billing_issue",
+    "confidence": 0.85,
+    "intent_distribution": {
+      "cancel_order": 0.15,
+      "refund_request": 0.0,
+      "billing_issue": 0.85,
+      "shipping_issue": 0.0,
+      "general_support": 0.0
+    },
+    "routing_flow": "Billing Support Flow",
+    "generated_response": "Parece que houve uma inconsistência financeira na sua cobrança. Podemos verificar isso e, se necessário, proceder com o cancelamento da sua assinatura.",
+    "execution_mode": "real_llm",
+    "timestamp": "2026-06-27T16:43:09.019303+00:00",
+    "run_number": 50
+  }
+]

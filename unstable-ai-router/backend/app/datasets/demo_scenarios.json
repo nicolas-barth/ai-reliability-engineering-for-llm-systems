@@ -1,0 +1,132 @@
+[
+  {
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "runs": [
+      {
+        "intent": "general_support",
+        "confidence": 0.05,
+        "distribution": {
+          "billing_issue": 0.22,
+          "cancel_order": 0.21,
+          "refund_request": 0.20,
+          "shipping_issue": 0.14,
+          "general_support": 0.23
+        },
+        "response": "Não consegui identificar exatamente qual é o problema principal da sua solicitação. Vou encaminhar para um agente especializado avaliar seu caso."
+      },
+      {
+        "intent": "refund_request",
+        "confidence": 0.29,
+        "distribution": {
+          "billing_issue": 0.25,
+          "cancel_order": 0.21,
+          "refund_request": 0.31,
+          "shipping_issue": 0.05,
+          "general_support": 0.18
+        },
+        "response": "Parece existir algum possível problema relacionado a reembolso ou cobrança indevida na sua conta."
+      },
+      {
+        "intent": "cancel_order",
+        "confidence": 0.54,
+        "distribution": {
+          "billing_issue": 0.21,
+          "cancel_order": 0.54,
+          "refund_request": 0.16,
+          "shipping_issue": 0.02,
+          "general_support": 0.07
+        },
+        "response": "Posso iniciar o cancelamento da assinatura caso você queira prosseguir. Por favor, confirme para que possamos processar."
+      },
+      {
+        "intent": "billing_issue",
+        "confidence": 0.71,
+        "distribution": {
+          "billing_issue": 0.71,
+          "cancel_order": 0.16,
+          "refund_request": 0.09,
+          "shipping_issue": 0.01,
+          "general_support": 0.03
+        },
+        "response": "Detectamos indícios de cobrança incorreta relacionados à sua assinatura. Nossa equipe de faturamento irá verificar a inconsistência."
+      },
+      {
+        "intent": "billing_issue",
+        "confidence": 0.88,
+        "distribution": {
+          "billing_issue": 0.88,
+          "cancel_order": 0.07,
+          "refund_request": 0.03,
+          "shipping_issue": 0.01,
+          "general_support": 0.01
+        },
+        "response": "Identificamos uma cobrança inconsistente na sua assinatura e vamos encaminhar o caso para análise financeira imediatamente."
+      }
+    ]
+  },
+  {
+    "input": "_default",
+    "runs": [
+      {
+        "intent": "general_support",
+        "confidence": 0.05,
+        "distribution": {
+          "billing_issue": 0.22,
+          "cancel_order": 0.20,
+          "refund_request": 0.19,
+          "shipping_issue": 0.15,
+          "general_support": 0.24
+        },
+        "response": "Não consegui identificar o problema principal. Vou encaminhar para um agente especializado."
+      },
+      {
+        "intent": "general_support",
+        "confidence": 0.29,
+        "distribution": {
+          "billing_issue": 0.24,
+          "cancel_order": 0.22,
+          "refund_request": 0.18,
+          "shipping_issue": 0.07,
+          "general_support": 0.29
+        },
+        "response": "Recebi sua mensagem. Nossa equipe irá analisar e retornar com a melhor solução."
+      },
+      {
+        "intent": "general_support",
+        "confidence": 0.54,
+        "distribution": {
+          "billing_issue": 0.20,
+          "cancel_order": 0.15,
+          "refund_request": 0.12,
+          "shipping_issue": 0.05,
+          "general_support": 0.48
+        },
+        "response": "Sua solicitação foi encaminhada para o departamento responsável verificar o caso."
+      },
+      {
+        "intent": "general_support",
+        "confidence": 0.71,
+        "distribution": {
+          "billing_issue": 0.12,
+          "cancel_order": 0.09,
+          "refund_request": 0.07,
+          "shipping_issue": 0.03,
+          "general_support": 0.69
+        },
+        "response": "Vou direcionar seu caso para o especialista mais adequado. Em breve você receberá um retorno."
+      },
+      {
+        "intent": "general_support",
+        "confidence": 0.88,
+        "distribution": {
+          "billing_issue": 0.06,
+          "cancel_order": 0.05,
+          "refund_request": 0.04,
+          "shipping_issue": 0.01,
+          "general_support": 0.84
+        },
+        "response": "Sua solicitação foi registrada com prioridade e será atendida pelo suporte especializado em breve."
+      }
+    ]
+  }
+]

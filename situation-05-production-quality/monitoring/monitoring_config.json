@@ -1,0 +1,22 @@
+{
+  "scrape_interval_seconds": 60,
+  "alert_evaluation_interval_seconds": 30,
+  "retention_days": 90,
+  "tracked_metrics": [
+    "consistency_rate_pct",
+    "reliability_score",
+    "entropy",
+    "detection_rate_pct",
+    "block_rate_pct",
+    "false_positive_rate_pct",
+    "guardrail_effectiveness_pct",
+    "overall_quality_score"
+  ],
+  "slo_evaluation_interval": "hourly",
+  "incident_escalation_policy": {
+    "P1": "immediate \u2014 page on-call",
+    "P2": "15 minutes \u2014 notify team lead",
+    "P3": "1 hour \u2014 ticket created",
+    "P4": "next business day \u2014 backlog"
+  }
+}

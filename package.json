@@ -1,0 +1,17 @@
+{
+  "name": "ai-quality-engineering-lab",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI Quality Engineering Lab — Intent Classification Reliability Pipeline",
+  "scripts": {
+    "situation-01": "cd situation-01-evaluation && python scripts/run_full_evaluation.py",
+    "situation-02": "cd situation-02-root-cause-analysis && python scripts/run_full_rca.py",
+    "situation-03": "cd situation-03-reliability-engineering && python scripts/run_full_reliability_engineering.py --skip-api",
+    "situation-04": "cd situation-04-guardrails && python scripts/run_full_guardrails_validation.py",
+    "situation-05": "cd situation-05-production-quality && python scripts/run_full_production_quality_assessment.py",
+    "situations": "npm run situation-01 && npm run situation-02 && npm run situation-03 && npm run situation-04 && npm run situation-05",
+    "dashboard": "python executive-dashboard/generate_executive_dashboard.py",
+    "frontend": "cd unstable-ai-router/frontend && npm run dev",
+    "backend": "cd unstable-ai-router/backend && uvicorn main:app --reload --port 8000"
+  }
+}

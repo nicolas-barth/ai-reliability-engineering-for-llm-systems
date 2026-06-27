@@ -1,0 +1,130 @@
+{
+  "primary_root_cause": {
+    "name": "Prompt Ambiguity",
+    "id": "RCA-01",
+    "severity": "CRITICAL",
+    "evidence": "Ambiguity level: HIGH. 3 intents triggered simultaneously: billing_issue, cancel_order, refund_request. Controlled experiments confirmed causality: removing ambiguity raised consistency from 53% to 100% (Cancel Only). Delta: +47 percentage points.",
+    "score": 95.0
+  },
+  "secondary_root_cause": {
+    "name": "Intent Taxonomy Overlap",
+    "id": "RCA-02",
+    "severity": "CRITICAL",
+    "evidence": "Primary competing pair: billing_issue ↔ cancel_order (overlap score 45.6%). Top-2 co-occurrence: 64.0% of runs. Pearson r=-0.151.",
+    "score": 91.2
+  },
+  "root_causes": [
+    {
+      "id": "RCA-01",
+      "name": "Prompt Ambiguity",
+      "rank": "primary",
+      "category": "root_cause",
+      "description": "The input activates multiple distinct intents simultaneously. No disambiguation strategy is applied at the input layer — the LLM must resolve genuine semantic uncertainty at inference time. Controlled experiments proved this is the primary causal driver: removing the ambiguity produced near-perfect consistency.",
+      "situation_3_fix": "Implement semantic disambiguation at the input layer. Detect multi-intent inputs and resolve them before classification.",
+      "score": 95.0,
+      "severity": "CRITICAL",
+      "evidence": "Ambiguity level: HIGH. 3 intents triggered simultaneously: billing_issue, cancel_order, refund_request. Controlled experiments confirmed causality: removing ambiguity raised consistency from 53% to 100% (Cancel Only). Delta: +47 percentage points."
+    },
+    {
+      "id": "RCA-02",
+      "name": "Intent Taxonomy Overlap",
+      "rank": "secondary",
+      "category": "root_cause",
+      "description": "billing_issue, cancel_order, and refund_request share significant semantic space. When an ambiguous input is presented, the classifier cannot distinguish between them cleanly — producing competing interpretations and split probability mass.",
+      "situation_3_fix": "Redefine intent boundaries with mutually exclusive semantic criteria. Add explicit decision rules for overlapping domains.",
+      "score": 91.2,
+      "severity": "CRITICAL",
+      "evidence": "Primary competing pair: billing_issue ↔ cancel_order (overlap score 45.6%). Top-2 co-occurrence: 64.0% of runs. Pearson r=-0.151."
+    }
+  ],
+  "contributing_factors": [
+    {
+      "id": "CF-01",
+      "name": "Non-Deterministic Routing",
+      "category": "contributing_factor",
+      "description": "When multiple intents compete, no routing priority hierarchy exists to resolve the ambiguity. The routing outcome is determined by whichever intent wins the probabilistic competition — which varies per run.",
+      "situation_3_fix": "Add routing priority rules and confidence threshold guards. Define explicit tiebreakers when multiple intents are viable.",
+      "score": 71.6,
+      "severity": "HIGH",
+      "evidence": "4 routing flows activated from identical input. Collision rate: 66.0%. Routing changed 36 times across 50 runs."
+    }
+  ],
+  "observable_symptoms": [
+    {
+      "id": "SYM-01",
+      "name": "Confidence Score Volatility",
+      "category": "symptom",
+      "explanation": "When two intents hold near-equal probability mass, confidence collapses. The observed multimodal distribution is a consequence of intent competition, not an independent cause.",
+      "metric": "σ=0.306, range 0.03–0.9, 4 confidence clusters"
+    },
+    {
+      "id": "SYM-02",
+      "name": "Semantic Response Drift",
+      "category": "symptom",
+      "explanation": "Responses drift because the selected intent changes per run. The LLM generates coherent responses per intent — but different intents produce structurally different responses.",
+      "metric": "mean drift 0.6425 (HIGH — from Situation 1)"
+    },
+    {
+      "id": "SYM-03",
+      "name": "Routing Variance",
+      "category": "symptom",
+      "explanation": "4 distinct routing flows activated from identical input. Routing variance is downstream of intent classification instability.",
+      "metric": "4 distinct flows from identical input"
+    },
+    {
+      "id": "SYM-04",
+      "name": "Low Consistency Rate",
+      "category": "symptom",
+      "explanation": "40% consistency is the aggregate result of all competing causal factors. It measures the problem, not its origin.",
+      "metric": "40.0% consistency rate (baseline — from Situation 1)"
+    }
+  ],
+  "root_cause_ranking": [
+    {
+      "id": "RCA-01",
+      "name": "Prompt Ambiguity",
+      "rank": "primary",
+      "category": "root_cause",
+      "description": "The input activates multiple distinct intents simultaneously. No disambiguation strategy is applied at the input layer — the LLM must resolve genuine semantic uncertainty at inference time. Controlled experiments proved this is the primary causal driver: removing the ambiguity produced near-perfect consistency.",
+      "situation_3_fix": "Implement semantic disambiguation at the input layer. Detect multi-intent inputs and resolve them before classification.",
+      "score": 95.0,
+      "severity": "CRITICAL",
+      "evidence": "Ambiguity level: HIGH. 3 intents triggered simultaneously: billing_issue, cancel_order, refund_request. Controlled experiments confirmed causality: removing ambiguity raised consistency from 53% to 100% (Cancel Only). Delta: +47 percentage points."
+    },
+    {
+      "id": "RCA-02",
+      "name": "Intent Taxonomy Overlap",
+      "rank": "secondary",
+      "category": "root_cause",
+      "description": "billing_issue, cancel_order, and refund_request share significant semantic space. When an ambiguous input is presented, the classifier cannot distinguish between them cleanly — producing competing interpretations and split probability mass.",
+      "situation_3_fix": "Redefine intent boundaries with mutually exclusive semantic criteria. Add explicit decision rules for overlapping domains.",
+      "score": 91.2,
+      "severity": "CRITICAL",
+      "evidence": "Primary competing pair: billing_issue ↔ cancel_order (overlap score 45.6%). Top-2 co-occurrence: 64.0% of runs. Pearson r=-0.151."
+    },
+    {
+      "id": "CF-01",
+      "name": "Non-Deterministic Routing",
+      "category": "contributing_factor",
+      "description": "When multiple intents compete, no routing priority hierarchy exists to resolve the ambiguity. The routing outcome is determined by whichever intent wins the probabilistic competition — which varies per run.",
+      "situation_3_fix": "Add routing priority rules and confidence threshold guards. Define explicit tiebreakers when multiple intents are viable.",
+      "score": 71.6,
+      "severity": "HIGH",
+      "evidence": "4 routing flows activated from identical input. Collision rate: 66.0%. Routing changed 36 times across 50 runs."
+    }
+  ],
+  "engineering_conclusion": "The primary driver of instability is prompt ambiguity. The input activates 3 competing intents simultaneously, providing no unambiguous signal for the classifier to resolve. Controlled experiments demonstrated that removing semantic ambiguity raised consistency from 53% to 100% (Cancel Only), confirming prompt ambiguity as the primary causal driver. Intent taxonomy overlap further amplifies instability by creating competing interpretations for the same user request — billing_issue, cancel_order, and refund_request share significant semantic space. Confidence volatility and routing variance are observable symptoms of these root causes — not independent causes themselves.",
+  "confidence_level": "HIGH",
+  "overall_impact": "CRITICAL",
+  "situation_3_priorities": [
+    "Implement semantic disambiguation at the input layer. Detect multi-intent inputs and resolve them before classification.",
+    "Redefine intent boundaries with mutually exclusive semantic criteria. Add explicit decision rules for overlapping domains.",
+    "Add routing priority rules and confidence threshold guards. Define explicit tiebreakers when multiple intents are viable."
+  ],
+  "causal_chain": [
+    "Prompt Ambiguity",
+    "Intent Taxonomy Overlap",
+    "Non-Deterministic Routing",
+    "Confidence Volatility / Routing Variance / Semantic Drift"
+  ]
+}

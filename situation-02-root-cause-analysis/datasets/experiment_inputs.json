@@ -1,0 +1,26 @@
+[
+  {
+    "id": "EXP-00",
+    "label": "Baseline",
+    "input": "Fui cobrado errado e quero cancelar minha assinatura",
+    "hypothesis": "Alta ambiguidade — 3 intents simultâneos (billing + cancel + refund implícito)"
+  },
+  {
+    "id": "EXP-01",
+    "label": "Cancel Only",
+    "input": "Quero cancelar minha assinatura",
+    "hypothesis": "Remoção de ambiguidade de billing — consistência deve aumentar para cancel_order"
+  },
+  {
+    "id": "EXP-02",
+    "label": "Billing Only",
+    "input": "Recebi uma cobrança indevida",
+    "hypothesis": "Remoção de ambiguidade de cancel — consistência deve aumentar para billing_issue"
+  },
+  {
+    "id": "EXP-03",
+    "label": "Explicit Refund",
+    "input": "Quero um reembolso pela cobrança indevida",
+    "hypothesis": "Gatilho explícito para refund_request — deve isolar o intent de reembolso"
+  }
+]

@@ -1,0 +1,87 @@
+{
+  "timestamp": "2026-06-27T16:45:18.457155+00:00",
+  "alert_rules": [
+    {
+      "id": "ALT-01",
+      "name": "Low Consistency",
+      "metric": "consistency_rate_pct",
+      "value": 92.0,
+      "threshold": 80,
+      "op": "<",
+      "severity": "HIGH",
+      "status": "OK",
+      "message": "Within acceptable range."
+    },
+    {
+      "id": "ALT-02",
+      "name": "Low Reliability Score",
+      "metric": "reliability_score",
+      "value": 91,
+      "threshold": 70,
+      "op": "<",
+      "severity": "HIGH",
+      "status": "OK",
+      "message": "Within acceptable range."
+    },
+    {
+      "id": "ALT-03",
+      "name": "Guardrail Detection Gap",
+      "metric": "detection_rate_pct",
+      "value": 100.0,
+      "threshold": 90,
+      "op": "<",
+      "severity": "CRITICAL",
+      "status": "OK",
+      "message": "Within acceptable range."
+    },
+    {
+      "id": "ALT-04",
+      "name": "High False Positive Rate",
+      "metric": "false_positive_rate_pct",
+      "value": 0.0,
+      "threshold": 10,
+      "op": ">",
+      "severity": "MEDIUM",
+      "status": "OK",
+      "message": "Within acceptable range."
+    },
+    {
+      "id": "ALT-05",
+      "name": "High Entropy",
+      "metric": "entropy",
+      "value": 0.202,
+      "threshold": 0.5,
+      "op": ">",
+      "severity": "MEDIUM",
+      "status": "OK",
+      "message": "Within acceptable range."
+    },
+    {
+      "id": "ALT-06",
+      "name": "Guardrail Effectiveness Low",
+      "metric": "guardrail_effectiveness_pct",
+      "value": 100.0,
+      "threshold": 90,
+      "op": "<",
+      "severity": "HIGH",
+      "status": "OK",
+      "message": "Within acceptable range."
+    },
+    {
+      "id": "ALT-07",
+      "name": "Quality Score Degradation",
+      "metric": "overall_quality_score",
+      "value": 92.4,
+      "threshold": 75.0,
+      "op": "<",
+      "severity": "HIGH",
+      "status": "OK",
+      "message": "Within acceptable range."
+    }
+  ],
+  "total_rules": 7,
+  "firing_count": 0,
+  "ok_count": 7,
+  "firing_alerts": [],
+  "alert_status": "ALL_CLEAR"
+}

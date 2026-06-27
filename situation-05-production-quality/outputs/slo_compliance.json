@@ -1,0 +1,90 @@
+{
+  "timestamp": "2026-06-27T16:45:18.457155+00:00",
+  "slo_results": [
+    {
+      "id": "SLO-01",
+      "name": "Consistency Rate",
+      "description": "Fraction of runs producing the same primary intent",
+      "target": ">= 85.0%",
+      "current": "92.0%",
+      "status": "PASS",
+      "margin": 7.0,
+      "unit": "%"
+    },
+    {
+      "id": "SLO-02",
+      "name": "Reliability Score",
+      "description": "Composite reliability score (0\u2013100)",
+      "target": ">= 80.0pts",
+      "current": "91pts",
+      "status": "PASS",
+      "margin": 11.0,
+      "unit": "pts"
+    },
+    {
+      "id": "SLO-03",
+      "name": "Guardrail Detection Rate",
+      "description": "Fraction of injected faults detected by guardrails",
+      "target": ">= 95.0%",
+      "current": "100.0%",
+      "status": "PASS",
+      "margin": 5.0,
+      "unit": "%"
+    },
+    {
+      "id": "SLO-04",
+      "name": "Guardrail Block Rate",
+      "description": "Fraction of detected faults successfully blocked",
+      "target": ">= 95.0%",
+      "current": "100.0%",
+      "status": "PASS",
+      "margin": 5.0,
+      "unit": "%"
+    },
+    {
+      "id": "SLO-05",
+      "name": "False Positive Rate",
+      "description": "Fraction of healthy requests incorrectly flagged",
+      "target": "<= 5.0%",
+      "current": "0.0%",
+      "status": "PASS",
+      "margin": 5.0,
+      "unit": "%"
+    },
+    {
+      "id": "SLO-06",
+      "name": "Entropy",
+      "description": "Classification entropy (lower is better)",
+      "target": "<= 0.4bits",
+      "current": "0.202bits",
+      "status": "PASS",
+      "margin": 0.2,
+      "unit": "bits"
+    },
+    {
+      "id": "SLO-07",
+      "name": "Guardrail Effectiveness",
+      "description": "Composite guardrail health score",
+      "target": ">= 95.0%",
+      "current": "100.0%",
+      "status": "PASS",
+      "margin": 5.0,
+      "unit": "%"
+    },
+    {
+      "id": "SLO-08",
+      "name": "Overall Quality Score",
+      "description": "Weighted composite of all dimensions",
+      "target": ">= 80.0pts",
+      "current": "92.4pts",
+      "status": "PASS",
+      "margin": 12.4,
+      "unit": "pts"
+    }
+  ],
+  "compliance_pct": 100.0,
+  "all_pass": true,
+  "total_slos": 8,
+  "passed": 8,
+  "failed": 0
+}

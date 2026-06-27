@@ -1,0 +1,22 @@
+[
+  {"id": 1,  "message": "Quero cancelar meu pedido e receber reembolso",             "hint": "cancel_order|refund_request"},
+  {"id": 2,  "message": "Meu pedido veio errado e quero resolver isso",              "hint": "cancel_order|shipping_issue|general_support"},
+  {"id": 3,  "message": "Meu pagamento deu problema",                                "hint": "billing_issue"},
+  {"id": 4,  "message": "Não gostei do produto e quero meu dinheiro de volta",       "hint": "refund_request|cancel_order"},
+  {"id": 5,  "message": "Preciso cancelar urgente",                                  "hint": "cancel_order"},
+  {"id": 6,  "message": "Fui cobrado duas vezes no meu cartão",                      "hint": "billing_issue|refund_request"},
+  {"id": 7,  "message": "Meu produto não chegou e já faz duas semanas",              "hint": "shipping_issue"},
+  {"id": 8,  "message": "Quero falar com alguém sobre meu pedido",                  "hint": "general_support|cancel_order"},
+  {"id": 9,  "message": "Vocês conseguem me ajudar com um problema?",               "hint": "general_support"},
+  {"id": 10, "message": "Meu produto atrasou e quero cancelar",                     "hint": "cancel_order|shipping_issue"},
+  {"id": 11, "message": "Preciso resolver meu pedido urgente",                       "hint": "cancel_order|general_support"},
+  {"id": 12, "message": "Quero devolver o produto",                                  "hint": "cancel_order|refund_request"},
+  {"id": 13, "message": "Não recebi meu reembolso ainda",                            "hint": "refund_request|billing_issue"},
+  {"id": 14, "message": "O produto chegou com defeito",                              "hint": "shipping_issue|general_support"},
+  {"id": 15, "message": "Minha assinatura foi cobrada errado",                       "hint": "billing_issue|refund_request"},
+  {"id": 16, "message": "Quero cancelar minha conta",                               "hint": "cancel_order"},
+  {"id": 17, "message": "Tive um problema com minha compra",                        "hint": "general_support|billing_issue"},
+  {"id": 18, "message": "Preciso de reembolso do meu último pedido",                "hint": "refund_request"},
+  {"id": 19, "message": "O rastreamento mostra entregue mas não recebi",            "hint": "shipping_issue|general_support"},
+  {"id": 20, "message": "Estou insatisfeito e quero resolver",                      "hint": "general_support|refund_request"}
+]
