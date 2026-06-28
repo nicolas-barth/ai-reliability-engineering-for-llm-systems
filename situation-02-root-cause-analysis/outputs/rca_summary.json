@@ -1,30 +1,19 @@
 {
   "primary_root_cause": {
-    "name": "Prompt Ambiguity",
-    "id": "RCA-01",
-    "severity": "CRITICAL",
-    "evidence": "Ambiguity level: HIGH. 3 intents triggered simultaneously: billing_issue, cancel_order, refund_request. Controlled experiments confirmed causality: removing ambiguity raised consistency from 53% to 100% (Cancel Only). Delta: +47 percentage points.",
-    "score": 95.0
-  },
-  "secondary_root_cause": {
     "name": "Intent Taxonomy Overlap",
     "id": "RCA-02",
     "severity": "CRITICAL",
     "evidence": "Primary competing pair: billing_issue ↔ cancel_order (overlap score 45.6%). Top-2 co-occurrence: 64.0% of runs. Pearson r=-0.151.",
     "score": 91.2
   },
+  "secondary_root_cause": {
+    "name": "Prompt Ambiguity",
+    "id": "RCA-01",
+    "severity": "HIGH",
+    "evidence": "Ambiguity level: HIGH. 3 intents triggered simultaneously: billing_issue, cancel_order, refund_request. ",
+    "score": 80.0
+  },
   "root_causes": [
-    {
-      "id": "RCA-01",
-      "name": "Prompt Ambiguity",
-      "rank": "primary",
-      "category": "root_cause",
-      "description": "The input activates multiple distinct intents simultaneously. No disambiguation strategy is applied at the input layer — the LLM must resolve genuine semantic uncertainty at inference time. Controlled experiments proved this is the primary causal driver: removing the ambiguity produced near-perfect consistency.",
-      "situation_3_fix": "Implement semantic disambiguation at the input layer. Detect multi-intent inputs and resolve them before classification.",
-      "score": 95.0,
-      "severity": "CRITICAL",
-      "evidence": "Ambiguity level: HIGH. 3 intents triggered simultaneously: billing_issue, cancel_order, refund_request. Controlled experiments confirmed causality: removing ambiguity raised consistency from 53% to 100% (Cancel Only). Delta: +47 percentage points."
-    },
     {
       "id": "RCA-02",
       "name": "Intent Taxonomy Overlap",
@@ -35,6 +24,17 @@
       "score": 91.2,
       "severity": "CRITICAL",
       "evidence": "Primary competing pair: billing_issue ↔ cancel_order (overlap score 45.6%). Top-2 co-occurrence: 64.0% of runs. Pearson r=-0.151."
+    },
+    {
+      "id": "RCA-01",
+      "name": "Prompt Ambiguity",
+      "rank": "primary",
+      "category": "root_cause",
+      "description": "The input activates multiple distinct intents simultaneously. No disambiguation strategy is applied at the input layer — the LLM must resolve genuine semantic uncertainty at inference time. Controlled experiments proved this is the primary causal driver: removing the ambiguity produced near-perfect consistency.",
+      "situation_3_fix": "Implement semantic disambiguation at the input layer. Detect multi-intent inputs and resolve them before classification.",
+      "score": 80.0,
+      "severity": "HIGH",
+      "evidence": "Ambiguity level: HIGH. 3 intents triggered simultaneously: billing_issue, cancel_order, refund_request. "
     }
   ],
   "contributing_factors": [
@@ -81,17 +81,6 @@
   ],
   "root_cause_ranking": [
     {
-      "id": "RCA-01",
-      "name": "Prompt Ambiguity",
-      "rank": "primary",
-      "category": "root_cause",
-      "description": "The input activates multiple distinct intents simultaneously. No disambiguation strategy is applied at the input layer — the LLM must resolve genuine semantic uncertainty at inference time. Controlled experiments proved this is the primary causal driver: removing the ambiguity produced near-perfect consistency.",
-      "situation_3_fix": "Implement semantic disambiguation at the input layer. Detect multi-intent inputs and resolve them before classification.",
-      "score": 95.0,
-      "severity": "CRITICAL",
-      "evidence": "Ambiguity level: HIGH. 3 intents triggered simultaneously: billing_issue, cancel_order, refund_request. Controlled experiments confirmed causality: removing ambiguity raised consistency from 53% to 100% (Cancel Only). Delta: +47 percentage points."
-    },
-    {
       "id": "RCA-02",
       "name": "Intent Taxonomy Overlap",
       "rank": "secondary",
@@ -101,6 +90,17 @@
       "score": 91.2,
       "severity": "CRITICAL",
       "evidence": "Primary competing pair: billing_issue ↔ cancel_order (overlap score 45.6%). Top-2 co-occurrence: 64.0% of runs. Pearson r=-0.151."
+    },
+    {
+      "id": "RCA-01",
+      "name": "Prompt Ambiguity",
+      "rank": "primary",
+      "category": "root_cause",
+      "description": "The input activates multiple distinct intents simultaneously. No disambiguation strategy is applied at the input layer — the LLM must resolve genuine semantic uncertainty at inference time. Controlled experiments proved this is the primary causal driver: removing the ambiguity produced near-perfect consistency.",
+      "situation_3_fix": "Implement semantic disambiguation at the input layer. Detect multi-intent inputs and resolve them before classification.",
+      "score": 80.0,
+      "severity": "HIGH",
+      "evidence": "Ambiguity level: HIGH. 3 intents triggered simultaneously: billing_issue, cancel_order, refund_request. "
     },
     {
       "id": "CF-01",
@@ -113,12 +113,12 @@
       "evidence": "4 routing flows activated from identical input. Collision rate: 66.0%. Routing changed 36 times across 50 runs."
     }
   ],
-  "engineering_conclusion": "The primary driver of instability is prompt ambiguity. The input activates 3 competing intents simultaneously, providing no unambiguous signal for the classifier to resolve. Controlled experiments demonstrated that removing semantic ambiguity raised consistency from 53% to 100% (Cancel Only), confirming prompt ambiguity as the primary causal driver. Intent taxonomy overlap further amplifies instability by creating competing interpretations for the same user request — billing_issue, cancel_order, and refund_request share significant semantic space. Confidence volatility and routing variance are observable symptoms of these root causes — not independent causes themselves.",
-  "confidence_level": "HIGH",
+  "engineering_conclusion": "The primary driver of instability is prompt ambiguity. The input activates 3 competing intents simultaneously, providing no unambiguous signal for the classifier to resolve. Intent taxonomy overlap further amplifies instability by creating competing interpretations for the same user request — billing_issue, cancel_order, and refund_request share significant semantic space. Confidence volatility and routing variance are observable symptoms of these root causes — not independent causes themselves.",
+  "confidence_level": "MEDIUM",
   "overall_impact": "CRITICAL",
   "situation_3_priorities": [
-    "Implement semantic disambiguation at the input layer. Detect multi-intent inputs and resolve them before classification.",
     "Redefine intent boundaries with mutually exclusive semantic criteria. Add explicit decision rules for overlapping domains.",
+    "Implement semantic disambiguation at the input layer. Detect multi-intent inputs and resolve them before classification.",
     "Add routing priority rules and confidence threshold guards. Define explicit tiebreakers when multiple intents are viable."
   ],
   "causal_chain": [
